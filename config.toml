@@ -29,9 +29,9 @@ canonifyurls = true
 # Author
 # ------
 [author]
-  name = "Crazyfire Lee"
-  bio = "A student interested in how machine learning can change the world"
-  job = "Student in FJU CSIE"
+  name = "Darren Lee (Crazyfire Lee)"
+  bio = "Darren Lee (@fdff87554) is a computer science student in Fu Jen University and an assistant engineer for Wiwynn Data Development Department, researching AI applications in Industrial Control Environment."
+  job = "Student in FJU CSIE, Assistant Engineer for Wiwynn Data Development Department."
   location = "Taiwan"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "wordpress.c@crazyfirelee.tw"
@@ -170,7 +170,7 @@ canonifyurls = true
   # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
   # Set this value to `right` if you have old posts to keep the old style on them
   # and define `thumbnailImagePosition` on a post to overwrite this setting
-  thumbnailImagePosition = "bottom"
+  thumbnailImagePosition = "right"
 
   # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
   # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
