@@ -1,7 +1,7 @@
 ---
 title: "Welcome to my blog~"
 date: 2022-08-09T15:47:56+08:00
-draft: true
+draft: false
 autoThumbnailImage: true
 thumbnailImagePosition: "top"
 thumbnailImage: ../static/img/about-me-cover-750.jpg
