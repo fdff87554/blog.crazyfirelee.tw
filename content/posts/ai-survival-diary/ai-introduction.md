@@ -11,7 +11,7 @@ tags: ['Artificial Intelligence',
        'Deep Learning']
 ---
 > 1940 年電腦正式誕生之後，1950 年 Alan Turing 就發表論文 計算機與智能（Computing Machinery and Intelligence） 探討機器所能產生的智慧，並提出有名的 圖靈測試（Turing Test），人工智慧的發展可能比你我想像的都更早，且其歷史是更加的值得反思。
-<!--more-->
+<!-- more -->
 
 > 在學習任何的領域，都應該先認識一下究竟這個東西是什麼跟其發展的歷史發生了什麼，因為唯有如此我們才能知道這個領域已經發生過什麼問題，而之後的發展跟研究可以避免什麼問題。
 
