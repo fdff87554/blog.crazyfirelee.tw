@@ -5,8 +5,8 @@ date: 2022-08-09T15:47:56+08:00
 draft: false
 autoThumbnailImage: true
 thumbnailImagePosition: "top"
-thumbnailImage: ../images/about-me-cover-750.jpg
-coverImage: ../images/about-me-cover.jpg
+thumbnailImage: https://blog.crazyfirelee.tw/images/about-me-cover-750.jpg
+coverImage: https://blog.crazyfirelee.tw/images/about-me-cover.jpg
 metaAlignment: center
 ---
 A place to share life and record some little knowledge.
