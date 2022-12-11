@@ -267,10 +267,10 @@ canonifyurls = true
   # --------------
   # Comment system
   # --------------
-  # [params.comment]
-  #   [params.comment.disqus]
-  #     enable = true
-  #     shortname = "disqus_L5OfjgBHqA"
+  [params.comment]
+    [params.comment.disqus]
+      enable = true
+      shortname = "disqus_L5OfjgBHqA"
   #   [params.comment.gitalk]
   #     enable = false
   #     clientId =
