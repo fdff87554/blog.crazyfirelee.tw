@@ -121,7 +121,7 @@ canonifyurls = true
   # Posts related configuration
   # ---------------------------
   # Global keywords configuration. Following keywords will be add to every pages
-  #  keywords = ["example"]
+  keywords = ["example"]
   
   # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
   clearReading = true
@@ -267,23 +267,23 @@ canonifyurls = true
   # --------------
   # Comment system
   # --------------
-  [params.comment]
-    [params.comment.disqus]
-      enable = true
-      shortname = "disqus_L5OfjgBHqA"
-    [params.comment.gitalk]
-      enable = false
-      # clientId =
-      # clientSecret =
-      # owner =
-      # repo =
-      # See all options: https://github.com/gitalk/gitalk#options
-      [params.comment.gitalk.options]
-        language = "en"
-        perPage = 10
-        distractionFreeMode = false
-        enableHotKey = true
-        pagerDirection = "first"
+  # [params.comment]
+  #   [params.comment.disqus]
+  #     enable = true
+  #     shortname = "disqus_L5OfjgBHqA"
+  #   [params.comment.gitalk]
+  #     enable = false
+  #     clientId =
+  #     clientSecret =
+  #     owner =
+  #     repo =
+  #     # See all options: https://github.com/gitalk/gitalk#options
+  #     [params.comment.gitalk.options]
+  #       language = "en"
+  #       perPage = 10
+  #       distractionFreeMode = false
+  #       enableHotKey = true
+  #       pagerDirection = "first"
   
   # --------------------
   # Header configuration
