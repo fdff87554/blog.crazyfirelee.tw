@@ -12,7 +12,7 @@ metaAlignment: center
 A place to share life and record some little knowledge.
 
 一個分享生活，記錄一些小知識的地方。
-<!-- more -->
+<!--more-->
 
 # About Me
 
