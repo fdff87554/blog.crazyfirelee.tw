@@ -1,11 +1,12 @@
 ---
 title: "Welcome to my blog~"
+slug: "about-me"
 date: 2022-08-09T15:47:56+08:00
 draft: false
 autoThumbnailImage: true
 thumbnailImagePosition: "top"
-thumbnailImage: ../static/img/about-me-cover-750.jpg
-coverImage: ../static/img/about-me-cover.jpg
+thumbnailImage: ../images/about-me-cover-750.jpg
+coverImage: ../images/about-me-cover.jpg
 metaAlignment: center
 ---
 A place to share life and record some little knowledge.

@@ -1,5 +1,6 @@
 ---
 title: "[AI 求生日誌] 關於本系列"
+slug: "series-introduction"
 date: 2022-12-09T13:46:50+08:00
 draft: false
 autoThumbnailImage: true
