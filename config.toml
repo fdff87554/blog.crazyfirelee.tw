@@ -1,5 +1,5 @@
 baseURL = "https://blog.crazyfirelee.tw/"
-languageCode = "en-us"
+languageCode = "zh-tw"
 defaultContentLanguage = "zh-tw"
 title = "Crazyfire's Blog"
 theme = "tranquilpeak"
@@ -8,7 +8,8 @@ paginate = 10
 canonifyurls = true
 
 [permalinks]
-  posts = "/:year/:month/:slug/"
+  posts = "/:year/:month/:day/:slug/"
+  page = "/:title"
 
 [taxonomies]
   tag = "tags"
@@ -21,9 +22,9 @@ canonifyurls = true
 [markup]
   # Set startLevel = 1 to support # title (<h1>title</h1>) otherwise table of content is blank/empty
   [markup.tableOfContents]
+    startLevel = 1
     endLevel = 3
     ordered = false
-    startLevel = 1
 
 # ------
 # Author
@@ -114,7 +115,7 @@ canonifyurls = true
   # You must use date format used by Go Time package https://golang.org/pkg/time/
   # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
   # Default format is: January 2, 2006
-  dateFormat = "2 January 2006"
+  dateFormat = "January 2, 2006"
 
   # ---------------------------
   # Posts related configuration
