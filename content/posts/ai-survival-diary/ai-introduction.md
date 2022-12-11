@@ -16,7 +16,6 @@ tags: ['Artificial Intelligence',
 > 在學習任何的領域，都應該先認識一下究竟這個東西是什麼跟其發展的歷史發生了什麼，因為唯有如此我們才能知道這個領域已經發生過什麼問題，而之後的發展跟研究可以避免什麼問題。
 
 ## What is Artificial Intelligence? / 什麼是人工智慧？
-
 * 人工智慧（Artificial Intelligence, AI）其實是計算機科學（Computer Science）的一個分支，通常是指由「人」製造出來的機器所表現出來的「智慧」。
 * 一般來說就是指電腦模擬人類思維過程以模仿人類能力或行為的能力，強調模擬人類智能。
 
@@ -38,7 +37,6 @@ tags: ['Artificial Intelligence',
     > 此階段的 AI 發展已經理解到人們無法建構人到電腦中，也無法利用人發展出所有的規則，因此改變了 AI 的演算法，要求 AI 自己找到一個答案，而不是變成人類（或者說把人類寫進電腦）。
 
 ### 名詞解釋
-
 * **機器學習 (Machine Learning)** - 機器利用給予問題跟結果，嘗試找出一個判斷這些問題的解題思路，並在往後的問題中給予答案的方法。
 * **專家系統 (Expert System)** - 在特定領域內具有專家水平的解決問題能力的程式系統，其運作方式就是建構大量的 if aaa, then bbb, else ccc，可以說是一個**收集了大量專家知識的問答系統**。
     * 那究竟有沒有存在的意義？其實是有的，因為可以 **快速**、**大量** 的進行問題的 **分析** / **校正** / **回答**。
@@ -46,12 +44,10 @@ tags: ['Artificial Intelligence',
     * 但現在名詞上已經有些差異了，其實現在的 AI 應用都可以說是一種專家系統，因為會如專家一般在給予我們問題的答案，現在的 AI 會嘗試給予我們沒有面對過的問題一個他可能屬於的答案。
 
 ## Weak and Strong Artificial Intelligence / 弱跟強人工智慧
-
 * 弱人工智慧 == 只執行一項特定工作的系統，也就是能解決一個特定任務，也稱為**狹義人工智慧 (ANI)**，是現在正在發展中的各種 AI 應用的種類，目前大多數的 AI 系統皆屬於這個類別，例如 **自駕車**、**自動調貨系統**、**語音助理**...
 * 強人工智慧 == 能跟人一樣解決問題的人工智慧，是執行被認為類似於人類的任務的系統，能解決超過一種任務，也稱為**通用人工智慧 (AGI)**，是一種理想中跟人無差別的人工智慧。
 
 ## The Type of AI / 人工智慧的種類
-
 * **Reactive Machines / 反應式機器**
     * 這些人工智慧系統沒有記憶並且是特定於任務的。這種 AI 很單純且目標明確，就是解決現在的問題，有名的例子是 IBM 的 DeepBlue 象棋 AI，他可以判斷當前的局面並選擇一個最好的走法來下棋，但是每一次的判斷都跟前一步驟沒有任何關係。
 * **Limited memory / 有限記憶**
@@ -71,13 +67,11 @@ tags: ['Artificial Intelligence',
     * 在這一類中，人工智慧系統具有自我意識，這賦予了它們意識。
 
 ## Summary
-
 * Artificial Intelligence 的發展涉及到硬體發展、軟體發展和人類對於期望是否明確這件事情，只有人類真的知道硬體的極限、軟體的對硬體調度的成熟度跟究竟「智慧」為何物，我們才能更好的推動發展。
 
 ## References
 
 ### Web Sites
-
 * [Introduction of Artificial Intelligence - Builtin](https://builtin.com/artificial-intelligence)
 * [Artificial intelligence - Britannica](https://www.britannica.com/technology/artificial-intelligence)
 * [The History of Artificial Intelligence - Harvard University](https://sitn.hms.harvard.edu/flash/2017/history-artificial-intelligence/)
@@ -85,8 +79,7 @@ tags: ['Artificial Intelligence',
 * [Expert System - Wiki](https://zh.wikipedia.org/zh-tw/%E4%B8%93%E5%AE%B6%E7%B3%BB%E7%BB%9F)
 * [Expert System - MIT 智庫](https://wiki.mbalib.com/zh-tw/%E4%B8%93%E5%AE%B6%E7%B3%BB%E7%BB%9F)
 
-#### Book
-
+### Book
 * 圖解人工智慧 - 神崎洋治 - 碁峰出版
 * 機器學習、人工智慧與人類未來 - 吳作樂、吳秉翰 - 五南出版
 * 機器學習和深度學習的技術與原理 - 山口達輝、松田洋之 - 碁峰出版
