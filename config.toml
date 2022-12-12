@@ -3,7 +3,7 @@ languageCode = "zh-tw"
 defaultContentLanguage = "zh-tw"
 title = "Crazyfire's Blog"
 theme = "tranquilpeak"
-disqusShortname = "tranquilpeak"
+disqusShortname = "crazyfirelee"
 paginate = 10
 canonifyurls = true
 
