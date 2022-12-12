@@ -3,6 +3,7 @@ languageCode: zh-tw
 defaultContentLanguage: zh-tw
 title: Crazyfire's Blog
 theme: tranquilpeak
+disqusShortname: crazyfirelee
 themesDir: themes
 paginate: 10
 canonifyurls: true
