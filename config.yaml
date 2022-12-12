@@ -3,7 +3,6 @@ languageCode: zh-tw
 defaultContentLanguage: zh-tw
 title: Crazyfire's Blog
 theme: tranquilpeak
-disqusShortname: crazyfirelee
 themesDir: themes
 paginate: 10
 canonifyurls: true
@@ -146,3 +145,7 @@ params:
       src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js
       async: true
       defer: true
+  comment:
+    disqus:
+      shortname: crazyfirelee
+      enable: true
