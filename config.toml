@@ -269,7 +269,7 @@ canonifyurls = true
   # --------------
   [params.comment]
     [params.comment.disqus]
-      enable = true
+      enable = false
       shortname = "crazyfirelee"
   #   [params.comment.gitalk]
   #     enable = false
