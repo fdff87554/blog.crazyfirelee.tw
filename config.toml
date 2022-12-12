@@ -270,7 +270,7 @@ canonifyurls = true
   [params.comment]
     [params.comment.disqus]
       enable = true
-      shortname = "disqus_L5OfjgBHqA"
+      shortname = "crazyfirelee"
   #   [params.comment.gitalk]
   #     enable = false
   #     clientId =
