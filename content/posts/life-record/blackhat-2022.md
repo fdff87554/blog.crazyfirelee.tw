@@ -8,7 +8,8 @@ thumbnailImagePosition: "top"
 metaAlignment: center
 tags: ['Blackhat',
        'Security',
-       'Conference']
+       'Conference',
+       '2022']
 ---
 > BlackHat，這個資安圈盛會，也一直是自己學習資安的路上一個嚮往和期待能參與的活動，但對於學生來說，費用相較昂貴而且參與成本較高，尤其是在疫情當頭的 2022 年，能參加更是一種奢侈...，但是！今年感謝 Orange Tsai 願意給我講者的學生推薦票，讓我有機會線上參與這場活動 (因為是役男不能隨便出國 QQ)，所以我就來紀錄一下這次的線上遊記吧！也希望藉由這個簡單的紀錄，讓更多人知道究竟 BlackHat 上會有什麼，跟我藉由這次參與兩天的議程，有什麼收穫跟感想。
 <!--more-->
@@ -67,6 +68,26 @@ tags: ['Blackhat',
 
 #### [In Need of 'Pair' Review: Vulnerable Code Contributions by GitHub Copilot](https://www.blackhat.com/us-22/briefings/schedule/#in-need-of-pair-review-vulnerable-code-contributions-by-github-copilot-27264)
 > [time= Aug 10, 2022 13:30 to 14:10]
+* 本場議程主要是在說明 GitHub Copilot 的推薦程式碼並不是安全的程式碼。GitHub Copilot 是一個 GPT-3 的 code completion service，可以幫助開發者快速完成程式碼的撰寫，但這邊有個問題，那就是 Copilot 所推薦的程式碼並不是安全的程式碼，例如下圖 Example，GitHub Copilot 推薦了最常見的 SQL Injection 漏洞程式碼 (輸入字串串接)，那為什麼會有這個問題，還有究竟 GitHub Copilot 是如何運作的呢？
+    > ![GitHub Copilot Completion Code](https://blog.crazyfirelee.tw/images/github-copilot-completion-code.png)
+* 上面有提到 GitHub Copilot 是一個 GPT-3 的 Code version model，那今天 Copilot 是怎麼知道要推薦我們什麼樣子的程式碼呢？如下圖舉例，在接收到我們的程式碼輸入之後，他會有一個文字清單來做輸出，但這個清單的每個單字應該出現的機率是不同的，Copilot 會選擇機率最高 (最合適) 的程式碼做推薦並且往下推舉，來建構應該推薦的程式碼片段。
+    > ![GitHub Copilot Generate Logic](https://blog.crazyfirelee.tw/images/github-copilot-generate-logic.png)
+* 那到這邊聽起來沒什麼問題啊？Copilot 確實推薦了最有可能性的程式碼，而且是可以正確運行的程式碼，問題在哪裡？最大的問題在於他推薦的是"可以使用的正確程式碼"而非"正確安全的程式碼"。
+* 針對這個問題，議程的發表團隊設計了一個實驗流程來驗證 Copilot 的推薦程式碼是否安全，實驗流程如下圖所示，並且希望利用這樣的實驗流程來調查驗證三件事情，分別是
+    > ![GitHub Copilot Experiment Process](https://blog.crazyfirelee.tw/images/github-copilot-experiment-process.png)
+    * 弱點的多樣性 - Diversity of Weakness: 不同類型的漏洞發生的機率是多少？
+    * 提示的多樣性 - Diversity of Prompt: 提示的變化會改變漏洞的發生率嗎？
+    * 領域的多樣性 - Diversity of Domain: 這種發現在 Software 以外的領域有發生嗎？
+    並設計了驗證指標，分別是
+    * 有效性 - Valid: 也就是 Copilot 返回的可運行程式碼數量
+    * 脆弱性 - Vulnerable: 也就是這些返回中有多少有 CWE 漏洞
+    * 最佳建議狀況 - Top Suggestion: 第一個 (也就是最推薦的)可運行建議安全嗎？
+* 後續的實驗概述就可以請大家自己去看 Public 的 Slides 了，很明顯的事情是推薦的狀況並沒有預期中的良好。
+
+##### My Comments
+* 在我的理解中，Copilot 會發生這樣的非安全性程式碼推薦是很正常的一件事情，大家應該都有把剛學習的時候的 hello world 程式碼推上 GitHub，這種所謂的練習 or 根本沒有安全意識的程式碼在 GitHub 上的數量可以說是非常非常巨量的，而利用 GPT-3 對這樣大量的程式碼做學習，在他的理解中，這些 code 確實都是可以執行的 "好程式碼"，既然如此，推薦這些程式碼來完整我們缺漏的部分當然是很合理的。
+* 這是不是需要關注的議題，當然是，因為在資訊安全的領域中，好從來就 != 正確，那究竟有什麼解決方案呢？其實不外乎就是不要完全相信 AI 推薦的程式碼，可以借用推薦的邏輯，但要記得修改成 Quality 更高的程式碼，這樣的做法其實是很常見的，例如在我們的開發流程中，我們會使用 Code Review 來確保程式碼的品質，這個過程就是在確保程式碼的品質，而不是完全相信 AI 推薦的程式碼。
+* 對於 model 的部分來說，當然就是要更多的資料前處理跟人員審核，才能更好的避免這個問題的發生，當然，成千上萬的 GitHub Repo 中要避免這個問題，實屬困難，因此只能期待於後期慢慢修正並且這個問題被解決，或是有更好的解決方案。
 
 #### [Return to Sender - Detecting Kernel Exploits with eBPF](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5NTM2)
 > [time= Aug 10, 2022 14:30 to 15:10]
@@ -116,5 +137,5 @@ tags: ['Blackhat',
 * 能夠理解為什麼 Detect Model 會失效，因為從頻譜中就可以看到這些語音的能量狀況已經可以說是完全被混淆摧毀了，而目前這些極度依賴 CV 的做法當然會在頻譜圖中失去焦點，而完全無法判斷是否是合成的人聲，這也放大了一個數據的問題就是頻域跟時域的轉換問題。
 * 是否可以緩解，誠如上面所說如果今天 model 前準備一個 filter 針對語言特徵去做人聲的提取，再給 detect model 做辨識，應該就能解決這個問題了，但究竟有多少 system 目前有考慮到這個問題，我猜應該是不多的，因此這個部分的想法我真的覺得很新穎，也意外地揭露了其實很多偽造攻擊都仍然在嘗試突破各式檢測。
 
-#### [Locknote: Conclusions and Key Takeaways from Black Hat USA 2022](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTY1MDY1)
+#### [Locknote: Conclusions and Key Takeaways from Black Hat USA 2022](https://www.blackhat.com/us-22/briefings/schedule/#locknote-conclusions-and-key-takeaways-from-black-hat-usa--29172)
 > [time= Aug 11, 2022 16:30 to 17:10]
