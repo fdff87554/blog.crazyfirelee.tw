@@ -97,6 +97,18 @@ tags: ['Blackhat',
 
 #### [GPT-3 and Me: How Supercomputer-scale Neural Network Models Apply to Defensive Cybersecurity Problems](https://www.blackhat.com/us-22/briefings/schedule/#gpt--and-me-how-supercomputer-scale-neural-network-models-apply-to-defensive-cybersecurity-problems-27540)
 > [time= Aug 10, 2022 16:30 to 17:10]
+* 此演講主要在呈現跟說明 Machine Learning 的 Model 跟 Self-supervised Learning Model 正在改變這個世界，本演講是一個很純粹正在說明 Machine Learning 跟 Security 這個領域的火花的演講，兩位 Speaker 都是這個領域的佼佼者。
+* 先講結論，這次演講呈現的結果是成功利用 GPT-3 這個 NLP Model 對指令列做解讀翻譯成人類更好理解的語句，並且效果顯著。在 F1-Score 上取得了 0.95 的成績，非常亮眼。
+* Self-supervised Learning 的概念是利用 Model 自動化標記資料，並且把標記完的資料當作 Training Data 去將 Unsupervised Problem 變成 Supervised Problem 來做解決。而在這個過程中，人工慢慢介入來修正標籤，讓 Model 在這個過程中越來越好並且輔助標記更多資料來重新訓練，在這個循環中持續提高準確率。聽起來跟 Semi-supervised Learning (半監督式學習) 很像，但其實兩者有根本上的差異，Semi-supervised Learning 是利用少量的 Labelled Data 來訓練 Model，並且利用 Unlabelled Data 來增加 Model 的準確率，而 Self-supervised Learning 則是利用 Unlabelled Data 來訓練 Model，並且利用 Labelled Data 來增加 Model 的準確率。
+* 而在演講中有提到一個很重要的事情就是 Model Size 的成長，Deep Learning 的發展本來就是依靠於神經元的數量跟神經網絡的深度來強化特徵分析，也正是因為如此，演講中有提到對於同樣的敘述，模型神經元的數量的差異會對資料有多大的影響，如下圖：
+    > ![Model Scaling Example of BlackHat 2022 GPT-3 and Me Speach](https://blog.crazyfirelee.tw/images/model-scaling-example-of-blackhat-2022-GPT_3-and-me-speach.png)
+* GPT-3 在 Model Scaling 的加成之下有一個非常恐怖的增長，例如文本跟程式碼的關聯性補齊等等，舉例來說 GitHub Copilot 就已經能從我們的註解中理解並且幫我們撰寫出很高品質 (非安全性的品質) 的程式碼了。從 Neural scaling laws 中可以看到，當 Parameters 越多，Loss 理應越低。
+    > ![Neural scaling laws](https://blog.crazyfirelee.tw/images/neural-scaling-laws.png)
+* 演說中也提到了 Self-supervised Learning 為什麼對於 Security 領域有很重要的發展在於，對於 "以前沒有發生過的攻擊類型的偵測的發掘" 有很重要的幫助，基於 Self-supervised Learning 本身的特性，Model 本來就會嘗試去找出資料中的 Pattern，而我們的介入是微調他們的 Self Labeling 來讓模型收斂的更漂亮，因此對於資料延伸的推估是非常強勁的。而以前這件事情並不是一個輕鬆的工作，但因為 Model Scaling 的原因，準確率跟效果越來越好。針對應用的部分演說中舉例了利用 GPT-3 針對垃圾郵件的檢測分類、對於惡意 Payload 的可讀性解釋生成等等，這些都是非常有趣的應用，而且也是我們在日常工作中可以利用的工具。
+* GitHub of the speach: https://github.com/sophos/gpt3-and-cybersecurity
+
+##### My Comments
+* GPT-3 這個 NLP Model 在各種領域的發展影響的越來越深了，不管是聽演講的當下 Microsoft 已經在 GitHub 上推出了 Copilot 這個 GPT-3 的 Code Complition Application，又或者在寫 Blog 的當下由 OpenAI 所推出的超強對話引擎 ChatGPT，都說明了這種 NLP Model 對於生活中的領域應用越來越多，而且都有著強大的效果，這次的演講提到了利用 Payload 生成 Human Readable Sentences，那其實在其他論文中也有嘗試在 Human Readable Information 提取成 Keywords 的部分。這些其實就是 Model 發展對於各種領域的加強，而應用在繁雜的程式語言世界中，也越來越有效果。
 
 ### Day 02
 
