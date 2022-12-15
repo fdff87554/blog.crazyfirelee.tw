@@ -92,8 +92,24 @@ tags: ['Blackhat',
 #### [Return to Sender - Detecting Kernel Exploits with eBPF](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5NTM2)
 > [time= Aug 10, 2022 14:30 to 15:10]
 
-#### [Fault-Injection Detection Circuits: Design, Calibration, Validation and Tuning](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5Mzg2)
+#### [Fault-Injection Detection Circuits: Design, Calibration, Validation and Tuning](https://www.blackhat.com/us-22/briefings/schedule/#fault-injection-detection-circuits-design-calibration-validation-and-tuning-27397)
 > [time= Aug 10, 2022 15:30 to 16:10]
+* 這場議程是關於 Fault-Injection Attack (故障注入攻擊)，在這場議程之前我是完全沒聽過這個東西的，因此覺得很新鮮。
+* 提到了 Non-Invasive FI Attack (非侵入式故障注入攻擊)、Semi-Invasive FI Attack (半侵入式故障注入攻擊)、Invasive Physical Attacks (侵入式物理攻擊)，
+    * 其中 non-invasive FI attacks 主要是在不對封裝進行影響的攻擊，因此主要能接觸的部位為封裝外部的 clock 跟 voltage pins (針腳)，攻擊有包括
+        * Voltage attacks - 電壓攻擊
+        * Clock attacks - 時鐘攻擊
+        * EM (Electro-mangnetic radiation) attacks - 電磁輻射攻擊
+        * Thermal attacks - 熱攻擊
+    * 而 semi-invasive FI attacks 的主要攻擊設立用 Lasers (雷射)，因為需要對封裝進行開蓋，但研究表明可以從封裝的側面再不開蓋的狀況下執行此攻擊。
+    * 而 invasive physical attacks 則主要利用 FIB、etching (蝕刻)、on-die probing 等等方式來進行攻擊。
+* 而使用 FI 攻擊的**共同目標是造成 circuit timing 的失效**而不是造成平台損毀。當 circuit timing 失敗時，資料可能會被過早或太晚的 latched，這時就可能造成例如在 fixed-function crypto engines 的 real key 有機會被替換。
+* 針對這個問題，Intel 選擇了 Tunable Replica Circuit (TRC, 可調式複製電路) 作為一個檢測錯誤 or 攻擊發生的解決方案，原因在於 TRC 本身有一個 Capture Flop 在攔截檢測訊號是否有發生異常，而這個 Capture Flop 同時也將檢測到 FI Attack。
+    > ![the TRC architecture](https://blog.crazyfirelee.tw/images/the-TRC-architecture.png)
+
+##### My Comments
+* 因為硬體層面的資訊安全，我覺得是一個很有趣的領域，但是我自己的知識不足，因此這次的議程我覺得很有趣，但是也沒有很深入的理解，因此我會再找時間來研究這個領域。
+* 但自己比較有感觸的就是硬體層級的資訊安全其實也非常重要，在修交大 Computer Security 課的時候，在密碼學就有提到旁通道攻擊這種側錄硬體運作時電壓狀況的攻擊，本身之前在實習時因為公司是 Server 相關公司，也聽過正在研究所謂的硬體層級的資料加密應用，因此 Chip Security 或者說 Hardware Security 也是非常重要的一個領域。如何避免外力干擾而正確驗證資料流，或者避免外力介入偷取傳輸資料等等，都可以說是這個領域的核心問題 (在我的理解)，而 Intel 這次希望解決的問題就是被替換 or 影響到資料流的狀況。
 
 #### [GPT-3 and Me: How Supercomputer-scale Neural Network Models Apply to Defensive Cybersecurity Problems](https://www.blackhat.com/us-22/briefings/schedule/#gpt--and-me-how-supercomputer-scale-neural-network-models-apply-to-defensive-cybersecurity-problems-27540)
 > [time= Aug 10, 2022 16:30 to 17:10]
