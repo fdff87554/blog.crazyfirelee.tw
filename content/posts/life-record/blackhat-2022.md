@@ -89,8 +89,16 @@ tags: ['Blackhat',
 * 這是不是需要關注的議題，當然是，因為在資訊安全的領域中，好從來就 != 正確，那究竟有什麼解決方案呢？其實不外乎就是不要完全相信 AI 推薦的程式碼，可以借用推薦的邏輯，但要記得修改成 Quality 更高的程式碼，這樣的做法其實是很常見的，例如在我們的開發流程中，我們會使用 Code Review 來確保程式碼的品質，這個過程就是在確保程式碼的品質，而不是完全相信 AI 推薦的程式碼。
 * 對於 model 的部分來說，當然就是要更多的資料前處理跟人員審核，才能更好的避免這個問題的發生，當然，成千上萬的 GitHub Repo 中要避免這個問題，實屬困難，因此只能期待於後期慢慢修正並且這個問題被解決，或是有更好的解決方案。
 
-#### [Return to Sender - Detecting Kernel Exploits with eBPF](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5NTM2)
+#### [Return to Sender - Detecting Kernel Exploits with eBPF](https://www.blackhat.com/us-22/briefings/schedule/#return-to-sender---detecting-kernel-exploits-with-ebpf-27127)
 > [time= Aug 10, 2022 14:30 to 15:10]
+> [Tool Link](https://github.com/Gui774ume/krie)
+* 本議程主要是在說明 Kernel Exploits 利用 Kernel 內建的 eBPF (Extended Berkeley Packet Filter) 來做檢測攻擊，這個議程的內容其實是很簡單的，就是在說明 eBPF 的基本概念，以及 eBPF 的問題、攻擊狀況。
+* eBPF 是 Kernel 的 Sandbox，可以允許我們在 OS Kernel 中運行 Sandbox Application。它用於安全有效地擴展 Kernel 的功能，而無需更改 Kernel Source Code 或 Loading Kernel Modules。
+* eBPF 的強大之處在於，他可以完全模仿 Kernel 的操作但確保安全性，例如錯誤的 Kernel Space 對 User Space Address 調用之類的問題，但也有問題就是 eBPF 對於 System 來說是一個負擔，因此會導致 Kernel 效能下降。
+* 因此講者今天提出了一個新的工具框架，叫做 KRIe (Kernel Runtime Integrity with eBPF)，旨在有限的預算和運作效能中，應用 eBPF 來檢測 Kernel Exploits，並且最大化降低對系統的負擔狀況。
+
+##### My Comments
+* 會選擇這個議程的原因是因為剛好有在修 Linux Kernel 的課程，並在議程中第一次聽到 eBPF，對於議程並沒有很聽懂，但可以發現到 eBPF 的應用場景原來可以從一個單純的 Sandbox 延伸出去做到防禦跟檢測 (錯誤的記憶體位置操作)。
 
 #### [Fault-Injection Detection Circuits: Design, Calibration, Validation and Tuning](https://www.blackhat.com/us-22/briefings/schedule/#fault-injection-detection-circuits-design-calibration-validation-and-tuning-27397)
 > [time= Aug 10, 2022 15:30 to 16:10]
