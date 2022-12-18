@@ -37,7 +37,6 @@ tags: ['Blackhat',
 
 #### [All Your GNN Models and Data Belong to Me](https://www.blackhat.com/us-22/briefings/schedule/#all-your-gnn-models-and-data-belong-to-me-26671)
 > [time= Aug 10, 2022 10:20 to 11:00]
-
 > * Notes
 >     * Message Passing Technology
 >     * GNN
@@ -52,7 +51,6 @@ tags: ['Blackhat',
 >         * Subgraph Inference Attack 
 >     * Secure - Model
 >         * Model Extraction Attack
-
 * 本分享主要在說明一個利用公司提供的 GNN API 就可以針對其中的 Graph & Model 盜取，由於涉及到大量的 GNN 基礎知識，因此這邊預計會寫一篇 GNN 的說明文章，大家可以去閱讀一下，應該會更好理解我這邊說明的部分
 * 這邊大致上針對這個 Speach 說明一下幾個核心重點，因為有 Release PPT 因此下面會直接截圖 PPT 內容，完整 PPT 請去官網連結獲取。
 * 這次的攻擊主要分成針對 Graph 的 Privary Attack，專注在利用 Link Re-Identification Attack、Property Inference Attach、Subgraph Inference Attack 來做 graph stealing，然後也可以直接利用 Model 的 Secure Attack 則是應用 Model Extraction Attack 做到輸出值做梯度下降來擬合建立的假 model 做目標 model 結構推估，而且可以利用約 1/4 的 network size 做到只有 3~5% 原始 model 的誤差的模型。
@@ -69,12 +67,12 @@ tags: ['Blackhat',
 #### [In Need of 'Pair' Review: Vulnerable Code Contributions by GitHub Copilot](https://www.blackhat.com/us-22/briefings/schedule/#in-need-of-pair-review-vulnerable-code-contributions-by-github-copilot-27264)
 > [time= Aug 10, 2022 13:30 to 14:10]
 * 本場議程主要是在說明 GitHub Copilot 的推薦程式碼並不是安全的程式碼。GitHub Copilot 是一個 GPT-3 的 code completion service，可以幫助開發者快速完成程式碼的撰寫，但這邊有個問題，那就是 Copilot 所推薦的程式碼並不是安全的程式碼，例如下圖 Example，GitHub Copilot 推薦了最常見的 SQL Injection 漏洞程式碼 (輸入字串串接)，那為什麼會有這個問題，還有究竟 GitHub Copilot 是如何運作的呢？
-    > ![GitHub Copilot Completion Code](https://blog.crazyfirelee.tw/images/github-copilot-completion-code.png)
+    > ![GitHub Copilot Completion Code](https://blog.crazyfirelee.tw/images/blackhat2022/github-copilot-completion-code.png)
 * 上面有提到 GitHub Copilot 是一個 GPT-3 的 Code version model，那今天 Copilot 是怎麼知道要推薦我們什麼樣子的程式碼呢？如下圖舉例，在接收到我們的程式碼輸入之後，他會有一個文字清單來做輸出，但這個清單的每個單字應該出現的機率是不同的，Copilot 會選擇機率最高 (最合適) 的程式碼做推薦並且往下推舉，來建構應該推薦的程式碼片段。
-    > ![GitHub Copilot Generate Logic](https://blog.crazyfirelee.tw/images/github-copilot-generate-logic.png)
+    > ![GitHub Copilot Generate Logic](https://blog.crazyfirelee.tw/images/blackhat2022/github-copilot-generate-logic.png)
 * 那到這邊聽起來沒什麼問題啊？Copilot 確實推薦了最有可能性的程式碼，而且是可以正確運行的程式碼，問題在哪裡？最大的問題在於他推薦的是"可以使用的正確程式碼"而非"正確安全的程式碼"。
 * 針對這個問題，議程的發表團隊設計了一個實驗流程來驗證 Copilot 的推薦程式碼是否安全，實驗流程如下圖所示，並且希望利用這樣的實驗流程來調查驗證三件事情，分別是
-    > ![GitHub Copilot Experiment Process](https://blog.crazyfirelee.tw/images/github-copilot-experiment-process.png)
+    > ![GitHub Copilot Experiment Process](https://blog.crazyfirelee.tw/images/blackhat2022/github-copilot-experiment-process.png)
     * 弱點的多樣性 - Diversity of Weakness: 不同類型的漏洞發生的機率是多少？
     * 提示的多樣性 - Diversity of Prompt: 提示的變化會改變漏洞的發生率嗎？
     * 領域的多樣性 - Diversity of Domain: 這種發現在 Software 以外的領域有發生嗎？
@@ -113,7 +111,7 @@ tags: ['Blackhat',
     * 而 invasive physical attacks 則主要利用 FIB、etching (蝕刻)、on-die probing 等等方式來進行攻擊。
 * 而使用 FI 攻擊的**共同目標是造成 circuit timing 的失效**而不是造成平台損毀。當 circuit timing 失敗時，資料可能會被過早或太晚的 latched，這時就可能造成例如在 fixed-function crypto engines 的 real key 有機會被替換。
 * 針對這個問題，Intel 選擇了 Tunable Replica Circuit (TRC, 可調式複製電路) 作為一個檢測錯誤 or 攻擊發生的解決方案，原因在於 TRC 本身有一個 Capture Flop 在攔截檢測訊號是否有發生異常，而這個 Capture Flop 同時也將檢測到 FI Attack。
-    > ![the TRC architecture](https://blog.crazyfirelee.tw/images/the-TRC-architecture.png)
+    > ![the TRC architecture](https://blog.crazyfirelee.tw/images/blackhat2022/the-TRC-architecture.png)
 
 ##### My Comments
 * 因為硬體層面的資訊安全，我覺得是一個很有趣的領域，但是我自己的知識不足，因此這次的議程我覺得很有趣，但是也沒有很深入的理解，因此我會再找時間來研究這個領域。
@@ -125,9 +123,9 @@ tags: ['Blackhat',
 * 先講結論，這次演講呈現的結果是成功利用 GPT-3 這個 NLP Model 對指令列做解讀翻譯成人類更好理解的語句，並且效果顯著。在 F1-Score 上取得了 0.95 的成績，非常亮眼。
 * Self-supervised Learning 的概念是利用 Model 自動化標記資料，並且把標記完的資料當作 Training Data 去將 Unsupervised Problem 變成 Supervised Problem 來做解決。而在這個過程中，人工慢慢介入來修正標籤，讓 Model 在這個過程中越來越好並且輔助標記更多資料來重新訓練，在這個循環中持續提高準確率。聽起來跟 Semi-supervised Learning (半監督式學習) 很像，但其實兩者有根本上的差異，Semi-supervised Learning 是利用少量的 Labelled Data 來訓練 Model，並且利用 Unlabelled Data 來增加 Model 的準確率，而 Self-supervised Learning 則是利用 Unlabelled Data 來訓練 Model，並且利用 Labelled Data 來增加 Model 的準確率。
 * 而在演講中有提到一個很重要的事情就是 Model Size 的成長，Deep Learning 的發展本來就是依靠於神經元的數量跟神經網絡的深度來強化特徵分析，也正是因為如此，演講中有提到對於同樣的敘述，模型神經元的數量的差異會對資料有多大的影響，如下圖：
-    > ![Model Scaling Example of BlackHat 2022 GPT-3 and Me Speach](https://blog.crazyfirelee.tw/images/model-scaling-example-of-blackhat-2022-GPT_3-and-me-speach.png)
+    > ![Model Scaling Example of BlackHat 2022 GPT-3 and Me Speach](https://blog.crazyfirelee.tw/images/blackhat2022/model-scaling-example-of-blackhat-2022-GPT_3-and-me-speach.png)
 * GPT-3 在 Model Scaling 的加成之下有一個非常恐怖的增長，例如文本跟程式碼的關聯性補齊等等，舉例來說 GitHub Copilot 就已經能從我們的註解中理解並且幫我們撰寫出很高品質 (非安全性的品質) 的程式碼了。從 Neural scaling laws 中可以看到，當 Parameters 越多，Loss 理應越低。
-    > ![Neural scaling laws](https://blog.crazyfirelee.tw/images/neural-scaling-laws.png)
+    > ![Neural scaling laws](https://blog.crazyfirelee.tw/images/blackhat2022/neural-scaling-laws.png)
 * 演說中也提到了 Self-supervised Learning 為什麼對於 Security 領域有很重要的發展在於，對於 "以前沒有發生過的攻擊類型的偵測的發掘" 有很重要的幫助，基於 Self-supervised Learning 本身的特性，Model 本來就會嘗試去找出資料中的 Pattern，而我們的介入是微調他們的 Self Labeling 來讓模型收斂的更漂亮，因此對於資料延伸的推估是非常強勁的。而以前這件事情並不是一個輕鬆的工作，但因為 Model Scaling 的原因，準確率跟效果越來越好。針對應用的部分演說中舉例了利用 GPT-3 針對垃圾郵件的檢測分類、對於惡意 Payload 的可讀性解釋生成等等，這些都是非常有趣的應用，而且也是我們在日常工作中可以利用的工具。
 * GitHub of the speach: https://github.com/sophos/gpt3-and-cybersecurity
 
@@ -150,17 +148,36 @@ tags: ['Blackhat',
 
 #### [Malware Classification With Machine Learning Enhanced by Windows Kernel Emulation](https://www.blackhat.com/us-22/briefings/schedule/#malware-classification-with-machine-learning-enhanced-by-windows-kernel-emulation-27167)
 > [time= Aug 11, 2022 14:30 to 15:10]
+> [Github Link](https://github.com/dtrizna/quo.vadis/)
+* 這場議程主要在討論的就是靜態惡意程式分析常見的所謂的混淆、路徑偵測等等的問題，是不是有新的解決方案 or 別的解決思路可以避免掉，並且提到了他們於內部的實驗跟嘗試。
+* 靜態程式分析 or 惡意程式偵測主要會遇到幾個常見的問題，分別是
+    * 對抗性機器學習 - Adversarial Machine Learning
+    * 打包 - Packer
+    * 混淆 - Obfuscation
+    * ...
+* 還有所謂的正確狀況跟惡意狀況非常近似的問題，例如
+    * 惡意路徑 == 一般正常路徑
+    * 惡意程式 依附於 正常程式
+    * ...
+    > ![Filepath Dataset in Malware](https://blog.crazyfirelee.tw/images/blackhat2022/filepath-dataset-in-malware.png)
+* 在 Dynamic & Contextual Analysis 的狀況之下，我們還有機會偵測辨識出一些特徵 or 發現一些奇怪的操作，如下
+    > ![Dynamic & Contextual Analysis in Malware](https://blog.crazyfirelee.tw/images/blackhat2022/dynamic-contextual-analysis-in-malware.png)
+* 那 MS 團隊利用了 1d converlution 的方式針對做過 Embedding 處理的 path string 做分析，在 3 個月的 training 之後得到了一些成果，如下
+    > ![1d convolution in Malware](https://blog.crazyfirelee.tw/images/blackhat2022/1d-convolution-in-malware.png)
+
+##### My Comments
+* 我覺得結論中的 'ML is not a "silver bullet", it is an extra tool" 這句話很傳神，目前很多 AI 應用其實都一直在挑戰傳統的解決方案，但事實上兩者應該嘗試融合並且合作，而非對立，ML 是一個很棒的 Classification 工具，但仍然無法取代或者解決一些更複雜細膩的問題。這次利用對 file path 的 NLP 建模結合 converlution 的 classification 就是期望解決路徑相似性的問題，希望藉由細微的特徵，來辨識是否是惡意路徑，而今天的議程就是在討論這個問題，並且提出了一個解決方案。效果仍然有限，但是這是一個很棒的開始，希望未來能夠有更多的研究可以進一步的發展。
+> OS: 真的要轉 NLP 的資料研究跟更熟習應用了，一堆議程都用到 NLP...
 
 #### [Human or Not: Can You Really Detect the Fake Voices?](https://www.blackhat.com/us-22/briefings/schedule/#human-or-not-can-you-really-detect-the-fake-voices-26288)
 > [time= Aug 11, 2022 15:30 to 16:10]
-
 * 此篇議程是 Lanzhou University 的學生在發表的，說的有點混亂，但概念上其實是在說明就 DeepFake 很像的概念，今天你正在面對的人跟聊天的對象，可能並不是你以為的那個人，因為人臉跟聲音都是假的。
 * 本議程有提到現有的檢測方法其實效果都還不錯，且大多使用到 Computer Vision (CV, 計算機視覺) 的做法，也就是將聲音資訊轉換成圖像，再利用 Image Classification 的方式做分類，並且都有很高的準確率。e.g., 
     * Neural Network Feature (NNF)-based approaches - ACM MM 2022 (Top Conference)
     * End-to-End (E2E)-based approaches - Used in NLP problems
     * Statistical-based approaches
 * 這個議程主要是在說明他們發展了一套 `SiF-DeepVC` 的 Speaker-irrelative Feature Deep Learning Voice Clone 的 Voice Clone，期望利用跟人聲無關的特徵來攻擊 FakeVoice Detecter 的方法，其假設在於利用這些所謂無關的背景、語速等等跟說話無關的特徵，來混淆 Detect Model，讓它無法正確判斷。
-    > ![Overview of SiF-DeepVC](https://blog.crazyfirelee.tw/images/SiF-DeepVC-overview.png)
+    > ![Overview of SiF-DeepVC](https://blog.crazyfirelee.tw/images/blackhat2022/SiF-DeepVC-overview.png)
 * 其中有提到一個很強的知識點在於，人聲主要頻率在 0.3kHz~3kHz，因此如果要去除人聲可以直接刪除 4kHz 以下的頻率，來保留噪音，相反要保留人聲可以先去除 0.3kHz 以下的頻率，再去除 4kHz 以上的頻率，來保留人聲。
 * 當 `Sif-DeepVC` 取得語音背景噪音之後，再將資料合成於一般的 VC 中，就可以欺騙 FakeVoice Detecter 了。
 * 其實這也反應了一個很大的問題，就是目前市面上的 FakeVoice Detecter 其實並沒有考慮到這種情況，因為他們的假設是說，假如有人要偽造人聲，那他就會去偽造人聲，而不會去偽造背景噪音，因此這些 FakeVoice Detecter 都是以人聲為主，而忽略了背景噪音的問題。而在 Model Training 跟 Data Preprocessing 的過程中，也沒有先進行人聲保留的操作，而是把整段錄音丟進去，其實針對 `Sif-DeepVC` 的破解方法非常簡單，就是放置 Noise Filter，但目前的 Detect Model 沒有人這樣做。
