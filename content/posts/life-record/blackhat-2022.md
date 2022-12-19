@@ -143,8 +143,24 @@ tags: ['Blackhat',
 #### [Oops..! I Glitched It Again! How to Multi-Glitch the Glitching-Protections on ARM TrustZone-M](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5NDkz)
 > [time= Aug 11, 2022 11:20 to 12:00]
 
-#### [The Battle Against the Billion-Scale Internet Underground Industry: Advertising Fraud Detection and Defense](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5NTkw)
+#### [The Battle Against the Billion-Scale Internet Underground Industry: Advertising Fraud Detection and Defense](https://www.blackhat.com/us-22/briefings/schedule/#the-battle-against-the-billion-scale-internet-underground-industry-advertising-fraud-detection-and-defense-27254)
 > [time= Aug 11, 2022 13:30 to 14:10]
+* 此場議程主要在討論惡意廣告的操作手法，並且討論是否有辦法建立檢測跟防禦手法。
+* 在提到了廣告商是如何購買廣告，而平台商又是如何呈現廣告，並依照案例提到了
+    * 在正常服務商的 SDK 中被載入惡意軟體的問題。
+    * PC 端軟體安裝程式中被綁定惡意軟體的問題。
+    * 各種惡意廣告點擊的工具。
+* 其中有一個很核心的部分在於瀏覽器再提供畫面時，被不管是
+    * 環境建構 - 醒目字體 or 醒目顏色 的惡意廣告滲透。
+    * 瀏覽器資料獲取漏洞 - 透明的惡意廣告滲透。
+    其核心都在於現階段資料呈現的過程中，有太多部分可以被調整並且滲透惡意廣告，而供應商還有畫面呈現的 Browser 都沒有對這些資料做檢查，所以就造成了這些問題。
+* 詳細案例說明跟檢測可以直接看議程提供的 Slides。
+
+##### My Comments
+
+* 我覺得廣告呈現的供應商應該有一套檢查 and 驗證的機制在提供廣告 and 調整資料呈現，而不是只為了賺錢而提供浮誇且甚至故意希望我們點擊進入的廣告，舉例來說大家應該都看過很多新聞網站，他們都會有浮誇的彈出式廣告在運作，這種就是廣告供應商的惡意，詳細廣告種類這個議程也有說明，真的很多元很可怕。
+* 而廣告的未審核更是惡意，之前就有 Telegram 的惡意程式偽裝成真的 Telegram 並且購買廣告之後，於 TG 檔案內放置惡意程式，這種明顯不是集團購買的廣告 Google 也沒有審核跟阻擋，其實也造就了惡意廣告層出不窮。
+* 一套正規良好的檢測跟防禦機制是必須要的，只是如何更好的且有系統地列出不管是黑名單 or 任何檢測流程，都還是需要努力的目標，甚至，這個強度應該不是一個組織 or 研究機構就可以成功的，更多是大家的聯合。
 
 #### [Malware Classification With Machine Learning Enhanced by Windows Kernel Emulation](https://www.blackhat.com/us-22/briefings/schedule/#malware-classification-with-machine-learning-enhanced-by-windows-kernel-emulation-27167)
 > [time= Aug 11, 2022 14:30 to 15:10]
