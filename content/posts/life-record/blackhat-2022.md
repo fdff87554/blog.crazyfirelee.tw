@@ -137,11 +137,21 @@ tags: ['Blackhat',
 #### [Keynote: Pre-Stuxnet, Post-Stuxnet: Everything Has Changed, Nothing Has Changed](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTY1MDYz)
 > [time= Aug 11, 2022 09:00 to 10:00]
 
-#### [Do Not Trust the ASA, Trojans!](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5MzYz)
+#### [Do Not Trust the ASA, Trojans!](https://www.blackhat.com/us-22/briefings/schedule/#oops-i-glitched-it-again-how-to-multi-glitch-the-glitching-protections-on-arm-trustzone-m-27352)
 > [time= Aug 11, 2022 10:20 to 11:00]
 
 #### [Oops..! I Glitched It Again! How to Multi-Glitch the Glitching-Protections on ARM TrustZone-M](https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5NDkz)
 > [time= Aug 11, 2022 11:20 to 12:00]
+* 這場議程也說到了硬體的安全問題，也說到了 故障注入 (Fault Injection, FI) 的攻擊手法，期待造成 IC 環境發生快速變化，從而導致特定的、可利用的惡意行為。並提到了四個常見的 FI，
+    * Clock-FI
+    * Electro-Magnetic FI
+    * Laser FI
+    * Voltage FI
+* 並提到了一個常見的 FI 防禦手法就是利用 重複暫存器 (Duplicated Registers) 的方式，進行狀態校驗，來驗證是否有任何故障的發生 (不只是是否有 FI 發生)。
+* 這個議程提到了 MFI 也就是 Muti Fault Injection 多重故障注入攻擊時，有辦法在利用最少 3 Voltage FI 來完成個有做到 Duplicated Registers 的繞過。
+
+##### My Comments
+* 一樣是對硬體 Security 的問題，由於自己對於這個領域的理解不夠，因此沒辦法很好理解全部的議程內容，因此不是很清楚關於 TrustZone-M 那邊的結構狀況，但因為上面的其他議程有提到類似的硬體安全也提到了 FI 的攻擊手法，那個時候並沒有提到這個議程裡面提到的 Duplicated Registers 的防禦手法，因此這個議程的內容對於我來說是新的，也是很有趣的。
 
 #### [The Battle Against the Billion-Scale Internet Underground Industry: Advertising Fraud Detection and Defense](https://www.blackhat.com/us-22/briefings/schedule/#the-battle-against-the-billion-scale-internet-underground-industry-advertising-fraud-detection-and-defense-27254)
 > [time= Aug 11, 2022 13:30 to 14:10]
