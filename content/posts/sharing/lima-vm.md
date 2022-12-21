@@ -57,8 +57,9 @@ tags: ['M1',
     * 關於 `arch` 的部分，可以參考 [lima-vm/lima#arch](https://github.com/lima-vm/lima/blob/master/docs/multi-arch.md) 這邊的說明。
 
 #### Issue Summary
-
-* 這邊自己有遇到一個問題，就是 mounts 的目錄指定問題，假設今天我們希望 `~` 家目錄底下的所有目錄都是 readonly 但其中的 `~/Works` 這個目錄是 `writable` 的話，會遇到 [issue 873](https://github.com/lima-vm/lima/issues/873) 的父目錄 readonly 阻止了子目錄 writeable 的問題，目前還在 tracking 中，所以這邊我們就直接把 `~/Works` 這個目錄指定到 `mounts` 裡面就好了。
+* 關於 `mounts` 問題
+    * 這邊自己有遇到一個問題，就是 mounts 的目錄指定問題，假設今天我們希望 `~` 家目錄底下的所有目錄都是 readonly 但其中的 `~/Works` 這個目錄是 `writable` 的話，會遇到 [issue 873](https://github.com/lima-vm/lima/issues/873) 的父目錄 readonly 阻止了子目錄 writeable 的問題，目前還在 tracking 中，所以這邊我們就直接把 `~/Works` 這個目錄指定到 `mounts` 裡面就好了。
+    * 或者現在有實驗性 mounting 的功能，可以利用 `9p` 做到，可以參考 [lima-vm/docs/mount.md](https://github.com/lima-vm/lima/blob/master/docs/mount.md)，但是這邊我們就不做介紹了。
 
 ### Start Lima-VM
 
