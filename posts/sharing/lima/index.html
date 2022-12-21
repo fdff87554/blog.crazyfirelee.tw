@@ -40,8 +40,8 @@ arch: &#34;aarch64&#34;
 mounts:
 - location: &#34;~&#34;
 - location: &#34;/tmp/lima&#34;
-writable: true
-</code></pre><ul><li>關於 <code>arch</code> 的部分，可以參考 <a href=https://github.com/lima-vm/lima/blob/master/docs/multi-arch.md>lima-vm/lima#arch</a> 這邊的說明。</li></ul></li></ul><h3 id=start-lima-vm>Start Lima-VM</h3><ul><li>這邊使用剛剛建立的 config (<code>ubuntu-22_04.yaml</code>) 來進行啟動，並且使用 <code>--name</code> 來命名我們的環境。<pre tabindex=0><code class="language-bash=" data-lang="bash=">limactl start ubuntu-22_04.yaml --name ubuntu-22_04-amd64
+  writable: true
+</code></pre><ul><li>關於 <code>arch</code> 的部分，可以參考 <a href=https://github.com/lima-vm/lima/blob/master/docs/multi-arch.md>lima-vm/lima#arch</a> 這邊的說明。</li></ul></li></ul><h4 id=issue-summary>Issue Summary</h4><ul><li>這邊自己有遇到一個問題，就是 mounts 的目錄指定問題，假設今天我們希望 <code>~</code> 家目錄底下的所有目錄都是 readonly 但其中的 <code>~/Works</code> 這個目錄是 <code>writable</code> 的話，會遇到 <a href=https://github.com/lima-vm/lima/issues/873>issue 873</a> 的父目錄 readonly 阻止了子目錄 writeable 的問題，目前還在 tracking 中，所以這邊我們就直接把 <code>~/Works</code> 這個目錄指定到 <code>mounts</code> 裡面就好了。</li></ul><h3 id=start-lima-vm>Start Lima-VM</h3><ul><li>這邊使用剛剛建立的 config (<code>ubuntu-22_04.yaml</code>) 來進行啟動，並且使用 <code>--name</code> 來命名我們的環境。<pre tabindex=0><code class="language-bash=" data-lang="bash=">limactl start ubuntu-22_04.yaml --name ubuntu-22_04-amd64
 </code></pre></li><li>這時會顯示選項，選擇 <code>Proceed with the current configuration</code>，等到看到 <code>INFO[xxxx] READY. Run lima to open the shell</code> 就完成了。</li></ul><h3 id=usage>Usage</h3><pre tabindex=0><code class="language-bash=" data-lang="bash="># 進入 shell
 limactl shell ubuntu-22_04-amd64
 # 關閉 VM
