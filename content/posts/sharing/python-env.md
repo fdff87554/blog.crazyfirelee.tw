@@ -1,6 +1,6 @@
 ---
 title: "My Python Environment on M1 Mac"
-slug: "python", "env"
+slug: "environment"
 date: 2023-03-04T16:11:47+08:00
 draft: false
 thumbnailImagePosition: "top"
