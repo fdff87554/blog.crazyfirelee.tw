@@ -23,7 +23,7 @@ tags: ['M1',
 
 #### Python Virtual Environment
 * Python 原生的 virtual environment 在管理套件上可以說是非常方便了，而且由於可以直接輸出 requirements.txt，因此如果是開發的話，我會直接在目錄下創建 `.venv` 來管理我的環境，這樣的好處是 VSCode 在開啟 Python 專案的目錄時，如果有看到 `.venv` 資料夾，會預設直接使用這個環境，而不用再去設定。
-* 但這個部分會遇到一個小問題，也就是 `pip install` 下來的 packages 不一定對於 aarm 環境有支援優化，因此在開發的過程中會發現，如果是利用這樣的方式準備的環境，在測試的過程中可以明顯發現很多時候 python 會跑到 rosetta 上去，經過一層 x86 轉譯，對於一些需要高效率的套件來說，效能會大打折扣，因此如果再做實驗的時候，我會希望能確實選擇跟安裝到 aarm 的相關套件，只有在確定要 deploy 的時候，再開始使用 venv 來整理環境並且輸出。
+* 但這個部分會遇到一個小問題，也就是 `pip install` 下來的 packages 不一定對於 aarm 環境有支援優化，因此在開發的過程中會發現，如果是利用這樣的方式準備的環境，在測試的過程中可以明顯發現很多時候 python 會跑到 rosetta 上去，經過一層 x86 轉譯，對於一些需要高效率的套件來說，效能會大打折扣，因此如果在做實驗的時候，我會希望能確實選擇跟安裝到 aarm 的相關套件，只有在確定要 deploy 的時候，再開始使用 venv 來整理環境並且輸出。
 * 這樣的使用想必對不管是在什麼機器上開發 Python Application 的人都是這樣在整理的，所以也就不過多贅述，只是強調一下這樣的 Python Code 不一定能完全發揮 M1 Mac 的效能。
 
 #### Anaconda / Miniconda / Miniforge
