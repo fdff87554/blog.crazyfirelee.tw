@@ -1,5 +1,199 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M1 on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/m1/</link><description>Recent content in M1 on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 04 Mar 2023 16:11:47 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/m1/index.xml" rel="self" type="application/rss+xml"/><item><title>My Python Environment on M1 Mac</title><link>https://blog.crazyfirelee.tw/posts/sharing/environment/</link><pubDate>Sat, 04 Mar 2023 16:11:47 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/environment/</guid><description>&lt;blockquote>
-&lt;p>換了 M1 Mac 之後，一樣遇到一個大魔王就是 Python 環境的問題，這邊不是純粹的指 Python 的安裝，而是管理 Python 環境跟各種 Framework 是不是能正確的再 M1 Mac 上運作，能不能很好的調用硬體的問題，這篇文章記錄一下我在這條路上的愛恨情仇。&lt;/p>
-&lt;/blockquote></description></item><item><title>Lima - M1 Mac 跑 x84 的好朋友</title><link>https://blog.crazyfirelee.tw/posts/sharing/lima/</link><pubDate>Wed, 21 Dec 2022 11:08:23 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/lima/</guid><description>&lt;blockquote>
-&lt;p>換了 M1 Mac 之後，發現其實還有大量工具只能跑在 x86_64 的環境，這就超級無敵痛苦了，因為不是所有東西都可以利用 Rosetta 2 來轉換，每天崩潰的使用 RDP 來連回家裡的 Windows 再開 VM 來解決問題也實在煩躁，直到喵喵推薦了 Lima 這個屌炸天的 Linux VM 工具，讓我可以在 M1 Mac 上跑 x86_64 的 Linux VM，真的是太感謝了，這篇文章就來介紹一下 Lima 這個工具吧！&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>M1 on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/m1/</link><description>Recent content in M1 on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Sat, 04 Mar 2023 16:11:47 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/m1/index.xml" rel="self" type="application/rss+xml"/><item><title>My Python Environment on M1 Mac</title><link>https://blog.crazyfirelee.tw/2023/03/04/environment/</link><pubDate>Sat, 04 Mar 2023 16:11:47 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2023/03/04/environment/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;換了 M1 Mac 之後，一樣遇到一個大魔王就是 Python 環境的問題，這邊不是純粹的指 Python 的安裝，而是管理 Python 環境跟各種 Framework 是不是能正確的再 M1 Mac 上運作，能不能很好的調用硬體的問題，這篇文章記錄一下我在這條路上的愛恨情仇。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="python-environment-on-m1-mac"&gt;Python Environment on M1 Mac
+&lt;/h2&gt;&lt;h3 id="前情提要"&gt;前情提要
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;因為我會希望我的原生 Python 環境不要因為各種套件或者實驗性的東西而被污染，而且在開發中往往會需要附上 requirements.txt 來讓其他人知道你的環境是怎麼樣的，所以我會希望能夠有一個虛擬環境來管理我的 Python 環境，這樣我就可以在不同的專案中切換不同的環境，而不會互相影響。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="python-environments"&gt;Python Environments
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;為了符合正確的開發流程跟環境管理，我自己嘗試歸納整理了一下，目前我會使用的 Python 環境管理方式，這邊會分成兩個部分，一個是在開發的時候，一個是在部署的時候。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="python-virtual-environment"&gt;Python Virtual Environment
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Python 原生的 virtual environment 在管理套件上可以說是非常方便了，而且由於可以直接輸出 requirements.txt，因此如果是開發的話，我會直接在目錄下創建 &lt;code&gt;.venv&lt;/code&gt; 來管理我的環境，這樣的好處是 VSCode 在開啟 Python 專案的目錄時，如果有看到 &lt;code&gt;.venv&lt;/code&gt; 資料夾，會預設直接使用這個環境，而不用再去設定。&lt;/li&gt;
+&lt;li&gt;但這個部分會遇到一個小問題，也就是 &lt;code&gt;pip install&lt;/code&gt; 下來的 packages 不一定對於 aarm 環境有支援優化，因此在開發的過程中會發現，如果是利用這樣的方式準備的環境，在測試的過程中可以明顯發現很多時候 python 會跑到 rosetta 上去，經過一層 x86 轉譯，對於一些需要高效率的套件來說，效能會大打折扣，因此如果在做實驗的時候，我會希望能確實選擇跟安裝到 aarm 的相關套件，只有在確定要 deploy 的時候，再開始使用 venv 來整理環境並且輸出。&lt;/li&gt;
+&lt;li&gt;這樣的使用想必對不管是在什麼機器上開發 Python Application 的人都是這樣在整理的，所以也就不過多贅述，只是強調一下這樣的 Python Code 不一定能完全發揮 M1 Mac 的效能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="anaconda--miniconda--miniforge"&gt;Anaconda / Miniconda / Miniforge
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;三者的核心都有 conda 這個工具，其主要用來實現 python 的 &lt;code&gt;環境 Environment&lt;/code&gt; 和 &lt;code&gt;套件 Package&lt;/code&gt; 的管理 (其實有包含多種語言，除了 Python，R, Java, C 等等都有支持)。&lt;/li&gt;
+&lt;li&gt;Anaconda 跟 Miniconda 是公司的產品，如果商用需要付費，但個人使用是免費的，而 Miniforge 則是由社群維護的。&lt;/li&gt;
+&lt;li&gt;Anaconda VS Miniconda
+&lt;ul&gt;
+&lt;li&gt;而 Miniconda 跟 Miniforge 都是相較輕量化的版本，相比 Anaconda 中預設 Python + conda + meta package 的肥胖組合，Miniconda 只有 Python + conda。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Miniconda VS Miniforge
+&lt;ul&gt;
+&lt;li&gt;兩者都是 Python + conda，但其 Miniforge 的預設 conda channel 是 &lt;code&gt;conda-forge&lt;/code&gt;，而 Miniconda 則是預設的 channel 是 &lt;code&gt;anaconda.org&lt;/code&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;conda channels (來源) 是 packages 的儲存位置，目前 &lt;code&gt;conda-forge&lt;/code&gt; 的維護度是最高的，而 &lt;code&gt;anaconda.org&lt;/code&gt; 則是 Anaconda 公司的產品，所以如果是要安裝一些比較新的套件，建議使用 &lt;code&gt;conda-forge&lt;/code&gt;。conda channel 是可以更換的，因此也可以使用 miniconda 但讓 channel 指向 &lt;code&gt;conda-forge&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Miniforge 相比 Miniconda 更早的支援了 Apple M1 Chip，但現在 Miniconda 已經也支援了，但這也側面證明了 Miniforge 的更新維護狀況是非常良好且快速的。
+&lt;blockquote&gt;
+&lt;p&gt;PS. 在早期 Tensorflow 的 M1 Installation 教學是推薦 Miniforge 的，但現在因為 Miniconda 已經支援了，所以改推薦 Miniconda 了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="小總結"&gt;小總結
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;Miniforge 由於是社群維護的，開源、更新快速、維護狀況其實也非常良好，如果沒啥意外 M1 Mac 我是推薦的直接安裝 Miniforge 來使用。&lt;/li&gt;
+&lt;li&gt;但也請注意，由於 Miniforge 是由社群維護驗證，穩定性一定還是會略輸 Miniconda 跟 Anaconda，因此如果不追求最快速的更新支援，那麼 Miniconda 或是 Anaconda 也是不錯的選擇。&lt;/li&gt;
+&lt;li&gt;Anaconda 太肥胖了，如果只是要用來管理 Python 環境，那麼 Miniconda 或是 Miniforge 就足夠了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="conda-vs-pip"&gt;Conda VS pip
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;conda 的 package source 在前面已經提過了，而 pip 的來源是 PyPI (Python Package Index)。pip 是專門針對 python 打包而成的，屬於 wheels or source distributions，會需要 compiler 來安裝，而 conda 則是 packages are binaries，因此包含例如 C Language 所撰寫的套件，都可以直接安裝，不需要 compiler。&lt;/li&gt;
+&lt;li&gt;conda 則會有嚴格的依賴衝突檢查，pip 則沒有。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="我的使用方式"&gt;我的使用方式
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;由於是 M1 Mac，為了集結社群之力，盡快取得合適的 Python 環境，我是直接安裝了 Miniforge 來使用。穩定性上我目前沒有特別擔心。&lt;/li&gt;
+&lt;li&gt;雖然一般來說，關於 Python 的 Package 會盡可能建議直接用 pip 來安裝，但由於我希望能夠盡可能的利用 M1 Mac 的效能，因此我會盡可能的使用 conda 來安裝套件，但如果是沒有 conda 的套件，那麼我會直接使用 pip 來安裝。
+&lt;blockquote&gt;
+&lt;p&gt;好處在於 conda 的 binary package 會類似於 source code 的編譯，可以發現其效能是比 pip 來的好的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Lima - M1 Mac 跑 x84 的好朋友</title><link>https://blog.crazyfirelee.tw/2022/12/21/lima/</link><pubDate>Wed, 21 Dec 2022 11:08:23 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/21/lima/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;換了 M1 Mac 之後，發現其實還有大量工具只能跑在 x86_64 的環境，這就超級無敵痛苦了，因為不是所有東西都可以利用 Rosetta 2 來轉換，每天崩潰的使用 RDP 來連回家裡的 Windows 再開 VM 來解決問題也實在煩躁，直到喵喵推薦了 Lima 這個屌炸天的 Linux VM 工具，讓我可以在 M1 Mac 上跑 x86_64 的 Linux VM，真的是太感謝了，這篇文章就來介紹一下 Lima 這個工具吧！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="lima-vm"&gt;Lima-VM
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/lima-vm/lima" target="_blank" rel="noopener"
+&gt;lima-vm/lima&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lima 是一個超級扯蛋的 Linux Virtual Machine，並且可以說是為了 macOS 而努力的存在，而且是 Containerd 的 Linux VM，並可以在 aarm64 上運行 x84_64 的 Linux VM。(而且還可以在上面再啟動其他 container，包含 docker container)&lt;/li&gt;
+&lt;li&gt;Lima 是透過 QEMU 進行執行的，並嚴格說起來是一種虛擬機。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;致謝: 感謝喵喵推薦這好用的酷東西，他也寫了 &lt;a class="link" href="https://blog.stevenyu.tw/2022/08/21/%E5%88%A9%E7%94%A8-lima-%E5%9C%A8-m1-%E5%9F%B7%E8%A1%8C-x86-%E7%9A%84-ubuntu/" target="_blank" rel="noopener"
+&gt;blog&lt;/a&gt; 介紹大家可以去&lt;del&gt;按讚分享小鈴鐺&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="install--config-prepare"&gt;Install &amp;amp; Config Prepare
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;如果有 homebrew 的話，可以直接透過 homebrew 進行安裝。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install lima
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;使用上 Lima-VM 官方有準備很多很多的 config 可以直接做使用，可以直接參考 &lt;a class="link" href="https://github.com/lima-vm/lima/tree/master/examples" target="_blank" rel="noopener"
+&gt;lima-vm/lima/examples&lt;/a&gt; 這邊的範例。那我們就直接使用官方的範例來進行操作。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# if using specific environment, add `arch` here to specify the architecture
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# ubuntu-22.04.yaml example from lima official (here is all the same as the official example)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;images&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Try to use release-yyyyMMdd image if available. Note that release-yyyyMMdd will be removed after several months.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release-20221214/ubuntu-22.04-server-cloudimg-amd64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;digest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sha256:b9a5a216901c34742ffe662b691db114269aaa25c90eb77f3ef4dd4f818e78a3&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release-20221214/ubuntu-22.04-server-cloudimg-arm64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;aarch64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;digest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sha256:b27163374c834c770e8db023fb21205529cea494257bf5ba866b8b1ae5969164&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Fallback to the latest release image.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Hint: run `limactl prune` to invalidate the cache
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-amd64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-arm64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;aarch64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# mount the host&amp;#39;s $HOME directory to the guest&amp;#39;s /home/ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# if need writable, add `writable: true` under the mount
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;mounts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;~&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;/tmp/lima&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;writable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="no"&gt;true&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;關於 &lt;code&gt;arch&lt;/code&gt; 的部分，可以參考 &lt;a class="link" href="https://github.com/lima-vm/lima/blob/master/docs/multi-arch.md" target="_blank" rel="noopener"
+&gt;lima-vm/lima#arch&lt;/a&gt; 這邊的說明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="issue-summary"&gt;Issue Summary
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;關於 &lt;code&gt;mounts&lt;/code&gt; 問題
+&lt;ul&gt;
+&lt;li&gt;這邊自己有遇到一個問題，就是 mounts 的目錄指定問題，假設今天我們希望 &lt;code&gt;~&lt;/code&gt; 家目錄底下的所有目錄都是 readonly 但其中的 &lt;code&gt;~/Works&lt;/code&gt; 這個目錄是 &lt;code&gt;writable&lt;/code&gt; 的話，會遇到 &lt;a class="link" href="https://github.com/lima-vm/lima/issues/873" target="_blank" rel="noopener"
+&gt;issue 873&lt;/a&gt; 的父目錄 readonly 阻止了子目錄 writeable 的問題，目前還在 tracking 中，所以這邊我們就直接把 &lt;code&gt;~/Works&lt;/code&gt; 這個目錄指定到 &lt;code&gt;mounts&lt;/code&gt; 裡面就好了。&lt;/li&gt;
+&lt;li&gt;或者現在有實驗性 mounting 的功能，可以利用 &lt;code&gt;9p&lt;/code&gt; 做到，可以參考 &lt;a class="link" href="https://github.com/lima-vm/lima/blob/master/docs/mount.md" target="_blank" rel="noopener"
+&gt;lima-vm/docs/mount.md&lt;/a&gt;，但是這邊我們就不做介紹了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="start-lima-vm"&gt;Start Lima-VM
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;這邊使用剛剛建立的 config (&lt;code&gt;ubuntu-22_04.yaml&lt;/code&gt;) 來進行啟動，並且使用 &lt;code&gt;--name&lt;/code&gt; 來命名我們的環境。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl start ubuntu-22_04.yaml --name ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;這時會顯示選項，選擇 &lt;code&gt;Proceed with the current configuration&lt;/code&gt;，等到看到 &lt;code&gt;INFO[xxxx] READY. Run lima to open the shell&lt;/code&gt; 就完成了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="usage"&gt;Usage
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 進入 shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl shell ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 關閉 VM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl stop ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 刪除 VM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl delete ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="more-information"&gt;More information
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官方文件寫得很不錯，可以直接去看官方說明歐～&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

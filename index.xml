@@ -1,18 +1,914 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/</link><description>Recent content on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 06 Apr 2023 20:50:42 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>A short story about Windows python environment conflict</title><link>https://blog.crazyfirelee.tw/posts/sharing/windows-python-env/</link><pubDate>Thu, 06 Apr 2023 20:50:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/windows-python-env/</guid><description>&lt;blockquote>
-&lt;p>許久沒有用 Windows 做開發，這幾天剛好在幫我老弟安裝 Python 跟 C++ 的開發環境，結果遇到了一個關於 python 跟 mingw64 的環境衝突的問題，在嘗試解決的過程中，因為沒有查到太多資料，所以就想說記錄一下，以免之後再次遇到相同的問題。&lt;/p>
-&lt;/blockquote></description></item><item><title>My Python Environment on M1 Mac</title><link>https://blog.crazyfirelee.tw/posts/sharing/environment/</link><pubDate>Sat, 04 Mar 2023 16:11:47 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/environment/</guid><description>&lt;blockquote>
-&lt;p>換了 M1 Mac 之後，一樣遇到一個大魔王就是 Python 環境的問題，這邊不是純粹的指 Python 的安裝，而是管理 Python 環境跟各種 Framework 是不是能正確的再 M1 Mac 上運作，能不能很好的調用硬體的問題，這篇文章記錄一下我在這條路上的愛恨情仇。&lt;/p>
-&lt;/blockquote></description></item><item><title>Lima - M1 Mac 跑 x84 的好朋友</title><link>https://blog.crazyfirelee.tw/posts/sharing/lima/</link><pubDate>Wed, 21 Dec 2022 11:08:23 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/lima/</guid><description>&lt;blockquote>
-&lt;p>換了 M1 Mac 之後，發現其實還有大量工具只能跑在 x86_64 的環境，這就超級無敵痛苦了，因為不是所有東西都可以利用 Rosetta 2 來轉換，每天崩潰的使用 RDP 來連回家裡的 Windows 再開 VM 來解決問題也實在煩躁，直到喵喵推薦了 Lima 這個屌炸天的 Linux VM 工具，讓我可以在 M1 Mac 上跑 x86_64 的 Linux VM，真的是太感謝了，這篇文章就來介紹一下 Lima 這個工具吧！&lt;/p>
-&lt;/blockquote></description></item><item><title>[AI 求生日誌] About Deep Learning</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-deep-learning/</link><pubDate>Mon, 12 Dec 2022 12:51:21 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-deep-learning/</guid><description>&lt;blockquote>
-&lt;p>Machine Learning 的概念已經存在數十年，為何於近期才又有一場新的反擊的號角？Deep Learning 的概念為什麼可以跟 Artificial Intelligence 一起被提起變成必駕齊驅的 Keywords？這篇文章將會介紹 Deep Learning 的基本概念，以及為什麼 Deep Learning 會讓 Machine Learning 有了新的生命力。&lt;/p>
-&lt;/blockquote></description></item><item><title>Blackhat 2022 線上遊記</title><link>https://blog.crazyfirelee.tw/posts/life-record/blackhat-2022/</link><pubDate>Mon, 12 Dec 2022 11:31:28 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/life-record/blackhat-2022/</guid><description>&lt;blockquote>
-&lt;p>BlackHat，這個資安圈盛會，也一直是自己學習資安的路上一個嚮往和期待能參與的活動，但對於學生來說，費用相較昂貴而且參與成本較高，尤其是在疫情當頭的 2022 年，能參加更是一種奢侈&amp;hellip;，但是！今年感謝 Orange Tsai 願意給我講者的學生推薦票，讓我有機會線上參與這場活動 (因為是役男不能隨便出國 QQ)，所以我就來紀錄一下這次的線上遊記吧！也希望藉由這個簡單的紀錄，讓更多人知道究竟 BlackHat 上會有什麼，跟我藉由這次參與兩天的議程，有什麼收穫跟感想。&lt;/p>
-&lt;/blockquote></description></item><item><title>[AI 求生日誌] About Machine Learning</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-machine-learning/</link><pubDate>Mon, 12 Dec 2022 00:04:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-machine-learning/</guid><description>&lt;blockquote>
-&lt;p>AI 在長久的發展中載浮載沈，是什麼決定了現在的崛起？在 2022 年的今天，生活中似乎已經慢慢被 AI 給滲透，手機、銀行和政府機構等等，似乎沒有什麼服務已經看不到 AI 的身影，究竟是什麼成就了現在的 AI？&lt;/p>
-&lt;/blockquote></description></item><item><title>[AI 求生日誌] About Artificial Intelligence</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-artificial-intelligence/</link><pubDate>Sun, 11 Dec 2022 18:59:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-artificial-intelligence/</guid><description>&lt;blockquote>
-&lt;p>1940 年電腦正式誕生之後，1950 年 Alan Turing 就發表論文 計算機與智能（Computing Machinery and Intelligence） 探討機器所能產生的智慧，並提出有名的 圖靈測試（Turing Test），人工智慧的發展可能比你我想像的都更早，且其歷史是更加的值得反思。&lt;/p>
-&lt;/blockquote></description></item><item><title>[AI 求生日誌] 關於本系列</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/series-introduction/</link><pubDate>Fri, 09 Dec 2022 13:46:50 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/series-introduction/</guid><description>&lt;blockquote>
-&lt;p>Artificial Intelligence 這個神秘的領域，於 2016 年 Google AlphaGo 突破人類堅守的圍棋領域之後，正式進入了我們的生活，進入了新的紀元，而於 2019 年為了比賽而踏入這個領域的我，在這個領域中的掙扎、挑戰和質疑，讓我慢慢理解到唯有重新深入理解這個領域，才能算是初出茅廬…&lt;/p>
-&lt;/blockquote></description></item><item><title>Welcome to my blog~</title><link>https://blog.crazyfirelee.tw/posts/about-me/</link><pubDate>Tue, 09 Aug 2022 15:47:56 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/about-me/</guid><description>&lt;p>A place to share life and record some little knowledge.&lt;/p>
-&lt;p>一個分享生活，記錄一些小知識的地方。&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/</link><description>Recent content on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 06 Apr 2023 20:50:42 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/index.xml" rel="self" type="application/rss+xml"/><item><title>A short story about Windows python environment conflict</title><link>https://blog.crazyfirelee.tw/2023/04/06/windows-python-env/</link><pubDate>Thu, 06 Apr 2023 20:50:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2023/04/06/windows-python-env/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;許久沒有用 Windows 做開發，這幾天剛好在幫我老弟安裝 Python 跟 C++ 的開發環境，結果遇到了一個關於 python 跟 mingw64 的環境衝突的問題，在嘗試解決的過程中，因為沒有查到太多資料，所以就想說記錄一下，以免之後再次遇到相同的問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="python-environment-and-mingw64"&gt;Python Environment and Mingw64
+&lt;/h2&gt;&lt;h3 id="前情提要"&gt;前情提要
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;由於咱小老弟純粹是為了學校的課程使用到 C++ 跟 Python，所以安裝上原本就希望一切從簡，對於環境的設定也沒有太多的要求，只求能夠正常使用就好。&lt;/li&gt;
+&lt;li&gt;也因此，我決定使用 mingw64 來提供 gcc 跟 g++ 的編譯器，因為這個編譯器的安裝過程相對簡單，而且也不需要太多的設定。而 Python 的部分，我也是直接使用官方提供的安裝程式來安裝，並且沒有特別的設定。&lt;/li&gt;
+&lt;li&gt;由於 Python 非常貼心的在 Windows Installer 的過程中，會自動的將 Python 的安裝路徑加入到系統的環境變數中，所以在安裝完 Python 後，我就可以直接在命令提示字元中使用 python 來執行 Python 的程式了。&lt;/li&gt;
+&lt;li&gt;但是，這邊我遇到了一個很神奇的問題，也就是我在使用 &lt;code&gt;pip&lt;/code&gt; 來安裝 python 的 packages 的時候，我的 python 竟然吃不到！也因此展開了後續的故事。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="--version-的小故事"&gt;&lt;code&gt;--version&lt;/code&gt; 的小故事
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一般來說，我們在安裝好 Python 後，都會使用 &lt;code&gt;python --version&lt;/code&gt; 來確認 Python 的版本，順便可以確認 python 的安裝狀況跟 windows 的 path 是否正確。&lt;/li&gt;
+&lt;li&gt;好玩的事情是，我的 &lt;code&gt;python --version&lt;/code&gt; 有正確顯示我安裝的版本 &lt;code&gt;3.10.9&lt;/code&gt;，而 &lt;code&gt;pip --version&lt;/code&gt; 則是顯示了 &lt;code&gt;pip 22.3.1 from the\path\of\AppData\Local\Programs\Python\Python310\lib\site-packages\pip (python 3.10)&lt;/code&gt;，也就是說，我的 pip 是正確的，而且看起來也是確實安裝在 python 3.10 底下的，太好了對吧～&lt;/li&gt;
+&lt;li&gt;開開心心地用 &lt;code&gt;pip install numpy&lt;/code&gt; 等等把環境裝好之後，&lt;code&gt;import numpy as np&lt;/code&gt; 的時候，&lt;code&gt;No module named 'numpy'&lt;/code&gt;&amp;hellip;，奇怪，問題出在哪？我有 pip 也有 python 啊，版本也都是對的啊，為什麼會出現這樣的問題呢？&lt;/li&gt;
+&lt;li&gt;這時候我決定多檢查一個部分，所以我使用了 &lt;code&gt;python -m pip --version&lt;/code&gt;，結果發現，我的 pip 竟然吃不到！顯示了 &lt;code&gt;path\of\msys64\mingw64\bin\python.exe: No module named pip&lt;/code&gt;！我的 python 竟然是 msys64 底下的 python，而不是我安裝的 python！神奇的 msys64 竟然有 python！&lt;/li&gt;
+&lt;li&gt;好的，環境衝突出現了，我們先來看看上面的不同的 &lt;code&gt;--version&lt;/code&gt; 其實分別代表什麼意思。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="different---version"&gt;Different &lt;code&gt;--version&lt;/code&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python --version&lt;/code&gt; 會顯示 python 的版本，也就是說，這個指令會去找到 python 的執行檔，並且執行它，然後顯示出版本，這個部分沒什麼問題。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip --version&lt;/code&gt; 也會顯示 pip 的版本，也就是說，這個指令會去找到 pip 的執行檔，並且執行它，然後顯示出版本，這個部分沒什麼問題。&lt;/li&gt;
+&lt;li&gt;只是上面兩個指令其實都是做一件事情，就是檢查 path，也就是系統路徑中，有記錄的執行檔的位置，然後去找到對應的執行檔，並且執行它，然後顯示出版本，這時候的 python 跟 pip 並沒有任何相依性的檢查，代表的就是 path 中的 python 跟 path 中的 pip，僅此而已，而也只說明了我們的環境中有 python 跟 pip 這兩個東西，但是並沒有說明 python 跟 pip 之間有什麼關係。&lt;/li&gt;
+&lt;li&gt;而 &lt;code&gt;python -m pip --version&lt;/code&gt; 則是現在這個 python 的 pip 會去找到 python 的執行檔，並且執行它，然後去執行 python 的 pip，也就是說，他的 pip 是 python 的 pip，而不是系統路徑中的 pip，這時候的 python 跟 pip 就會有相依性的檢查。&lt;/li&gt;
+&lt;li&gt;上面的 error message 可以發現，我們現在的 python 是 msys64 底下的 python，而不是我安裝的 python，所以當我們使用 &lt;code&gt;python -m pip --version&lt;/code&gt; 的時候，python 會去找到 msys64 底下的 python，然後去執行它，而 msys64 底下的 python 並沒有 pip，所以就會出現上面的 error message。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="環境衝突的原因跟解決辦法"&gt;環境衝突的原因跟解決辦法
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;簡單來說這個問題就是我的系統中現在有兩個 python 環境，而現在 python 預設執行到了 msys64 底下的 python，而不是我安裝的 python，而這個 python 並沒有 pip，所以就會出現上面的問題。&lt;/li&gt;
+&lt;li&gt;那我們要怎麼解決，其實就是讓系統預設執行的 python 是我安裝的 python，而不是 msys64 底下的 python，這樣就可以解決這個問題了。&lt;/li&gt;
+&lt;li&gt;那由於 python 在安裝時的 path 是自動加入 windows 的 users path 中，而 msys64 則是手動加入在 system 的 path 中，那 Windows 預設 system path 的 priority 會比較高，所以就會出現上面的問題。&lt;/li&gt;
+&lt;li&gt;那我們要怎麼解決，其實就是把 python 的 path 從 users path 中複製一份送到 system path 中，而且要放在 msys64 的前面，這樣就可以解決這個問題了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="小結論"&gt;小結論
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;這次的衝突算是開發過程中第一次遇到，不確定是不是之前安裝 c++ 的時候的安裝方式跟現在新的安裝法不同，所以現在才第一次遇到。&lt;/li&gt;
+&lt;li&gt;那藉由這個衝突，其實讓我對於 python 在系統上的調用跟指令上的差異，以前其實不是很清楚為什麼網路上對於 pip 指令的安裝中，會有 &lt;code&gt;python -m pip install&lt;/code&gt; 這樣的指令，現在就比較清楚了，因為這樣的指令可以確保我們的 pip 是跟 python 有相依性的，而不是系統路徑中的 pip，所以才會有這樣的指令。&lt;/li&gt;
+&lt;li&gt;那以上就是這次簡單的紀錄了～希望對於有踢到一樣問題的人可以有所幫助～&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>My Python Environment on M1 Mac</title><link>https://blog.crazyfirelee.tw/2023/03/04/environment/</link><pubDate>Sat, 04 Mar 2023 16:11:47 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2023/03/04/environment/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;換了 M1 Mac 之後，一樣遇到一個大魔王就是 Python 環境的問題，這邊不是純粹的指 Python 的安裝，而是管理 Python 環境跟各種 Framework 是不是能正確的再 M1 Mac 上運作，能不能很好的調用硬體的問題，這篇文章記錄一下我在這條路上的愛恨情仇。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="python-environment-on-m1-mac"&gt;Python Environment on M1 Mac
+&lt;/h2&gt;&lt;h3 id="前情提要"&gt;前情提要
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;因為我會希望我的原生 Python 環境不要因為各種套件或者實驗性的東西而被污染，而且在開發中往往會需要附上 requirements.txt 來讓其他人知道你的環境是怎麼樣的，所以我會希望能夠有一個虛擬環境來管理我的 Python 環境，這樣我就可以在不同的專案中切換不同的環境，而不會互相影響。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="python-environments"&gt;Python Environments
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;為了符合正確的開發流程跟環境管理，我自己嘗試歸納整理了一下，目前我會使用的 Python 環境管理方式，這邊會分成兩個部分，一個是在開發的時候，一個是在部署的時候。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="python-virtual-environment"&gt;Python Virtual Environment
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Python 原生的 virtual environment 在管理套件上可以說是非常方便了，而且由於可以直接輸出 requirements.txt，因此如果是開發的話，我會直接在目錄下創建 &lt;code&gt;.venv&lt;/code&gt; 來管理我的環境，這樣的好處是 VSCode 在開啟 Python 專案的目錄時，如果有看到 &lt;code&gt;.venv&lt;/code&gt; 資料夾，會預設直接使用這個環境，而不用再去設定。&lt;/li&gt;
+&lt;li&gt;但這個部分會遇到一個小問題，也就是 &lt;code&gt;pip install&lt;/code&gt; 下來的 packages 不一定對於 aarm 環境有支援優化，因此在開發的過程中會發現，如果是利用這樣的方式準備的環境，在測試的過程中可以明顯發現很多時候 python 會跑到 rosetta 上去，經過一層 x86 轉譯，對於一些需要高效率的套件來說，效能會大打折扣，因此如果在做實驗的時候，我會希望能確實選擇跟安裝到 aarm 的相關套件，只有在確定要 deploy 的時候，再開始使用 venv 來整理環境並且輸出。&lt;/li&gt;
+&lt;li&gt;這樣的使用想必對不管是在什麼機器上開發 Python Application 的人都是這樣在整理的，所以也就不過多贅述，只是強調一下這樣的 Python Code 不一定能完全發揮 M1 Mac 的效能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="anaconda--miniconda--miniforge"&gt;Anaconda / Miniconda / Miniforge
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;三者的核心都有 conda 這個工具，其主要用來實現 python 的 &lt;code&gt;環境 Environment&lt;/code&gt; 和 &lt;code&gt;套件 Package&lt;/code&gt; 的管理 (其實有包含多種語言，除了 Python，R, Java, C 等等都有支持)。&lt;/li&gt;
+&lt;li&gt;Anaconda 跟 Miniconda 是公司的產品，如果商用需要付費，但個人使用是免費的，而 Miniforge 則是由社群維護的。&lt;/li&gt;
+&lt;li&gt;Anaconda VS Miniconda
+&lt;ul&gt;
+&lt;li&gt;而 Miniconda 跟 Miniforge 都是相較輕量化的版本，相比 Anaconda 中預設 Python + conda + meta package 的肥胖組合，Miniconda 只有 Python + conda。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Miniconda VS Miniforge
+&lt;ul&gt;
+&lt;li&gt;兩者都是 Python + conda，但其 Miniforge 的預設 conda channel 是 &lt;code&gt;conda-forge&lt;/code&gt;，而 Miniconda 則是預設的 channel 是 &lt;code&gt;anaconda.org&lt;/code&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;conda channels (來源) 是 packages 的儲存位置，目前 &lt;code&gt;conda-forge&lt;/code&gt; 的維護度是最高的，而 &lt;code&gt;anaconda.org&lt;/code&gt; 則是 Anaconda 公司的產品，所以如果是要安裝一些比較新的套件，建議使用 &lt;code&gt;conda-forge&lt;/code&gt;。conda channel 是可以更換的，因此也可以使用 miniconda 但讓 channel 指向 &lt;code&gt;conda-forge&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Miniforge 相比 Miniconda 更早的支援了 Apple M1 Chip，但現在 Miniconda 已經也支援了，但這也側面證明了 Miniforge 的更新維護狀況是非常良好且快速的。
+&lt;blockquote&gt;
+&lt;p&gt;PS. 在早期 Tensorflow 的 M1 Installation 教學是推薦 Miniforge 的，但現在因為 Miniconda 已經支援了，所以改推薦 Miniconda 了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="小總結"&gt;小總結
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;Miniforge 由於是社群維護的，開源、更新快速、維護狀況其實也非常良好，如果沒啥意外 M1 Mac 我是推薦的直接安裝 Miniforge 來使用。&lt;/li&gt;
+&lt;li&gt;但也請注意，由於 Miniforge 是由社群維護驗證，穩定性一定還是會略輸 Miniconda 跟 Anaconda，因此如果不追求最快速的更新支援，那麼 Miniconda 或是 Anaconda 也是不錯的選擇。&lt;/li&gt;
+&lt;li&gt;Anaconda 太肥胖了，如果只是要用來管理 Python 環境，那麼 Miniconda 或是 Miniforge 就足夠了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="conda-vs-pip"&gt;Conda VS pip
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;conda 的 package source 在前面已經提過了，而 pip 的來源是 PyPI (Python Package Index)。pip 是專門針對 python 打包而成的，屬於 wheels or source distributions，會需要 compiler 來安裝，而 conda 則是 packages are binaries，因此包含例如 C Language 所撰寫的套件，都可以直接安裝，不需要 compiler。&lt;/li&gt;
+&lt;li&gt;conda 則會有嚴格的依賴衝突檢查，pip 則沒有。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="我的使用方式"&gt;我的使用方式
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;由於是 M1 Mac，為了集結社群之力，盡快取得合適的 Python 環境，我是直接安裝了 Miniforge 來使用。穩定性上我目前沒有特別擔心。&lt;/li&gt;
+&lt;li&gt;雖然一般來說，關於 Python 的 Package 會盡可能建議直接用 pip 來安裝，但由於我希望能夠盡可能的利用 M1 Mac 的效能，因此我會盡可能的使用 conda 來安裝套件，但如果是沒有 conda 的套件，那麼我會直接使用 pip 來安裝。
+&lt;blockquote&gt;
+&lt;p&gt;好處在於 conda 的 binary package 會類似於 source code 的編譯，可以發現其效能是比 pip 來的好的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Lima - M1 Mac 跑 x84 的好朋友</title><link>https://blog.crazyfirelee.tw/2022/12/21/lima/</link><pubDate>Wed, 21 Dec 2022 11:08:23 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/21/lima/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;換了 M1 Mac 之後，發現其實還有大量工具只能跑在 x86_64 的環境，這就超級無敵痛苦了，因為不是所有東西都可以利用 Rosetta 2 來轉換，每天崩潰的使用 RDP 來連回家裡的 Windows 再開 VM 來解決問題也實在煩躁，直到喵喵推薦了 Lima 這個屌炸天的 Linux VM 工具，讓我可以在 M1 Mac 上跑 x86_64 的 Linux VM，真的是太感謝了，這篇文章就來介紹一下 Lima 這個工具吧！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="lima-vm"&gt;Lima-VM
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/lima-vm/lima" target="_blank" rel="noopener"
+&gt;lima-vm/lima&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lima 是一個超級扯蛋的 Linux Virtual Machine，並且可以說是為了 macOS 而努力的存在，而且是 Containerd 的 Linux VM，並可以在 aarm64 上運行 x84_64 的 Linux VM。(而且還可以在上面再啟動其他 container，包含 docker container)&lt;/li&gt;
+&lt;li&gt;Lima 是透過 QEMU 進行執行的，並嚴格說起來是一種虛擬機。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;致謝: 感謝喵喵推薦這好用的酷東西，他也寫了 &lt;a class="link" href="https://blog.stevenyu.tw/2022/08/21/%E5%88%A9%E7%94%A8-lima-%E5%9C%A8-m1-%E5%9F%B7%E8%A1%8C-x86-%E7%9A%84-ubuntu/" target="_blank" rel="noopener"
+&gt;blog&lt;/a&gt; 介紹大家可以去&lt;del&gt;按讚分享小鈴鐺&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="install--config-prepare"&gt;Install &amp;amp; Config Prepare
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;如果有 homebrew 的話，可以直接透過 homebrew 進行安裝。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install lima
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;使用上 Lima-VM 官方有準備很多很多的 config 可以直接做使用，可以直接參考 &lt;a class="link" href="https://github.com/lima-vm/lima/tree/master/examples" target="_blank" rel="noopener"
+&gt;lima-vm/lima/examples&lt;/a&gt; 這邊的範例。那我們就直接使用官方的範例來進行操作。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# if using specific environment, add `arch` here to specify the architecture
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# ubuntu-22.04.yaml example from lima official (here is all the same as the official example)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;images&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Try to use release-yyyyMMdd image if available. Note that release-yyyyMMdd will be removed after several months.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release-20221214/ubuntu-22.04-server-cloudimg-amd64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;digest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sha256:b9a5a216901c34742ffe662b691db114269aaa25c90eb77f3ef4dd4f818e78a3&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release-20221214/ubuntu-22.04-server-cloudimg-arm64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;aarch64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;digest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sha256:b27163374c834c770e8db023fb21205529cea494257bf5ba866b8b1ae5969164&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Fallback to the latest release image.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Hint: run `limactl prune` to invalidate the cache
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-amd64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-arm64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;aarch64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# mount the host&amp;#39;s $HOME directory to the guest&amp;#39;s /home/ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# if need writable, add `writable: true` under the mount
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;mounts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;~&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;/tmp/lima&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;writable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="no"&gt;true&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;關於 &lt;code&gt;arch&lt;/code&gt; 的部分，可以參考 &lt;a class="link" href="https://github.com/lima-vm/lima/blob/master/docs/multi-arch.md" target="_blank" rel="noopener"
+&gt;lima-vm/lima#arch&lt;/a&gt; 這邊的說明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="issue-summary"&gt;Issue Summary
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;關於 &lt;code&gt;mounts&lt;/code&gt; 問題
+&lt;ul&gt;
+&lt;li&gt;這邊自己有遇到一個問題，就是 mounts 的目錄指定問題，假設今天我們希望 &lt;code&gt;~&lt;/code&gt; 家目錄底下的所有目錄都是 readonly 但其中的 &lt;code&gt;~/Works&lt;/code&gt; 這個目錄是 &lt;code&gt;writable&lt;/code&gt; 的話，會遇到 &lt;a class="link" href="https://github.com/lima-vm/lima/issues/873" target="_blank" rel="noopener"
+&gt;issue 873&lt;/a&gt; 的父目錄 readonly 阻止了子目錄 writeable 的問題，目前還在 tracking 中，所以這邊我們就直接把 &lt;code&gt;~/Works&lt;/code&gt; 這個目錄指定到 &lt;code&gt;mounts&lt;/code&gt; 裡面就好了。&lt;/li&gt;
+&lt;li&gt;或者現在有實驗性 mounting 的功能，可以利用 &lt;code&gt;9p&lt;/code&gt; 做到，可以參考 &lt;a class="link" href="https://github.com/lima-vm/lima/blob/master/docs/mount.md" target="_blank" rel="noopener"
+&gt;lima-vm/docs/mount.md&lt;/a&gt;，但是這邊我們就不做介紹了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="start-lima-vm"&gt;Start Lima-VM
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;這邊使用剛剛建立的 config (&lt;code&gt;ubuntu-22_04.yaml&lt;/code&gt;) 來進行啟動，並且使用 &lt;code&gt;--name&lt;/code&gt; 來命名我們的環境。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl start ubuntu-22_04.yaml --name ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;這時會顯示選項，選擇 &lt;code&gt;Proceed with the current configuration&lt;/code&gt;，等到看到 &lt;code&gt;INFO[xxxx] READY. Run lima to open the shell&lt;/code&gt; 就完成了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="usage"&gt;Usage
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 進入 shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl shell ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 關閉 VM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl stop ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 刪除 VM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl delete ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="more-information"&gt;More information
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官方文件寫得很不錯，可以直接去看官方說明歐～&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[AI 求生日誌] About Deep Learning</title><link>https://blog.crazyfirelee.tw/2022/12/12/about-deep-learning/</link><pubDate>Mon, 12 Dec 2022 12:51:21 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/12/about-deep-learning/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Machine Learning 的概念已經存在數十年，為何於近期才又有一場新的反擊的號角？Deep Learning 的概念為什麼可以跟 Artificial Intelligence 一起被提起變成必駕齊驅的 Keywords？這篇文章將會介紹 Deep Learning 的基本概念，以及為什麼 Deep Learning 會讓 Machine Learning 有了新的生命力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="what-is-deep-learning--什麼是深度學習"&gt;What is Deep Learning? / 什麼是深度學習？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;深度學習是機器學習領域中的一種作法。&lt;/li&gt;
+&lt;li&gt;主要利用類神經網路的概念，模仿人類神經網路的運作，來判斷資料特徵，達到辨別資料的效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="what-is-artificial-neural-network--什麼是人工神經網絡"&gt;What is Artificial Neural Network? / 什麼是人工神經網絡？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Artificial Neural Network 是一種藉由模仿人體神經元，來模仿人類思考更新資料的方式的一種概念&lt;/li&gt;
+&lt;li&gt;Biological Neuron
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/biological-neuron.png"
+loading="lazy"
+alt="Biological Neuron"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Artificial Neuron
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/artificial-neuron.png"
+loading="lazy"
+alt="Artificial Neuron"
+&gt;
+天主教輔仁大學 深度學習課程 黃貞瑛老師 教材截圖&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;我們可以發現在圖片對照上
+&lt;ul&gt;
+&lt;li&gt;Dendrites（樹突） = Input Signals（$x_i$）&lt;/li&gt;
+&lt;li&gt;Synapses（突觸） = Weights（$w_i$）&lt;/li&gt;
+&lt;li&gt;Cell Body（細胞體） = Cell Body（$n, f(n)$）&lt;/li&gt;
+&lt;li&gt;Axon（軸突） = Output Signal（$a$）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我們來理解一下到底是什麼意思，我們回到我們的機器學習概念，我們希望機器幫我們由資料判斷一個答案，但是這些資料，也就是對這個答案判斷&amp;quot;特徵&amp;quot;一定有好有壞，例如說之前提過的貓咪判斷，我們對於貓咪這個生物有沒有毛，一定不是唯一的判斷標準，但是也會出現在決策的因素裡面，那這邊我們會有很多很多的輸入，就是跟上面提到的 Input Signals 一樣，會有很多個，而這些輸入，有好有壞，因此 weights 這東西就是調控這些資料輸入時的&amp;quot;份量&amp;quot;，Cell body 基於這些 input 的運算了，而後，依照目標，輸出答案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="relation-of-deep-learning-and-neuron-深度學習跟神經元的關係"&gt;Relation of Deep Learning and Neuron 深度學習跟神經元的關係
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;深度學習就是一個大量人工神經網路合併的過程，利用模仿大腦神經元的結構，層層傳遞，達到運算等等的效果&lt;/li&gt;
+&lt;li&gt;深度學習的&lt;strong&gt;深度&lt;/strong&gt;一詞，就是在說整體神經網路結構到底有多複雜，整個神經元的層數有多&lt;strong&gt;深&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/all-kinds-of-neural-networks.png"
+loading="lazy"
+alt="Neural Network Structure"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;上圖的詳細初始來源我已經不確定了，但是這張圖完美的呈現了各種神經網路的結構&lt;/li&gt;
+&lt;li&gt;從上圖我們可以發現一件事情，就是每個神經元（就是圖片中的球球）他們都會與下一層的所有神經元座連接，並且一層一層的往下傳遞，因此我們才會用 Layer 的層數來說明這個神經網路有多複雜&lt;/li&gt;
+&lt;li&gt;那這邊有幾個小觀念要順便釐清
+&lt;ul&gt;
+&lt;li&gt;input layer 不會被算在神經元深度內&lt;/li&gt;
+&lt;li&gt;除了 input layer 跟 output layer 以外的 layer 我們通稱 hidden layer&lt;/li&gt;
+&lt;li&gt;當我們定義一個 Network structure，就等於定義了一個 function set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Blackhat 2022 線上遊記</title><link>https://blog.crazyfirelee.tw/2022/12/12/blackhat-2022/</link><pubDate>Mon, 12 Dec 2022 11:31:28 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/12/blackhat-2022/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;BlackHat，這個資安圈盛會，也一直是自己學習資安的路上一個嚮往和期待能參與的活動，但對於學生來說，費用相較昂貴而且參與成本較高，尤其是在疫情當頭的 2022 年，能參加更是一種奢侈&amp;hellip;，但是！今年感謝 Orange Tsai 願意給我講者的學生推薦票，讓我有機會線上參與這場活動 (因為是役男不能隨便出國 QQ)，所以我就來紀錄一下這次的線上遊記吧！也希望藉由這個簡單的紀錄，讓更多人知道究竟 BlackHat 上會有什麼，跟我藉由這次參與兩天的議程，有什麼收穫跟感想。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="前言"&gt;前言
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在大四即將畢業的今年，剛好也是學習資安這條路上的第三年，其實對於未來也有些迷莽，由於自身也有接觸 AI 的相關領域，其實一直希望研究 AI + Security 這條路，但對於這條路上會需要的知識跟技能，還有發展方向都不是很清楚，也不確定世界是不是需要這樣的人，在台灣的很多 Conferences (HITCON、資安大會等等) 其實都有對應的議題議程，但對於正個世界而言，是不是真的有需要，還是只要好好學好資安在跨足把 AI 當工具就好，這些困擾一直在我心頭，也一直希望有機會聽聽看國際議程，更了解世界正在發生著什麼，跟需要怎樣的人。&lt;/li&gt;
+&lt;li&gt;這時剛好看到 Orange 大大願意讓大家爭取他的學生推薦票去參加 BlackHat 2022 USA，抱著試試看的心情填寫了問卷並且表達了自己對於相關議程的興趣之後，Orange 大大願意給我這個機會去看看 BlackHat 這個盛會正在討論著什麼，雖然因為各種原因只能線上參加，但能獲得這個機會實在很難得也很感謝，因此要特別感謝 Orange 大大願意給這個機會，因為這次聽完議程，有更加理解自己能做什麼跟 AI Security 究竟是什麼。&lt;/li&gt;
+&lt;li&gt;由於這次真的太多東西可以分享了，因此我大打算藉此機會寫一系列相關的文章，分別是內部的技術分析跟我自己的理解，因此這篇作為開場會 Summary 關於這次我聽的議程的一些大綱，然後會再 link 到我自己另外想討論的內容～&lt;/li&gt;
+&lt;li&gt;這邊挖了坑但是也要說聲抱歉，很多東西都還在學習中，因此可能會有一些錯誤的地方，如果有任何問題或是想討論的地方，歡迎在下方留言討論～&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="議程"&gt;議程
+&lt;/h2&gt;&lt;h3 id="day-01"&gt;Day 01
+&lt;/h3&gt;&lt;h4 id="keynote-black-hat-at-25-where-do-we-go-from-here"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#keynote-black-hat-at--where-do-we-go-from-here--28699" target="_blank" rel="noopener"
+&gt;Keynote: Black Hat at 25: Where Do We Go from Here?&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 10, 2022 09:00 to 10:00]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Jeff Moss，Black Hat 的聯合創辦人為我們進行了精彩的開場，很榮幸今年是我第一次參加 Black Hat 卻剛剛好是 Black Hat 創辦的地 25 個年頭，Jeff 有特別說到 25 年是一個很重要的里程碑之一，1/4 個世紀以來整個環境有許多改變，很多事情正在慢慢明瞭中，但仍有許多未知的事物等著所有人去理解探索。&lt;/li&gt;
+&lt;li&gt;Jeff Moss 在開場提到了一個很重要的事情，那就是網路世界或者說整個世界已經有根本性的改變，Jeff 提到了訊息監管和網路權威等等的資訊跟議題，究竟是更完善完整的訊息才是重點還是適當的資訊限制才對人們有利呢？也提到了現在其實有一股力量，被他稱為 super empovered organization，擁有巨大的影響力，他們有權利有能力跟你的 mail server 的 spam block list 一樣創建一個阻擋清單。Jeff 利用這次的烏俄戰爭作為例子，當人們決定懲罰戰爭罪的時候，當人們覺得政府並不夠積極的時候，發生了什麼事情？ MongoDB 刪除了所有跟俄羅斯有關的項目、數據，公司將以一個超高影響力的角度進駐社群改變生態也都是可能的，而且這件事情會越來越明顯，越來越強勢。Jeff 提到正因為這些事情的發生，讓他提議發起一個監管組織，來制定所謂的 block list，這樣才能更針對性的制裁或者控制影響範圍，例如假設今天有這個監管組織，MongoDB 就不會移出所有俄羅斯的 Database，而是說，我們基於這個 block list 禁止了特定 IP 的訪問，這樣就不會影響那些無法改變任何事情的普通民眾。但這件事情就如一個魔盒，有些事情並不是被期望攤出來說的，我們期望政府監管，但我們也在種種地方看到政府無力影響龐大的公司決策，但 Jeff 也狠狠的說明，當政府無能時，會有人接手填補空白，上述資訊說明了世界的互動已經有了截然不同的改變，很多事情不再如我們預想的一般運行，影響力巨大的世界互動慢慢在改變著世界。&lt;/li&gt;
+&lt;li&gt;Chris Krebs 開始了接下來的演說，整個核心主題我認為說明到了現在的狀況和未來其實應該注意的部分，現階段的產品設計或者說公司主軸都還是認為產品的搶先對於市場對於賺錢而言有至高無上的地位，這當然沒錯，但這樣搶快的開發根本性的造就了現在架構上的混亂，當然，這些風氣正在因為越來越嚴重的資安事件跟勒索病毒有所改變但這些改變仍然太慢，公司領導必須放眼到 2&lt;del&gt;3 年後的世界變化，應該能更加重視接下來 2&lt;/del&gt;3 季可能發生的攻擊、可能發生的國際情勢變化，我們無法忽視各種數據正在加速擴展的事實跟這些資料都是攻擊者的目標，俄羅斯對烏克蘭的攻擊、中國跟台灣的緊張關係都正說明世界的改變其實並沒有依照原設想的劇本走，資訊安全有許多期望跟需要努力的方向，都一一在這個演說中被強調出來。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comment"&gt;My Comment
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;身為兩次實習都是在傳統科技廠的我來說，我完全能夠理解公司內部為何對&amp;quot;資訊安全&amp;quot;不在意的原因，因為嚴格的資安限制跟監管就是對於開發還有人員的一個巨大挑戰，公司是不是在意資安，是，他們非常在意，但在瞬息萬變的市場趨勢中，如果我能快別人一小步開發出產品，是不是就能改變市場改變世界，其實是的，因此在所謂的賺錢部門跟開銷部門的博弈中，資安往往是能被忽略的，不是說不在意跟不重要，是當必須做出取捨時，他會被毫不猶豫地丟棄。&lt;/li&gt;
+&lt;li&gt;在我的角度，如和取得平衡跟如何最小影響的一直提醒開發人員反而是資安部門需要理解跟考慮的議題，例如資安檢查的自動化跟建議，還有在不影響開發的狀況下的提醒，似乎是專注於資安的我們需要去考慮的跟調整的思維，一味的要求開發人員去培養資安思維是不切實際的，不是說不要求，而是當他們忘記時，我們是否有機制跟方法去自動化的檢查跟提醒修正，似乎更加重要。&lt;/li&gt;
+&lt;li&gt;良好的 DevOps 跟 CI/CD 的建立，我認為是開發上防守的第一步，更好的 Quality 的程式碼跟更安全完整的 Review 流程，都是不可或缺的一環，再外加安全的開發環境跟基本社交工程防禦意識 (由資安人員建立的安全內網環境，還有釣魚信件的意識培養等等)，其實就可以加強公司的資訊安全狀況，我們無法忽視資安問題，但當資安跟開發兩者有所抵觸時，換個思維去思考是不是能讓資安公司跟其他企業們不再是對立，而是共同發展的合作夥伴。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="all-your-gnn-models-and-data-belong-to-me"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#all-your-gnn-models-and-data-belong-to-me-26671" target="_blank" rel="noopener"
+&gt;All Your GNN Models and Data Belong to Me&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 10, 2022 10:20 to 11:00]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Notes
+&lt;ul&gt;
+&lt;li&gt;Message Passing Technology&lt;/li&gt;
+&lt;li&gt;GNN
+&lt;ul&gt;
+&lt;li&gt;Graph Converlution Network&lt;/li&gt;
+&lt;li&gt;Graph Isomorphism Network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Euclidean space 歐幾里得空間&lt;/li&gt;
+&lt;li&gt;Adversarial Machine Learning 對抗式機器學習
+&lt;ul&gt;
+&lt;li&gt;The big topic of the security of machine learning themselves&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Privacy - Graph
+&lt;ul&gt;
+&lt;li&gt;Link Re-Identification Attack 鏈路重識別攻擊&lt;/li&gt;
+&lt;li&gt;Property Inference Attack 屬性推理攻擊&lt;/li&gt;
+&lt;li&gt;Subgraph Inference Attack&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Secure - Model
+&lt;ul&gt;
+&lt;li&gt;Model Extraction Attack&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;本分享主要在說明一個利用公司提供的 GNN API 就可以針對其中的 Graph &amp;amp; Model 盜取，由於涉及到大量的 GNN 基礎知識，因此這邊預計會寫一篇 GNN 的說明文章，大家可以去閱讀一下，應該會更好理解我這邊說明的部分&lt;/li&gt;
+&lt;li&gt;這邊大致上針對這個 Speach 說明一下幾個核心重點，因為有 Release PPT 因此下面會直接截圖 PPT 內容，完整 PPT 請去官網連結獲取。&lt;/li&gt;
+&lt;li&gt;這次的攻擊主要分成針對 Graph 的 Privary Attack，專注在利用 Link Re-Identification Attack、Property Inference Attach、Subgraph Inference Attack 來做 graph stealing，然後也可以直接利用 Model 的 Secure Attack 則是應用 Model Extraction Attack 做到輸出值做梯度下降來擬合建立的假 model 做目標 model 結構推估，而且可以利用約 1/4 的 network size 做到只有 3~5% 原始 model 的誤差的模型。&lt;/li&gt;
+&lt;li&gt;這邊的很多細節都還不知道是怎麼做到的，會藉由寫其他 Blog 來理解跟完善。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Last update at 2022-12-12&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id="my-comment-1"&gt;My Comment
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;我聽完這場議程後最大的感想是因為 GNN 的模型特性，如果不做一定程度的輸出混淆，確實真的很容易被利用這樣的方式把 model 的 graph dataset 跟 model structure 給整個偷出來，但是這整個想法真的是非常非常的特別，因為我從來沒想到可以利用後接一個 network 作為收斂函式就快速收斂逼近模型結構。那由於議程講者有說他們有提供緩解解法了，因此我現在想到針對這個做法的應用反而可以是公司端利用這個技術來優化縮小 model size，因為有時候 3~5% 的 model acc 誤差是完全可以接受的，但是 model size 只要 1/4 卻是對於硬體設備有極大的優勢跟誘因，因此雖然現在這個可能慢慢不是 security issue 卻仍然可以是一個非常天才非常令人讚嘆的作法，來優化模型結構。&lt;/li&gt;
+&lt;li&gt;而利用 API 來做 Model Stealing 其實並不是第一次了，這也是為什麼例如 Google Image Search 會利用一套流程來隨機輸出錯誤的 Mapping Data 來避免 Model 被 Leak 出來，這個議題已經是很早就已經被注意的議題，因為 100% 的輸出結果意味著我可以建構特定輸入資料來推出輸出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="glitched-on-earth-by-humans-a-black-box-security-evaluation-of-the-spacex-starlink-user-terminal"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#glitched-on-earth-by-humans-a-black-box-security-evaluation-of-the-spacex-starlink-user-terminal-26982" target="_blank" rel="noopener"
+&gt;Glitched on Earth by Humans: A Black-Box Security Evaluation of the SpaceX Starlink User Terminal&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 10, 2022 11:20 to 12:00]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="in-need-of"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#in-need-of-pair-review-vulnerable-code-contributions-by-github-copilot-27264" target="_blank" rel="noopener"
+&gt;In Need of &amp;lsquo;Pair&amp;rsquo; Review: Vulnerable Code Contributions by GitHub Copilot&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 10, 2022 13:30 to 14:10]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;本場議程主要是在說明 GitHub Copilot 的推薦程式碼並不是安全的程式碼。GitHub Copilot 是一個 GPT-3 的 code completion service，可以幫助開發者快速完成程式碼的撰寫，但這邊有個問題，那就是 Copilot 所推薦的程式碼並不是安全的程式碼，例如下圖 Example，GitHub Copilot 推薦了最常見的 SQL Injection 漏洞程式碼 (輸入字串串接)，那為什麼會有這個問題，還有究竟 GitHub Copilot 是如何運作的呢？
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/github-copilot-completion-code.png"
+loading="lazy"
+alt="GitHub Copilot Completion Code"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;上面有提到 GitHub Copilot 是一個 GPT-3 的 Code version model，那今天 Copilot 是怎麼知道要推薦我們什麼樣子的程式碼呢？如下圖舉例，在接收到我們的程式碼輸入之後，他會有一個文字清單來做輸出，但這個清單的每個單字應該出現的機率是不同的，Copilot 會選擇機率最高 (最合適) 的程式碼做推薦並且往下推舉，來建構應該推薦的程式碼片段。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/github-copilot-generate-logic.png"
+loading="lazy"
+alt="GitHub Copilot Generate Logic"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;那到這邊聽起來沒什麼問題啊？Copilot 確實推薦了最有可能性的程式碼，而且是可以正確運行的程式碼，問題在哪裡？最大的問題在於他推薦的是&amp;quot;可以使用的正確程式碼&amp;quot;而非&amp;quot;正確安全的程式碼&amp;quot;。&lt;/li&gt;
+&lt;li&gt;針對這個問題，議程的發表團隊設計了一個實驗流程來驗證 Copilot 的推薦程式碼是否安全，實驗流程如下圖所示，並且希望利用這樣的實驗流程來調查驗證三件事情，分別是
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/github-copilot-experiment-process.png"
+loading="lazy"
+alt="GitHub Copilot Experiment Process"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;弱點的多樣性 - Diversity of Weakness: 不同類型的漏洞發生的機率是多少？&lt;/li&gt;
+&lt;li&gt;提示的多樣性 - Diversity of Prompt: 提示的變化會改變漏洞的發生率嗎？&lt;/li&gt;
+&lt;li&gt;領域的多樣性 - Diversity of Domain: 這種發現在 Software 以外的領域有發生嗎？
+並設計了驗證指標，分別是&lt;/li&gt;
+&lt;li&gt;有效性 - Valid: 也就是 Copilot 返回的可運行程式碼數量&lt;/li&gt;
+&lt;li&gt;脆弱性 - Vulnerable: 也就是這些返回中有多少有 CWE 漏洞&lt;/li&gt;
+&lt;li&gt;最佳建議狀況 - Top Suggestion: 第一個 (也就是最推薦的)可運行建議安全嗎？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;後續的實驗概述就可以請大家自己去看 Public 的 Slides 了，很明顯的事情是推薦的狀況並沒有預期中的良好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;在我的理解中，Copilot 會發生這樣的非安全性程式碼推薦是很正常的一件事情，大家應該都有把剛學習的時候的 hello world 程式碼推上 GitHub，這種所謂的練習 or 根本沒有安全意識的程式碼在 GitHub 上的數量可以說是非常非常巨量的，而利用 GPT-3 對這樣大量的程式碼做學習，在他的理解中，這些 code 確實都是可以執行的 &amp;ldquo;好程式碼&amp;rdquo;，既然如此，推薦這些程式碼來完整我們缺漏的部分當然是很合理的。&lt;/li&gt;
+&lt;li&gt;這是不是需要關注的議題，當然是，因為在資訊安全的領域中，好從來就 != 正確，那究竟有什麼解決方案呢？其實不外乎就是不要完全相信 AI 推薦的程式碼，可以借用推薦的邏輯，但要記得修改成 Quality 更高的程式碼，這樣的做法其實是很常見的，例如在我們的開發流程中，我們會使用 Code Review 來確保程式碼的品質，這個過程就是在確保程式碼的品質，而不是完全相信 AI 推薦的程式碼。&lt;/li&gt;
+&lt;li&gt;對於 model 的部分來說，當然就是要更多的資料前處理跟人員審核，才能更好的避免這個問題的發生，當然，成千上萬的 GitHub Repo 中要避免這個問題，實屬困難，因此只能期待於後期慢慢修正並且這個問題被解決，或是有更好的解決方案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="return-to-sender---detecting-kernel-exploits-with-ebpf"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#return-to-sender---detecting-kernel-exploits-with-ebpf-27127" target="_blank" rel="noopener"
+&gt;Return to Sender - Detecting Kernel Exploits with eBPF&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 10, 2022 14:30 to 15:10]
+&lt;a class="link" href="https://github.com/Gui774ume/krie" target="_blank" rel="noopener"
+&gt;Tool Link&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;本議程主要是在說明 Kernel Exploits 利用 Kernel 內建的 eBPF (Extended Berkeley Packet Filter) 來做檢測攻擊，這個議程的內容其實是很簡單的，就是在說明 eBPF 的基本概念，以及 eBPF 的問題、攻擊狀況。&lt;/li&gt;
+&lt;li&gt;eBPF 是 Kernel 的 Sandbox，可以允許我們在 OS Kernel 中運行 Sandbox Application。它用於安全有效地擴展 Kernel 的功能，而無需更改 Kernel Source Code 或 Loading Kernel Modules。&lt;/li&gt;
+&lt;li&gt;eBPF 的強大之處在於，他可以完全模仿 Kernel 的操作但確保安全性，例如錯誤的 Kernel Space 對 User Space Address 調用之類的問題，但也有問題就是 eBPF 對於 System 來說是一個負擔，因此會導致 Kernel 效能下降。&lt;/li&gt;
+&lt;li&gt;因此講者今天提出了一個新的工具框架，叫做 KRIe (Kernel Runtime Integrity with eBPF)，旨在有限的預算和運作效能中，應用 eBPF 來檢測 Kernel Exploits，並且最大化降低對系統的負擔狀況。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments-1"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;會選擇這個議程的原因是因為剛好有在修 Linux Kernel 的課程，並在議程中第一次聽到 eBPF，對於議程並沒有很聽懂，但可以發現到 eBPF 的應用場景原來可以從一個單純的 Sandbox 延伸出去做到防禦跟檢測 (錯誤的記憶體位置操作)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="fault-injection-detection-circuits-design-calibration-validation-and-tuning"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#fault-injection-detection-circuits-design-calibration-validation-and-tuning-27397" target="_blank" rel="noopener"
+&gt;Fault-Injection Detection Circuits: Design, Calibration, Validation and Tuning&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 10, 2022 15:30 to 16:10]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;這場議程是關於 Fault-Injection Attack (故障注入攻擊)，在這場議程之前我是完全沒聽過這個東西的，因此覺得很新鮮。&lt;/li&gt;
+&lt;li&gt;提到了 Non-Invasive FI Attack (非侵入式故障注入攻擊)、Semi-Invasive FI Attack (半侵入式故障注入攻擊)、Invasive Physical Attacks (侵入式物理攻擊)，
+&lt;ul&gt;
+&lt;li&gt;其中 non-invasive FI attacks 主要是在不對封裝進行影響的攻擊，因此主要能接觸的部位為封裝外部的 clock 跟 voltage pins (針腳)，攻擊有包括
+&lt;ul&gt;
+&lt;li&gt;Voltage attacks - 電壓攻擊&lt;/li&gt;
+&lt;li&gt;Clock attacks - 時鐘攻擊&lt;/li&gt;
+&lt;li&gt;EM (Electro-mangnetic radiation) attacks - 電磁輻射攻擊&lt;/li&gt;
+&lt;li&gt;Thermal attacks - 熱攻擊&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;而 semi-invasive FI attacks 的主要攻擊設立用 Lasers (雷射)，因為需要對封裝進行開蓋，但研究表明可以從封裝的側面再不開蓋的狀況下執行此攻擊。&lt;/li&gt;
+&lt;li&gt;而 invasive physical attacks 則主要利用 FIB、etching (蝕刻)、on-die probing 等等方式來進行攻擊。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;而使用 FI 攻擊的&lt;strong&gt;共同目標是造成 circuit timing 的失效&lt;/strong&gt;而不是造成平台損毀。當 circuit timing 失敗時，資料可能會被過早或太晚的 latched，這時就可能造成例如在 fixed-function crypto engines 的 real key 有機會被替換。&lt;/li&gt;
+&lt;li&gt;針對這個問題，Intel 選擇了 Tunable Replica Circuit (TRC, 可調式複製電路) 作為一個檢測錯誤 or 攻擊發生的解決方案，原因在於 TRC 本身有一個 Capture Flop 在攔截檢測訊號是否有發生異常，而這個 Capture Flop 同時也將檢測到 FI Attack。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/the-TRC-architecture.png"
+loading="lazy"
+alt="the TRC architecture"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments-2"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;因為硬體層面的資訊安全，我覺得是一個很有趣的領域，但是我自己的知識不足，因此這次的議程我覺得很有趣，但是也沒有很深入的理解，因此我會再找時間來研究這個領域。&lt;/li&gt;
+&lt;li&gt;但自己比較有感觸的就是硬體層級的資訊安全其實也非常重要，在修交大 Computer Security 課的時候，在密碼學就有提到旁通道攻擊這種側錄硬體運作時電壓狀況的攻擊，本身之前在實習時因為公司是 Server 相關公司，也聽過正在研究所謂的硬體層級的資料加密應用，因此 Chip Security 或者說 Hardware Security 也是非常重要的一個領域。如何避免外力干擾而正確驗證資料流，或者避免外力介入偷取傳輸資料等等，都可以說是這個領域的核心問題 (在我的理解)，而 Intel 這次希望解決的問題就是被替換 or 影響到資料流的狀況。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="gpt-3-and-me-how-supercomputer-scale-neural-network-models-apply-to-defensive-cybersecurity-problems"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#gpt--and-me-how-supercomputer-scale-neural-network-models-apply-to-defensive-cybersecurity-problems-27540" target="_blank" rel="noopener"
+&gt;GPT-3 and Me: How Supercomputer-scale Neural Network Models Apply to Defensive Cybersecurity Problems&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 10, 2022 16:30 to 17:10]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;此演講主要在呈現跟說明 Machine Learning 的 Model 跟 Self-supervised Learning Model 正在改變這個世界，本演講是一個很純粹正在說明 Machine Learning 跟 Security 這個領域的火花的演講，兩位 Speaker 都是這個領域的佼佼者。&lt;/li&gt;
+&lt;li&gt;先講結論，這次演講呈現的結果是成功利用 GPT-3 這個 NLP Model 對指令列做解讀翻譯成人類更好理解的語句，並且效果顯著。在 F1-Score 上取得了 0.95 的成績，非常亮眼。&lt;/li&gt;
+&lt;li&gt;Self-supervised Learning 的概念是利用 Model 自動化標記資料，並且把標記完的資料當作 Training Data 去將 Unsupervised Problem 變成 Supervised Problem 來做解決。而在這個過程中，人工慢慢介入來修正標籤，讓 Model 在這個過程中越來越好並且輔助標記更多資料來重新訓練，在這個循環中持續提高準確率。聽起來跟 Semi-supervised Learning (半監督式學習) 很像，但其實兩者有根本上的差異，Semi-supervised Learning 是利用少量的 Labelled Data 來訓練 Model，並且利用 Unlabelled Data 來增加 Model 的準確率，而 Self-supervised Learning 則是利用 Unlabelled Data 來訓練 Model，並且利用 Labelled Data 來增加 Model 的準確率。&lt;/li&gt;
+&lt;li&gt;而在演講中有提到一個很重要的事情就是 Model Size 的成長，Deep Learning 的發展本來就是依靠於神經元的數量跟神經網絡的深度來強化特徵分析，也正是因為如此，演講中有提到對於同樣的敘述，模型神經元的數量的差異會對資料有多大的影響，如下圖：
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/model-scaling-example-of-blackhat-2022-GPT_3-and-me-speach.png"
+loading="lazy"
+alt="Model Scaling Example of BlackHat 2022 GPT-3 and Me Speach"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;GPT-3 在 Model Scaling 的加成之下有一個非常恐怖的增長，例如文本跟程式碼的關聯性補齊等等，舉例來說 GitHub Copilot 就已經能從我們的註解中理解並且幫我們撰寫出很高品質 (非安全性的品質) 的程式碼了。從 Neural scaling laws 中可以看到，當 Parameters 越多，Loss 理應越低。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/neural-scaling-laws.png"
+loading="lazy"
+alt="Neural scaling laws"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;演說中也提到了 Self-supervised Learning 為什麼對於 Security 領域有很重要的發展在於，對於 &amp;ldquo;以前沒有發生過的攻擊類型的偵測的發掘&amp;rdquo; 有很重要的幫助，基於 Self-supervised Learning 本身的特性，Model 本來就會嘗試去找出資料中的 Pattern，而我們的介入是微調他們的 Self Labeling 來讓模型收斂的更漂亮，因此對於資料延伸的推估是非常強勁的。而以前這件事情並不是一個輕鬆的工作，但因為 Model Scaling 的原因，準確率跟效果越來越好。針對應用的部分演說中舉例了利用 GPT-3 針對垃圾郵件的檢測分類、對於惡意 Payload 的可讀性解釋生成等等，這些都是非常有趣的應用，而且也是我們在日常工作中可以利用的工具。&lt;/li&gt;
+&lt;li&gt;GitHub of the speach: &lt;a class="link" href="https://github.com/sophos/gpt3-and-cybersecurity" target="_blank" rel="noopener"
+&gt;https://github.com/sophos/gpt3-and-cybersecurity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments-3"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;GPT-3 這個 NLP Model 在各種領域的發展影響的越來越深了，不管是聽演講的當下 Microsoft 已經在 GitHub 上推出了 Copilot 這個 GPT-3 的 Code Complition Application，又或者在寫 Blog 的當下由 OpenAI 所推出的超強對話引擎 ChatGPT，都說明了這種 NLP Model 對於生活中的領域應用越來越多，而且都有著強大的效果，這次的演講提到了利用 Payload 生成 Human Readable Sentences，那其實在其他論文中也有嘗試在 Human Readable Information 提取成 Keywords 的部分。這些其實就是 Model 發展對於各種領域的加強，而應用在繁雜的程式語言世界中，也越來越有效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="day-02"&gt;Day 02
+&lt;/h3&gt;&lt;h4 id="keynote-pre-stuxnet-post-stuxnet-everything-has-changed-nothing-has-changed"&gt;&lt;a class="link" href="https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTY1MDYz" target="_blank" rel="noopener"
+&gt;Keynote: Pre-Stuxnet, Post-Stuxnet: Everything Has Changed, Nothing Has Changed&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 11, 2022 09:00 to 10:00]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="do-not-trust-the-asa-trojans"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#oops-i-glitched-it-again-how-to-multi-glitch-the-glitching-protections-on-arm-trustzone-m-27352" target="_blank" rel="noopener"
+&gt;Do Not Trust the ASA, Trojans!&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 11, 2022 10:20 to 11:00]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="oops-i-glitched-it-again-how-to-multi-glitch-the-glitching-protections-on-arm-trustzone-m"&gt;&lt;a class="link" href="https://attend.blackhatevents.virtual.informatech.com/event/black-hat-usa-2022/planning/UGxhbm5pbmdfOTQ5NDkz" target="_blank" rel="noopener"
+&gt;Oops..! I Glitched It Again! How to Multi-Glitch the Glitching-Protections on ARM TrustZone-M&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 11, 2022 11:20 to 12:00]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;這場議程也說到了硬體的安全問題，也說到了 故障注入 (Fault Injection, FI) 的攻擊手法，期待造成 IC 環境發生快速變化，從而導致特定的、可利用的惡意行為。並提到了四個常見的 FI，
+&lt;ul&gt;
+&lt;li&gt;Clock-FI&lt;/li&gt;
+&lt;li&gt;Electro-Magnetic FI&lt;/li&gt;
+&lt;li&gt;Laser FI&lt;/li&gt;
+&lt;li&gt;Voltage FI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;並提到了一個常見的 FI 防禦手法就是利用 重複暫存器 (Duplicated Registers) 的方式，進行狀態校驗，來驗證是否有任何故障的發生 (不只是是否有 FI 發生)。&lt;/li&gt;
+&lt;li&gt;這個議程提到了 MFI 也就是 Muti Fault Injection 多重故障注入攻擊時，有辦法在利用最少 3 Voltage FI 來完成個有做到 Duplicated Registers 的繞過。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments-4"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;一樣是對硬體 Security 的問題，由於自己對於這個領域的理解不夠，因此沒辦法很好理解全部的議程內容，因此不是很清楚關於 TrustZone-M 那邊的結構狀況，但因為上面的其他議程有提到類似的硬體安全也提到了 FI 的攻擊手法，那個時候並沒有提到這個議程裡面提到的 Duplicated Registers 的防禦手法，因此這個議程的內容對於我來說是新的，也是很有趣的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="the-battle-against-the-billion-scale-internet-underground-industry-advertising-fraud-detection-and-defense"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#the-battle-against-the-billion-scale-internet-underground-industry-advertising-fraud-detection-and-defense-27254" target="_blank" rel="noopener"
+&gt;The Battle Against the Billion-Scale Internet Underground Industry: Advertising Fraud Detection and Defense&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 11, 2022 13:30 to 14:10]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;此場議程主要在討論惡意廣告的操作手法，並且討論是否有辦法建立檢測跟防禦手法。&lt;/li&gt;
+&lt;li&gt;在提到了廣告商是如何購買廣告，而平台商又是如何呈現廣告，並依照案例提到了
+&lt;ul&gt;
+&lt;li&gt;在正常服務商的 SDK 中被載入惡意軟體的問題。&lt;/li&gt;
+&lt;li&gt;PC 端軟體安裝程式中被綁定惡意軟體的問題。&lt;/li&gt;
+&lt;li&gt;各種惡意廣告點擊的工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;其中有一個很核心的部分在於瀏覽器再提供畫面時，被不管是
+&lt;ul&gt;
+&lt;li&gt;環境建構 - 醒目字體 or 醒目顏色 的惡意廣告滲透。&lt;/li&gt;
+&lt;li&gt;瀏覽器資料獲取漏洞 - 透明的惡意廣告滲透。
+其核心都在於現階段資料呈現的過程中，有太多部分可以被調整並且滲透惡意廣告，而供應商還有畫面呈現的 Browser 都沒有對這些資料做檢查，所以就造成了這些問題。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;詳細案例說明跟檢測可以直接看議程提供的 Slides。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments-5"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;我覺得廣告呈現的供應商應該有一套檢查 and 驗證的機制在提供廣告 and 調整資料呈現，而不是只為了賺錢而提供浮誇且甚至故意希望我們點擊進入的廣告，舉例來說大家應該都看過很多新聞網站，他們都會有浮誇的彈出式廣告在運作，這種就是廣告供應商的惡意，詳細廣告種類這個議程也有說明，真的很多元很可怕。&lt;/li&gt;
+&lt;li&gt;而廣告的未審核更是惡意，之前就有 Telegram 的惡意程式偽裝成真的 Telegram 並且購買廣告之後，於 TG 檔案內放置惡意程式，這種明顯不是集團購買的廣告 Google 也沒有審核跟阻擋，其實也造就了惡意廣告層出不窮。&lt;/li&gt;
+&lt;li&gt;一套正規良好的檢測跟防禦機制是必須要的，只是如何更好的且有系統地列出不管是黑名單 or 任何檢測流程，都還是需要努力的目標，甚至，這個強度應該不是一個組織 or 研究機構就可以成功的，更多是大家的聯合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="malware-classification-with-machine-learning-enhanced-by-windows-kernel-emulation"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#malware-classification-with-machine-learning-enhanced-by-windows-kernel-emulation-27167" target="_blank" rel="noopener"
+&gt;Malware Classification With Machine Learning Enhanced by Windows Kernel Emulation&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 11, 2022 14:30 to 15:10]
+&lt;a class="link" href="https://github.com/dtrizna/quo.vadis/" target="_blank" rel="noopener"
+&gt;Github Link&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;這場議程主要在討論的就是靜態惡意程式分析常見的所謂的混淆、路徑偵測等等的問題，是不是有新的解決方案 or 別的解決思路可以避免掉，並且提到了他們於內部的實驗跟嘗試。&lt;/li&gt;
+&lt;li&gt;靜態程式分析 or 惡意程式偵測主要會遇到幾個常見的問題，分別是
+&lt;ul&gt;
+&lt;li&gt;對抗性機器學習 - Adversarial Machine Learning&lt;/li&gt;
+&lt;li&gt;打包 - Packer&lt;/li&gt;
+&lt;li&gt;混淆 - Obfuscation&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;還有所謂的正確狀況跟惡意狀況非常近似的問題，例如
+&lt;ul&gt;
+&lt;li&gt;惡意路徑 == 一般正常路徑&lt;/li&gt;
+&lt;li&gt;惡意程式 依附於 正常程式&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/filepath-dataset-in-malware.png"
+loading="lazy"
+alt="Filepath Dataset in Malware"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;在 Dynamic &amp;amp; Contextual Analysis 的狀況之下，我們還有機會偵測辨識出一些特徵 or 發現一些奇怪的操作，如下
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/dynamic-contextual-analysis-in-malware.png"
+loading="lazy"
+alt="Dynamic &amp; Contextual Analysis in Malware"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;那 MS 團隊利用了 1d converlution 的方式針對做過 Embedding 處理的 path string 做分析，在 3 個月的 training 之後得到了一些成果，如下
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/1d-convolution-in-malware.png"
+loading="lazy"
+alt="1d convolution in Malware"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments-6"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;我覺得結論中的 &amp;lsquo;ML is not a &amp;ldquo;silver bullet&amp;rdquo;, it is an extra tool&amp;quot; 這句話很傳神，目前很多 AI 應用其實都一直在挑戰傳統的解決方案，但事實上兩者應該嘗試融合並且合作，而非對立，ML 是一個很棒的 Classification 工具，但仍然無法取代或者解決一些更複雜細膩的問題。這次利用對 file path 的 NLP 建模結合 converlution 的 classification 就是期望解決路徑相似性的問題，希望藉由細微的特徵，來辨識是否是惡意路徑，而今天的議程就是在討論這個問題，並且提出了一個解決方案。效果仍然有限，但是這是一個很棒的開始，希望未來能夠有更多的研究可以進一步的發展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OS: 真的要轉 NLP 的資料研究跟更熟習應用了，一堆議程都用到 NLP&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id="human-or-not-can-you-really-detect-the-fake-voices"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#human-or-not-can-you-really-detect-the-fake-voices-26288" target="_blank" rel="noopener"
+&gt;Human or Not: Can You Really Detect the Fake Voices?&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 11, 2022 15:30 to 16:10]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;此篇議程是 Lanzhou University 的學生在發表的，說的有點混亂，但概念上其實是在說明就 DeepFake 很像的概念，今天你正在面對的人跟聊天的對象，可能並不是你以為的那個人，因為人臉跟聲音都是假的。&lt;/li&gt;
+&lt;li&gt;本議程有提到現有的檢測方法其實效果都還不錯，且大多使用到 Computer Vision (CV, 計算機視覺) 的做法，也就是將聲音資訊轉換成圖像，再利用 Image Classification 的方式做分類，並且都有很高的準確率。e.g.,
+&lt;ul&gt;
+&lt;li&gt;Neural Network Feature (NNF)-based approaches - ACM MM 2022 (Top Conference)&lt;/li&gt;
+&lt;li&gt;End-to-End (E2E)-based approaches - Used in NLP problems&lt;/li&gt;
+&lt;li&gt;Statistical-based approaches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;這個議程主要是在說明他們發展了一套 &lt;code&gt;SiF-DeepVC&lt;/code&gt; 的 Speaker-irrelative Feature Deep Learning Voice Clone 的 Voice Clone，期望利用跟人聲無關的特徵來攻擊 FakeVoice Detecter 的方法，其假設在於利用這些所謂無關的背景、語速等等跟說話無關的特徵，來混淆 Detect Model，讓它無法正確判斷。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/blackhat2022/SiF-DeepVC-overview.png"
+loading="lazy"
+alt="Overview of SiF-DeepVC"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;其中有提到一個很強的知識點在於，人聲主要頻率在 0.3kHz~3kHz，因此如果要去除人聲可以直接刪除 4kHz 以下的頻率，來保留噪音，相反要保留人聲可以先去除 0.3kHz 以下的頻率，再去除 4kHz 以上的頻率，來保留人聲。&lt;/li&gt;
+&lt;li&gt;當 &lt;code&gt;Sif-DeepVC&lt;/code&gt; 取得語音背景噪音之後，再將資料合成於一般的 VC 中，就可以欺騙 FakeVoice Detecter 了。&lt;/li&gt;
+&lt;li&gt;其實這也反應了一個很大的問題，就是目前市面上的 FakeVoice Detecter 其實並沒有考慮到這種情況，因為他們的假設是說，假如有人要偽造人聲，那他就會去偽造人聲，而不會去偽造背景噪音，因此這些 FakeVoice Detecter 都是以人聲為主，而忽略了背景噪音的問題。而在 Model Training 跟 Data Preprocessing 的過程中，也沒有先進行人聲保留的操作，而是把整段錄音丟進去，其實針對 &lt;code&gt;Sif-DeepVC&lt;/code&gt; 的破解方法非常簡單，就是放置 Noise Filter，但目前的 Detect Model 沒有人這樣做。&lt;/li&gt;
+&lt;li&gt;這次的 Speech 說明並且強調了，其實目前的 Fake Voice Detect 是失效的，先不提人耳根本就無法聽出合成的聲音或者真實的聲音的問題，現有的 Detect Model 其實還有實際應用的極大缺失。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="my-comments-7"&gt;My Comments
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;關於這種議題，我認為是屬於實體 Security Issue，因為這些技術在於偽造身份去做到社交工程 or 欺騙生物辨識系統，for example，偽造總統發言造成國際壓力和國內恐慌，或者偽裝 CEO 來店取得公司機密文件等等。&lt;/li&gt;
+&lt;li&gt;相較於 DeepFake 技術，我覺得 Voice Clone 的問題更加危險一些，因為人對於聲音的敏銳度其實並沒有眼睛對圖像的敏銳度高，而且往往我們會對聲音有一種認知上的信任，因此我認為這種技術的應用對於社會的影響會更加大。&lt;/li&gt;
+&lt;li&gt;這個 Speech 令我大開眼界的部分在於這是我少數看到針對 &lt;strong&gt;Noice&lt;/strong&gt; 去做攻擊的部分，因為在我的認知之中，大部分的資料進入 model 做 detect 之前，應該都會經過一系列標準的資料歸一化過程，盡可能去除影響辨識的資料，當然也會有適當添加 Noise 來增加模型的泛化能力的做法，但相比直接利用調整 Noise 影響辨識，這種作法我是沒有想過的。&lt;/li&gt;
+&lt;li&gt;能夠理解為什麼 Detect Model 會失效，因為從頻譜中就可以看到這些語音的能量狀況已經可以說是完全被混淆摧毀了，而目前這些極度依賴 CV 的做法當然會在頻譜圖中失去焦點，而完全無法判斷是否是合成的人聲，這也放大了一個數據的問題就是頻域跟時域的轉換問題。&lt;/li&gt;
+&lt;li&gt;是否可以緩解，誠如上面所說如果今天 model 前準備一個 filter 針對語言特徵去做人聲的提取，再給 detect model 做辨識，應該就能解決這個問題了，但究竟有多少 system 目前有考慮到這個問題，我猜應該是不多的，因此這個部分的想法我真的覺得很新穎，也意外地揭露了其實很多偽造攻擊都仍然在嘗試突破各式檢測。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="locknote-conclusions-and-key-takeaways-from-black-hat-usa-2022"&gt;&lt;a class="link" href="https://www.blackhat.com/us-22/briefings/schedule/#locknote-conclusions-and-key-takeaways-from-black-hat-usa--29172" target="_blank" rel="noopener"
+&gt;Locknote: Conclusions and Key Takeaways from Black Hat USA 2022&lt;/a&gt;
+&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;[time= Aug 11, 2022 16:30 to 17:10]&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>[AI 求生日誌] About Machine Learning</title><link>https://blog.crazyfirelee.tw/2022/12/12/about-machine-learning/</link><pubDate>Mon, 12 Dec 2022 00:04:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/12/about-machine-learning/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;AI 在長久的發展中載浮載沈，是什麼決定了現在的崛起？在 2022 年的今天，生活中似乎已經慢慢被 AI 給滲透，手機、銀行和政府機構等等，似乎沒有什麼服務已經看不到 AI 的身影，究竟是什麼成就了現在的 AI？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="what-is-machine-learning--什麼是機器學習"&gt;What is Machine Learning? / 什麼是機器學習？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;機器學習 (ML) 是人工智慧 (AI) 的一種，基於計算機可以在沒有人工干預的情況下學習信息的概念。&lt;/li&gt;
+&lt;li&gt;最基本的做法是使用算法解析數據，從中學習，然後對世界上的某事做出決定或預測。&lt;/li&gt;
+&lt;li&gt;因此，機器不是使用一組特定指令手動編碼軟件程序來完成特定任務，而是使用大量數據和算法&amp;quot;訓練&amp;quot;機器，使其能夠學習如何執行任務。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="why-big-data-pushed-machine-learning-a-hand--為什麼大數據推了機器學習一把"&gt;Why Big Data pushed Machine Learning a hand? / 為什麼大數據推了機器學習一把？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;剛剛有提到機器學習其實就是從眾多數據中，找到針對特定目標的一種解決方案，那數據的多寡很直觀明顯的決定了 ML 對於數據判斷的精準程度，因為數據 == 可能出現的特徵，因此很多人也會說，正式 21 世紀生活型態，網路雲端等等爆炸性數據的出現，成就了現在的 AI 發展，因為有足夠多的數據，造就了足夠精準跟完善的 AI 辨識結果。&lt;/li&gt;
+&lt;li&gt;大數據的確切定義如下：
+&lt;ul&gt;
+&lt;li&gt;種類更多樣化 (variety)、數量不斷增加 (volume) 且產生速度越來越快 (velocity) 的數據。以上三個特徵又稱為「三個 V」。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-machine-learning-works--機器學習是怎麼運作的"&gt;How Machine Learning Works? / 機器學習是怎麼運作的？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;相比一般程式的運作是我們給予問題和解決邏輯，他輸出答案給我們，機器學習剛剛有提過是希望能藉由問題和答案給我們一個解決方案並接著解決沒有答案的問題，所以差異上看起來會長下面這樣
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/how-machine-learning-works.png"
+loading="lazy"
+alt="How Machine Learning Works"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;那實際上其實對於我們來說，我們是提供機器學習一大堆的可能的 function，並且希望他在這堆可能的 function 中找到能用的最佳的那個。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-types-of-machine-learning--機器學習有哪些種類"&gt;The Types of Machine Learning / 機器學習有哪些種類？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;我們說過機器學習是利用數據跟問題去做學習，選擇一個解法，那究竟是處理什麼問題跟怎麼學習的呢？&lt;/li&gt;
+&lt;li&gt;那這邊我們可以做一些分類，分別是，
+&lt;ul&gt;
+&lt;li&gt;依照目標可分成
+&lt;ul&gt;
+&lt;li&gt;Regression (預測)&lt;/li&gt;
+&lt;li&gt;Classification (分類)&lt;/li&gt;
+&lt;li&gt;Clustering (分群)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;依照資料狀況和訓練方式可以分成
+&lt;ul&gt;
+&lt;li&gt;Supervised Learning (監督式學習)&lt;/li&gt;
+&lt;li&gt;Semi-supervised Learning (半監督式學習)&lt;/li&gt;
+&lt;li&gt;Unsupervised Learning (非監督式學習)&lt;/li&gt;
+&lt;li&gt;Reinforcement Learning (強化學習)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="tasks-of-learning--學習的任務"&gt;Tasks of Learning / 學習的任務
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Regression (預測) - 顧名思義是希望藉由之前的狀況預測下一個時間點的狀況，因此我們的模型輸出的是一個數值。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/task-regression.png"
+loading="lazy"
+alt="Task of Regression"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Classification (分類) - 顧名思義是希望藉由現在的資料分類現在輸入的數據，因此我們的模型會輸出一個分類的答案。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/task-classification.png"
+loading="lazy"
+alt="Task of Classification"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Clustering (分群) - 顧名思義是希望將有關聯性的資料分成一群整理出來，因此我們的模型會出書很多群的資料。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/task-clustering.png"
+loading="lazy"
+alt="Task of Clustering"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="types-of-learning--學習的類型"&gt;Types of Learning / 學習的類型
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Supervised Learning (監督式學習) - 我們會給予模型一些答案，讓他去學習，因此我們會有一個答案的資料集，而這個資料集會有一個輸入跟一個輸出，輸入就是我們的特徵，輸出就是我們的答案。&lt;/li&gt;
+&lt;li&gt;Semi-supervised Learning (半監督式學習) - 對少部分資料進行「標註」，電腦只要透過有標註的資料找出特徵並對其它的資料進行分類。&lt;/li&gt;
+&lt;li&gt;Unsupervised Learning (非監督式學習) - 我們不會給予模型任何答案，而是要求模型想辦法把相似的集合在一起，沒有答案。&lt;/li&gt;
+&lt;li&gt;Reinforcement Learning (強化學習) - Training 當下沒有給答案，但是會在事後告訴他他的回答是好的還是不好的，也就是一種混合的概念。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="what-is-the-differences-between-statistics--ml--機器學習跟統計學的差異"&gt;What is the Differences between Statistics &amp;amp; ML? / 機器學習跟統計學的差異？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;上面的一切聽完之後，應該會有人疑會那究竟機器學習跟統計到底有什麼差異呢？感覺就是把東西歸類整理完之後，給一個結論而已啊？&lt;/li&gt;
+&lt;li&gt;其實最大的差異就在於能不能面對未知跟未來這兩件事情，什麼意思呢？&lt;/li&gt;
+&lt;li&gt;統計其實就是整理歸納，這件事情在 ML 中也是近似的，但最大的差異在於 ML 會把歸納的東西變成一種判斷模式，新的資料進來 or 問題進來的時候，就算之前完全沒有出現過這個數據，他也會盡可能給你一個相似的答案，意味著 ML 就是在整理歸納的過程中發展出了判斷標準，一個 function 來面對這個問題，他給你的是一個這個問題的答案&lt;/li&gt;
+&lt;li&gt;但統計就是統計，你可以拿來算平均，拿來算標準差看看現況，但他不能告訴你今天突然出現一個 300 公分的人是不是代表他有些問題，不能告訴你明天會不會下雨，他不會給你一個答案，給出判斷的人是看這些統計資料的人，不是電腦。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="references"&gt;References
+&lt;/h2&gt;&lt;h3 id="web-site"&gt;Web Site
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://blogs.nvidia.com/blog/2016/07/29/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/" target="_blank" rel="noopener"
+&gt;What&amp;rsquo;s the Difference Between Artificial Intelligence, Machine Learning and Deep Learning? - Nvidia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.ecloudvalley.com/tw/blog/machine-learning/" target="_blank" rel="noopener"
+&gt;https://www.ecloudvalley.com/tw/blog/machine-learning/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.trendmicro.com/zh_tw/what-is/machine-learning.html" target="_blank" rel="noopener"
+&gt;https://www.trendmicro.com/zh_tw/what-is/machine-learning.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="book"&gt;Book
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;圖解人工智慧 - 神崎洋治 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;機器學習、人工智慧與人類未來 - 吳作樂、吳秉翰 - 五南出版&lt;/li&gt;
+&lt;li&gt;機器學習和深度學習的技術與原理 - 山口達輝、松田洋之 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;從人到人工智慧，破解 AI 革命的 68 個核心概念 - 三宅陽一郎、森川幸人 - 臉譜出版&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[AI 求生日誌] About Artificial Intelligence</title><link>https://blog.crazyfirelee.tw/2022/12/11/about-artificial-intelligence/</link><pubDate>Sun, 11 Dec 2022 18:59:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/11/about-artificial-intelligence/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;1940 年電腦正式誕生之後，1950 年 Alan Turing 就發表論文 計算機與智能（Computing Machinery and Intelligence） 探討機器所能產生的智慧，並提出有名的 圖靈測試（Turing Test），人工智慧的發展可能比你我想像的都更早，且其歷史是更加的值得反思。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在學習任何的領域，都應該先認識一下究竟這個東西是什麼跟其發展的歷史發生了什麼，因為唯有如此我們才能知道這個領域已經發生過什麼問題，而之後的發展跟研究可以避免什麼問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="what-is-artificial-intelligence--什麼是人工智慧"&gt;What is Artificial Intelligence? / 什麼是人工智慧？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;人工智慧（Artificial Intelligence, AI）其實是計算機科學（Computer Science）的一個分支，通常是指由「人」製造出來的機器所表現出來的「智慧」。&lt;/li&gt;
+&lt;li&gt;一般來說就是指電腦模擬人類思維過程以模仿人類能力或行為的能力，強調模擬人類智能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-history-of-artificial-intelligence--人工智慧的歷史"&gt;The History of Artificial Intelligence / 人工智慧的歷史
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;詳細時間線可以參考 &lt;a class="link" href="https://builtin.com/artificial-intelligence" target="_blank" rel="noopener"
+&gt;Introduction of Artificial Intelligence — Builtin&lt;/a&gt;，條列的非常的清楚。
+&lt;img src="https://blog.crazyfirelee.tw/images/history-of-ai.png"
+loading="lazy"
+alt="History of AI"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;自 1940 年電腦正式誕生以後，人類對於資訊處理和計算進入了全新的紀元，許多傳統密碼學中一直依賴的人工計算問題被大量的算力所突破，對人類的發展有了新的提升。&lt;/li&gt;
+&lt;li&gt;而到了 1950 年，Alan Turing 就已經設想了機器是否會發展出人類智能的問題，而發表了 Computing Machinery and Intelligence（計算機與智能）一論文，並發表了辨識人和機器的著名測試 Turing Test（圖靈測試），在這時人們其實就已經開始思考各種機器產生人類智慧的可能性和期待了。&lt;/li&gt;
+&lt;li&gt;而 1956 年，達特茅斯會議提出 Artificial Intelligence 一詞，並正式宣告人工智慧在計算機科學這個領域的發展。&lt;/li&gt;
+&lt;li&gt;從上述時間我們可以看到，自 1950 年 ~ 1974 年，是第一次 AI Algorithm 的發展盛期，期間&lt;strong&gt;第一台神經網絡計算機 (1950 年)&lt;/strong&gt;、&lt;strong&gt;機器學習 Machine Learning 一詞的出現 (1956 年)&lt;/strong&gt;、&lt;strong&gt;第一台成功的專家系統 Expert System (1969 年)&lt;/strong&gt; 等等各種嘗試將人類導入機器的實驗跟發展一一出現。&lt;/li&gt;
+&lt;li&gt;但由於人們對人工智慧過度樂觀的預測跟實際電腦發展的軟硬體限制，人工「智慧」一直沒有顯現於機器中，於 1974 年 ~ 1980 年引發了這個研究領域的大量撤資，迎來了&lt;strong&gt;第一次的 AI 寒冬&lt;/strong&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;此階段的 AI 發展仍然嘗試在電腦中放入&lt;strong&gt;人類的知識&lt;/strong&gt;、&lt;strong&gt;思考方式&lt;/strong&gt;，但由於人類其實也不是很確定人類是如何思考的（生物學跟行為學的發展尚未如現在成熟），因此很難正確的把人寫入電腦中，AI 也因此無法擁有&lt;strong&gt;理解 ／決策能力&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;到了 1980 年 ~ 1987 年，軟/硬體有了新的突破，也允許了新的發展，如 &lt;strong&gt;1980 年第一個成功的商業專家系統問世&lt;/strong&gt;，也開啟了專家系統的大量發展；到了 1982 年，&lt;strong&gt;日本則開啟了第五代計算機系統計畫&lt;/strong&gt;，其目標是發展超級計算機 and 人工智能開發平台；到了 1985 年，Lisp 機器（專門的專家系統計算機）的發展巔峰，各公司平均每年投入超過 10 億美金在專家系統的維護上。&lt;/li&gt;
+&lt;li&gt;可惜的是在感覺又有好的發展前景的狀況之下，由於日本的超級計算機計畫失敗，Lisp 機器的市場崩盤等等，AI 發展於 1987 年 ~ 1993 年再次邁入寒冬，進入&lt;strong&gt;第二次 AI 寒冬時期&lt;/strong&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;此階段的 AI 發展主要是利用大量人類定義好的規則做決策，卻忘記了人無法定義出一個問題的所有規則，因此只能一直解決&lt;strong&gt;簡單 / 數據小&lt;/strong&gt;的問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;又到了 2000 年，軟 / 硬體再次有了新的突破，AI 也再次有了新的進展。&lt;/li&gt;
+&lt;li&gt;2012 年，因&lt;strong&gt;硬體的重大進展&lt;/strong&gt;跟 &lt;strong&gt;Deep Learning&lt;/strong&gt; 的發展，Google 成功在沒有 Define 貓咪的狀況下，成功利用影片 Train 一個判斷貓咪的模型，也因此 AI 的發展重回了顛峰。&lt;/li&gt;
+&lt;li&gt;而 2016 年，AlphaGo 打敗了世界圍棋冠軍，正式宣告 AI 突破了新的領域，打敗了人類堅守的領域。
+&lt;blockquote&gt;
+&lt;p&gt;此階段的 AI 發展已經理解到人們無法建構人到電腦中，也無法利用人發展出所有的規則，因此改變了 AI 的演算法，要求 AI 自己找到一個答案，而不是變成人類（或者說把人類寫進電腦）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="名詞解釋"&gt;名詞解釋
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;機器學習 (Machine Learning)&lt;/strong&gt; - 機器利用給予問題跟結果，嘗試找出一個判斷這些問題的解題思路，並在往後的問題中給予答案的方法。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專家系統 (Expert System)&lt;/strong&gt; - 在特定領域內具有專家水平的解決問題能力的程式系統，其運作方式就是建構大量的 if aaa, then bbb, else ccc，可以說是一個&lt;strong&gt;收集了大量專家知識的問答系統&lt;/strong&gt;。
+&lt;ul&gt;
+&lt;li&gt;那究竟有沒有存在的意義？其實是有的，因為可以 &lt;strong&gt;快速&lt;/strong&gt;、&lt;strong&gt;大量&lt;/strong&gt; 的進行問題的 &lt;strong&gt;分析&lt;/strong&gt; / &lt;strong&gt;校正&lt;/strong&gt; / &lt;strong&gt;回答&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;但仍然存在很多問題，就是當然不可能回答沒有答案的問題（沒有統計過 or 紀錄過的）。&lt;/li&gt;
+&lt;li&gt;但現在名詞上已經有些差異了，其實現在的 AI 應用都可以說是一種專家系統，因為會如專家一般在給予我們問題的答案，現在的 AI 會嘗試給予我們沒有面對過的問題一個他可能屬於的答案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="weak-and-strong-artificial-intelligence--弱跟強人工智慧"&gt;Weak and Strong Artificial Intelligence / 弱跟強人工智慧
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;弱人工智慧 == 只執行一項特定工作的系統，也就是能解決一個特定任務，也稱為&lt;strong&gt;狹義人工智慧 (ANI)&lt;/strong&gt;，是現在正在發展中的各種 AI 應用的種類，目前大多數的 AI 系統皆屬於這個類別，例如 &lt;strong&gt;自駕車&lt;/strong&gt;、&lt;strong&gt;自動調貨系統&lt;/strong&gt;、&lt;strong&gt;語音助理&lt;/strong&gt;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;強人工智慧 == 能跟人一樣解決問題的人工智慧，是執行被認為類似於人類的任務的系統，能解決超過一種任務，也稱為&lt;strong&gt;通用人工智慧 (AGI)&lt;/strong&gt;，是一種理想中跟人無差別的人工智慧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-type-of-ai--人工智慧的種類"&gt;The Type of AI / 人工智慧的種類
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reactive Machines / 反應式機器&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;這些人工智慧系統沒有記憶並且是特定於任務的。這種 AI 很單純且目標明確，就是解決現在的問題，有名的例子是 IBM 的 DeepBlue 象棋 AI，他可以判斷當前的局面並選擇一個最好的走法來下棋，但是每一次的判斷都跟前一步驟沒有任何關係。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Limited memory / 有限記憶&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;這些人工智慧系統具有記憶力，因此它們可以利用過去的經驗來為未來的決策提供信息。記憶有限的 AI 能夠在收集信息和權衡潛在決策時存儲先前的數據和預測 — 本質上是回顧過去以尋找接下來可能發生的事情的線索。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其必須遵循六個步驟：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必須創建訓練數據&lt;/li&gt;
+&lt;li&gt;必須創建 ML 模型&lt;/li&gt;
+&lt;li&gt;模型必須能夠做出預測&lt;/li&gt;
+&lt;li&gt;模型必須能夠接收人類或環境反饋&lt;/li&gt;
+&lt;li&gt;反饋必須作為數據存儲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;並且這些步驟必須作為一個循環重複。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Theory of mind / 心智理論&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;心理理論是一個心理學術語。當應用於人工智慧時，這意味著該系統將具有理解情緒的社會智能。理論上這類型的 AI 我們還沒達到，因為其必須可以通過自我反思和決心來理解人類、動物和其他機器的感受並做出決定，然後利用這些信息做出自己的決定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-awareness / 自我意識&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;在這一類中，人工智慧系統具有自我意識，這賦予了它們意識。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="summary"&gt;Summary
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Artificial Intelligence 的發展涉及到硬體發展、軟體發展和人類對於期望是否明確這件事情，只有人類真的知道硬體的極限、軟體的對硬體調度的成熟度跟究竟「智慧」為何物，我們才能更好的推動發展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="references"&gt;References
+&lt;/h2&gt;&lt;h3 id="web-sites"&gt;Web Sites
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://builtin.com/artificial-intelligence" target="_blank" rel="noopener"
+&gt;Introduction of Artificial Intelligence - Builtin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.britannica.com/technology/artificial-intelligence" target="_blank" rel="noopener"
+&gt;Artificial intelligence - Britannica&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://sitn.hms.harvard.edu/flash/2017/history-artificial-intelligence/" target="_blank" rel="noopener"
+&gt;The History of Artificial Intelligence - Harvard University&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ai.iias.sinica.edu.tw/glossary/expert-system/" target="_blank" rel="noopener"
+&gt;Expert System - 臺灣人工智慧行動網&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zh.wikipedia.org/zh-tw/%E4%B8%93%E5%AE%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener"
+&gt;Expert System - Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://wiki.mbalib.com/zh-tw/%E4%B8%93%E5%AE%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener"
+&gt;Expert System - MIT 智庫&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="book"&gt;Book
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;圖解人工智慧 - 神崎洋治 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;機器學習、人工智慧與人類未來 - 吳作樂、吳秉翰 - 五南出版&lt;/li&gt;
+&lt;li&gt;機器學習和深度學習的技術與原理 - 山口達輝、松田洋之 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;從人到人工智慧，破解 AI 革命的 68 個核心概念 - 三宅陽一郎、森川幸人 - 臉譜出版&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[AI 求生日誌] 關於本系列</title><link>https://blog.crazyfirelee.tw/2022/12/09/series-introduction/</link><pubDate>Fri, 09 Dec 2022 13:46:50 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/09/series-introduction/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Artificial Intelligence 這個神秘的領域，於 2016 年 Google AlphaGo 突破人類堅守的圍棋領域之後，正式進入了我們的生活，進入了新的紀元，而於 2019 年為了比賽而踏入這個領域的我，在這個領域中的掙扎、挑戰和質疑，讓我慢慢理解到唯有重新深入理解這個領域，才能算是初出茅廬…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="這個系列的誕生"&gt;這個系列的誕生
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;2016 年 Google AlphaGo 突破人類堅守的圍棋領域之後，我也於 2019 年接觸了 AI 這個神秘的領域，但由於剛開始的接觸是為了參加競賽，在慢慢要開始深入研究之後發現底子不穩的問題慢慢顯現了……，也意識到唯有重新有系統的理解這個世界，才能更好的在未來使用跟理解 AI 的世界。&lt;/li&gt;
+&lt;li&gt;藉由繼續求學的機會跟備課的機會，好好重新研究理解究竟 AI 的世界發生了什麼，有哪些東西是需要知道的，從最基礎的數學到最複雜的模型，完善學習這個領域，也嘗試融入自己的工作經驗跟學習經驗，讓也想入門這個領域的人，能有個資料參考，加速入門。&lt;/li&gt;
+&lt;li&gt;如同所有系列的文章，願成領路人，在我所有的努力中，成就你我。&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>About Me</title><link>https://blog.crazyfirelee.tw/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.crazyfirelee.tw/about/</guid><description>&lt;h1 id="about-me"&gt;About Me
+&lt;/h1&gt;&lt;p&gt;Hi, I am Crazyfire Lee (Darren Lee).&lt;/p&gt;
+&lt;p&gt;A student interested in how machine learning &amp;amp; cyber security can change the world.&lt;/p&gt;
+&lt;p&gt;I believe that someday the combination of security and machine learning will change the world, and I am working hard to enrich myself in hopes of becoming a small screw that changes the world.&lt;/p&gt;
+&lt;p&gt;I have a passion for documenting life and sharing knowledge, so I hope to share what I have learned through my blog, or share life~&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A place to share life and record some little knowledge.&lt;/p&gt;</description></item><item><title>Archives</title><link>https://blog.crazyfirelee.tw/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://blog.crazyfirelee.tw/archives/</guid><description/></item></channel></rss>

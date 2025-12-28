@@ -1,3 +1,138 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lima on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/lima/</link><description>Recent content in Lima on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 21 Dec 2022 11:08:23 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/lima/index.xml" rel="self" type="application/rss+xml"/><item><title>Lima - M1 Mac 跑 x84 的好朋友</title><link>https://blog.crazyfirelee.tw/posts/sharing/lima/</link><pubDate>Wed, 21 Dec 2022 11:08:23 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/lima/</guid><description>&lt;blockquote>
-&lt;p>換了 M1 Mac 之後，發現其實還有大量工具只能跑在 x86_64 的環境，這就超級無敵痛苦了，因為不是所有東西都可以利用 Rosetta 2 來轉換，每天崩潰的使用 RDP 來連回家裡的 Windows 再開 VM 來解決問題也實在煩躁，直到喵喵推薦了 Lima 這個屌炸天的 Linux VM 工具，讓我可以在 M1 Mac 上跑 x86_64 的 Linux VM，真的是太感謝了，這篇文章就來介紹一下 Lima 這個工具吧！&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lima on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/lima/</link><description>Recent content in Lima on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 21 Dec 2022 11:08:23 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/lima/index.xml" rel="self" type="application/rss+xml"/><item><title>Lima - M1 Mac 跑 x84 的好朋友</title><link>https://blog.crazyfirelee.tw/2022/12/21/lima/</link><pubDate>Wed, 21 Dec 2022 11:08:23 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/21/lima/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;換了 M1 Mac 之後，發現其實還有大量工具只能跑在 x86_64 的環境，這就超級無敵痛苦了，因為不是所有東西都可以利用 Rosetta 2 來轉換，每天崩潰的使用 RDP 來連回家裡的 Windows 再開 VM 來解決問題也實在煩躁，直到喵喵推薦了 Lima 這個屌炸天的 Linux VM 工具，讓我可以在 M1 Mac 上跑 x86_64 的 Linux VM，真的是太感謝了，這篇文章就來介紹一下 Lima 這個工具吧！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="lima-vm"&gt;Lima-VM
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://github.com/lima-vm/lima" target="_blank" rel="noopener"
+&gt;lima-vm/lima&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lima 是一個超級扯蛋的 Linux Virtual Machine，並且可以說是為了 macOS 而努力的存在，而且是 Containerd 的 Linux VM，並可以在 aarm64 上運行 x84_64 的 Linux VM。(而且還可以在上面再啟動其他 container，包含 docker container)&lt;/li&gt;
+&lt;li&gt;Lima 是透過 QEMU 進行執行的，並嚴格說起來是一種虛擬機。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;致謝: 感謝喵喵推薦這好用的酷東西，他也寫了 &lt;a class="link" href="https://blog.stevenyu.tw/2022/08/21/%E5%88%A9%E7%94%A8-lima-%E5%9C%A8-m1-%E5%9F%B7%E8%A1%8C-x86-%E7%9A%84-ubuntu/" target="_blank" rel="noopener"
+&gt;blog&lt;/a&gt; 介紹大家可以去&lt;del&gt;按讚分享小鈴鐺&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="install--config-prepare"&gt;Install &amp;amp; Config Prepare
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;如果有 homebrew 的話，可以直接透過 homebrew 進行安裝。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install lima
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;使用上 Lima-VM 官方有準備很多很多的 config 可以直接做使用，可以直接參考 &lt;a class="link" href="https://github.com/lima-vm/lima/tree/master/examples" target="_blank" rel="noopener"
+&gt;lima-vm/lima/examples&lt;/a&gt; 這邊的範例。那我們就直接使用官方的範例來進行操作。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# if using specific environment, add `arch` here to specify the architecture
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# ubuntu-22.04.yaml example from lima official (here is all the same as the official example)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;images&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Try to use release-yyyyMMdd image if available. Note that release-yyyyMMdd will be removed after several months.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release-20221214/ubuntu-22.04-server-cloudimg-amd64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;digest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sha256:b9a5a216901c34742ffe662b691db114269aaa25c90eb77f3ef4dd4f818e78a3&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release-20221214/ubuntu-22.04-server-cloudimg-arm64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;aarch64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;digest&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sha256:b27163374c834c770e8db023fb21205529cea494257bf5ba866b8b1ae5969164&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Fallback to the latest release image.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Hint: run `limactl prune` to invalidate the cache
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-amd64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x86_64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://cloud-images.ubuntu.com/releases/22.04/release/ubuntu-22.04-server-cloudimg-arm64.img&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;arch&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;aarch64&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# mount the host&amp;#39;s $HOME directory to the guest&amp;#39;s /home/ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# if need writable, add `writable: true` under the mount
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;mounts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;~&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;location&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;/tmp/lima&amp;#34;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;writable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="no"&gt;true&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;關於 &lt;code&gt;arch&lt;/code&gt; 的部分，可以參考 &lt;a class="link" href="https://github.com/lima-vm/lima/blob/master/docs/multi-arch.md" target="_blank" rel="noopener"
+&gt;lima-vm/lima#arch&lt;/a&gt; 這邊的說明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="issue-summary"&gt;Issue Summary
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;關於 &lt;code&gt;mounts&lt;/code&gt; 問題
+&lt;ul&gt;
+&lt;li&gt;這邊自己有遇到一個問題，就是 mounts 的目錄指定問題，假設今天我們希望 &lt;code&gt;~&lt;/code&gt; 家目錄底下的所有目錄都是 readonly 但其中的 &lt;code&gt;~/Works&lt;/code&gt; 這個目錄是 &lt;code&gt;writable&lt;/code&gt; 的話，會遇到 &lt;a class="link" href="https://github.com/lima-vm/lima/issues/873" target="_blank" rel="noopener"
+&gt;issue 873&lt;/a&gt; 的父目錄 readonly 阻止了子目錄 writeable 的問題，目前還在 tracking 中，所以這邊我們就直接把 &lt;code&gt;~/Works&lt;/code&gt; 這個目錄指定到 &lt;code&gt;mounts&lt;/code&gt; 裡面就好了。&lt;/li&gt;
+&lt;li&gt;或者現在有實驗性 mounting 的功能，可以利用 &lt;code&gt;9p&lt;/code&gt; 做到，可以參考 &lt;a class="link" href="https://github.com/lima-vm/lima/blob/master/docs/mount.md" target="_blank" rel="noopener"
+&gt;lima-vm/docs/mount.md&lt;/a&gt;，但是這邊我們就不做介紹了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="start-lima-vm"&gt;Start Lima-VM
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;這邊使用剛剛建立的 config (&lt;code&gt;ubuntu-22_04.yaml&lt;/code&gt;) 來進行啟動，並且使用 &lt;code&gt;--name&lt;/code&gt; 來命名我們的環境。
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl start ubuntu-22_04.yaml --name ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;這時會顯示選項，選擇 &lt;code&gt;Proceed with the current configuration&lt;/code&gt;，等到看到 &lt;code&gt;INFO[xxxx] READY. Run lima to open the shell&lt;/code&gt; 就完成了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="usage"&gt;Usage
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 進入 shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl shell ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 關閉 VM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl stop ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# 刪除 VM
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;limactl delete ubuntu-22_04-amd64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="more-information"&gt;More information
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官方文件寫得很不錯，可以直接去看官方說明歐～&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

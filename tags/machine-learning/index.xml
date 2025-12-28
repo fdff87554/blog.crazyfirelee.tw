@@ -1,9 +1,300 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Machine Learning on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/machine-learning/</link><description>Recent content in Machine Learning on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 12 Dec 2022 12:51:21 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>[AI 求生日誌] About Deep Learning</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-deep-learning/</link><pubDate>Mon, 12 Dec 2022 12:51:21 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-deep-learning/</guid><description>&lt;blockquote>
-&lt;p>Machine Learning 的概念已經存在數十年，為何於近期才又有一場新的反擊的號角？Deep Learning 的概念為什麼可以跟 Artificial Intelligence 一起被提起變成必駕齊驅的 Keywords？這篇文章將會介紹 Deep Learning 的基本概念，以及為什麼 Deep Learning 會讓 Machine Learning 有了新的生命力。&lt;/p>
-&lt;/blockquote></description></item><item><title>[AI 求生日誌] About Machine Learning</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-machine-learning/</link><pubDate>Mon, 12 Dec 2022 00:04:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-machine-learning/</guid><description>&lt;blockquote>
-&lt;p>AI 在長久的發展中載浮載沈，是什麼決定了現在的崛起？在 2022 年的今天，生活中似乎已經慢慢被 AI 給滲透，手機、銀行和政府機構等等，似乎沒有什麼服務已經看不到 AI 的身影，究竟是什麼成就了現在的 AI？&lt;/p>
-&lt;/blockquote></description></item><item><title>[AI 求生日誌] About Artificial Intelligence</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-artificial-intelligence/</link><pubDate>Sun, 11 Dec 2022 18:59:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/about-artificial-intelligence/</guid><description>&lt;blockquote>
-&lt;p>1940 年電腦正式誕生之後，1950 年 Alan Turing 就發表論文 計算機與智能（Computing Machinery and Intelligence） 探討機器所能產生的智慧，並提出有名的 圖靈測試（Turing Test），人工智慧的發展可能比你我想像的都更早，且其歷史是更加的值得反思。&lt;/p>
-&lt;/blockquote></description></item><item><title>[AI 求生日誌] 關於本系列</title><link>https://blog.crazyfirelee.tw/posts/ai-survival-diary/series-introduction/</link><pubDate>Fri, 09 Dec 2022 13:46:50 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/ai-survival-diary/series-introduction/</guid><description>&lt;blockquote>
-&lt;p>Artificial Intelligence 這個神秘的領域，於 2016 年 Google AlphaGo 突破人類堅守的圍棋領域之後，正式進入了我們的生活，進入了新的紀元，而於 2019 年為了比賽而踏入這個領域的我，在這個領域中的掙扎、挑戰和質疑，讓我慢慢理解到唯有重新深入理解這個領域，才能算是初出茅廬…&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Machine Learning on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/machine-learning/</link><description>Recent content in Machine Learning on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 12 Dec 2022 12:51:21 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>[AI 求生日誌] About Deep Learning</title><link>https://blog.crazyfirelee.tw/2022/12/12/about-deep-learning/</link><pubDate>Mon, 12 Dec 2022 12:51:21 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/12/about-deep-learning/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Machine Learning 的概念已經存在數十年，為何於近期才又有一場新的反擊的號角？Deep Learning 的概念為什麼可以跟 Artificial Intelligence 一起被提起變成必駕齊驅的 Keywords？這篇文章將會介紹 Deep Learning 的基本概念，以及為什麼 Deep Learning 會讓 Machine Learning 有了新的生命力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="what-is-deep-learning--什麼是深度學習"&gt;What is Deep Learning? / 什麼是深度學習？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;深度學習是機器學習領域中的一種作法。&lt;/li&gt;
+&lt;li&gt;主要利用類神經網路的概念，模仿人類神經網路的運作，來判斷資料特徵，達到辨別資料的效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="what-is-artificial-neural-network--什麼是人工神經網絡"&gt;What is Artificial Neural Network? / 什麼是人工神經網絡？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Artificial Neural Network 是一種藉由模仿人體神經元，來模仿人類思考更新資料的方式的一種概念&lt;/li&gt;
+&lt;li&gt;Biological Neuron
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/biological-neuron.png"
+loading="lazy"
+alt="Biological Neuron"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Artificial Neuron
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/artificial-neuron.png"
+loading="lazy"
+alt="Artificial Neuron"
+&gt;
+天主教輔仁大學 深度學習課程 黃貞瑛老師 教材截圖&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;我們可以發現在圖片對照上
+&lt;ul&gt;
+&lt;li&gt;Dendrites（樹突） = Input Signals（$x_i$）&lt;/li&gt;
+&lt;li&gt;Synapses（突觸） = Weights（$w_i$）&lt;/li&gt;
+&lt;li&gt;Cell Body（細胞體） = Cell Body（$n, f(n)$）&lt;/li&gt;
+&lt;li&gt;Axon（軸突） = Output Signal（$a$）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我們來理解一下到底是什麼意思，我們回到我們的機器學習概念，我們希望機器幫我們由資料判斷一個答案，但是這些資料，也就是對這個答案判斷&amp;quot;特徵&amp;quot;一定有好有壞，例如說之前提過的貓咪判斷，我們對於貓咪這個生物有沒有毛，一定不是唯一的判斷標準，但是也會出現在決策的因素裡面，那這邊我們會有很多很多的輸入，就是跟上面提到的 Input Signals 一樣，會有很多個，而這些輸入，有好有壞，因此 weights 這東西就是調控這些資料輸入時的&amp;quot;份量&amp;quot;，Cell body 基於這些 input 的運算了，而後，依照目標，輸出答案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="relation-of-deep-learning-and-neuron-深度學習跟神經元的關係"&gt;Relation of Deep Learning and Neuron 深度學習跟神經元的關係
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;深度學習就是一個大量人工神經網路合併的過程，利用模仿大腦神經元的結構，層層傳遞，達到運算等等的效果&lt;/li&gt;
+&lt;li&gt;深度學習的&lt;strong&gt;深度&lt;/strong&gt;一詞，就是在說整體神經網路結構到底有多複雜，整個神經元的層數有多&lt;strong&gt;深&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/all-kinds-of-neural-networks.png"
+loading="lazy"
+alt="Neural Network Structure"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;上圖的詳細初始來源我已經不確定了，但是這張圖完美的呈現了各種神經網路的結構&lt;/li&gt;
+&lt;li&gt;從上圖我們可以發現一件事情，就是每個神經元（就是圖片中的球球）他們都會與下一層的所有神經元座連接，並且一層一層的往下傳遞，因此我們才會用 Layer 的層數來說明這個神經網路有多複雜&lt;/li&gt;
+&lt;li&gt;那這邊有幾個小觀念要順便釐清
+&lt;ul&gt;
+&lt;li&gt;input layer 不會被算在神經元深度內&lt;/li&gt;
+&lt;li&gt;除了 input layer 跟 output layer 以外的 layer 我們通稱 hidden layer&lt;/li&gt;
+&lt;li&gt;當我們定義一個 Network structure，就等於定義了一個 function set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[AI 求生日誌] About Machine Learning</title><link>https://blog.crazyfirelee.tw/2022/12/12/about-machine-learning/</link><pubDate>Mon, 12 Dec 2022 00:04:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/12/about-machine-learning/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;AI 在長久的發展中載浮載沈，是什麼決定了現在的崛起？在 2022 年的今天，生活中似乎已經慢慢被 AI 給滲透，手機、銀行和政府機構等等，似乎沒有什麼服務已經看不到 AI 的身影，究竟是什麼成就了現在的 AI？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="what-is-machine-learning--什麼是機器學習"&gt;What is Machine Learning? / 什麼是機器學習？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;機器學習 (ML) 是人工智慧 (AI) 的一種，基於計算機可以在沒有人工干預的情況下學習信息的概念。&lt;/li&gt;
+&lt;li&gt;最基本的做法是使用算法解析數據，從中學習，然後對世界上的某事做出決定或預測。&lt;/li&gt;
+&lt;li&gt;因此，機器不是使用一組特定指令手動編碼軟件程序來完成特定任務，而是使用大量數據和算法&amp;quot;訓練&amp;quot;機器，使其能夠學習如何執行任務。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="why-big-data-pushed-machine-learning-a-hand--為什麼大數據推了機器學習一把"&gt;Why Big Data pushed Machine Learning a hand? / 為什麼大數據推了機器學習一把？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;剛剛有提到機器學習其實就是從眾多數據中，找到針對特定目標的一種解決方案，那數據的多寡很直觀明顯的決定了 ML 對於數據判斷的精準程度，因為數據 == 可能出現的特徵，因此很多人也會說，正式 21 世紀生活型態，網路雲端等等爆炸性數據的出現，成就了現在的 AI 發展，因為有足夠多的數據，造就了足夠精準跟完善的 AI 辨識結果。&lt;/li&gt;
+&lt;li&gt;大數據的確切定義如下：
+&lt;ul&gt;
+&lt;li&gt;種類更多樣化 (variety)、數量不斷增加 (volume) 且產生速度越來越快 (velocity) 的數據。以上三個特徵又稱為「三個 V」。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="how-machine-learning-works--機器學習是怎麼運作的"&gt;How Machine Learning Works? / 機器學習是怎麼運作的？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;相比一般程式的運作是我們給予問題和解決邏輯，他輸出答案給我們，機器學習剛剛有提過是希望能藉由問題和答案給我們一個解決方案並接著解決沒有答案的問題，所以差異上看起來會長下面這樣
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/how-machine-learning-works.png"
+loading="lazy"
+alt="How Machine Learning Works"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;那實際上其實對於我們來說，我們是提供機器學習一大堆的可能的 function，並且希望他在這堆可能的 function 中找到能用的最佳的那個。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-types-of-machine-learning--機器學習有哪些種類"&gt;The Types of Machine Learning / 機器學習有哪些種類？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;我們說過機器學習是利用數據跟問題去做學習，選擇一個解法，那究竟是處理什麼問題跟怎麼學習的呢？&lt;/li&gt;
+&lt;li&gt;那這邊我們可以做一些分類，分別是，
+&lt;ul&gt;
+&lt;li&gt;依照目標可分成
+&lt;ul&gt;
+&lt;li&gt;Regression (預測)&lt;/li&gt;
+&lt;li&gt;Classification (分類)&lt;/li&gt;
+&lt;li&gt;Clustering (分群)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;依照資料狀況和訓練方式可以分成
+&lt;ul&gt;
+&lt;li&gt;Supervised Learning (監督式學習)&lt;/li&gt;
+&lt;li&gt;Semi-supervised Learning (半監督式學習)&lt;/li&gt;
+&lt;li&gt;Unsupervised Learning (非監督式學習)&lt;/li&gt;
+&lt;li&gt;Reinforcement Learning (強化學習)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="tasks-of-learning--學習的任務"&gt;Tasks of Learning / 學習的任務
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Regression (預測) - 顧名思義是希望藉由之前的狀況預測下一個時間點的狀況，因此我們的模型輸出的是一個數值。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/task-regression.png"
+loading="lazy"
+alt="Task of Regression"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Classification (分類) - 顧名思義是希望藉由現在的資料分類現在輸入的數據，因此我們的模型會輸出一個分類的答案。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/task-classification.png"
+loading="lazy"
+alt="Task of Classification"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Clustering (分群) - 顧名思義是希望將有關聯性的資料分成一群整理出來，因此我們的模型會出書很多群的資料。
+&lt;blockquote&gt;
+&lt;p&gt;&lt;img src="https://blog.crazyfirelee.tw/images/task-clustering.png"
+loading="lazy"
+alt="Task of Clustering"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="types-of-learning--學習的類型"&gt;Types of Learning / 學習的類型
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Supervised Learning (監督式學習) - 我們會給予模型一些答案，讓他去學習，因此我們會有一個答案的資料集，而這個資料集會有一個輸入跟一個輸出，輸入就是我們的特徵，輸出就是我們的答案。&lt;/li&gt;
+&lt;li&gt;Semi-supervised Learning (半監督式學習) - 對少部分資料進行「標註」，電腦只要透過有標註的資料找出特徵並對其它的資料進行分類。&lt;/li&gt;
+&lt;li&gt;Unsupervised Learning (非監督式學習) - 我們不會給予模型任何答案，而是要求模型想辦法把相似的集合在一起，沒有答案。&lt;/li&gt;
+&lt;li&gt;Reinforcement Learning (強化學習) - Training 當下沒有給答案，但是會在事後告訴他他的回答是好的還是不好的，也就是一種混合的概念。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="what-is-the-differences-between-statistics--ml--機器學習跟統計學的差異"&gt;What is the Differences between Statistics &amp;amp; ML? / 機器學習跟統計學的差異？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;上面的一切聽完之後，應該會有人疑會那究竟機器學習跟統計到底有什麼差異呢？感覺就是把東西歸類整理完之後，給一個結論而已啊？&lt;/li&gt;
+&lt;li&gt;其實最大的差異就在於能不能面對未知跟未來這兩件事情，什麼意思呢？&lt;/li&gt;
+&lt;li&gt;統計其實就是整理歸納，這件事情在 ML 中也是近似的，但最大的差異在於 ML 會把歸納的東西變成一種判斷模式，新的資料進來 or 問題進來的時候，就算之前完全沒有出現過這個數據，他也會盡可能給你一個相似的答案，意味著 ML 就是在整理歸納的過程中發展出了判斷標準，一個 function 來面對這個問題，他給你的是一個這個問題的答案&lt;/li&gt;
+&lt;li&gt;但統計就是統計，你可以拿來算平均，拿來算標準差看看現況，但他不能告訴你今天突然出現一個 300 公分的人是不是代表他有些問題，不能告訴你明天會不會下雨，他不會給你一個答案，給出判斷的人是看這些統計資料的人，不是電腦。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="references"&gt;References
+&lt;/h2&gt;&lt;h3 id="web-site"&gt;Web Site
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://blogs.nvidia.com/blog/2016/07/29/whats-difference-artificial-intelligence-machine-learning-deep-learning-ai/" target="_blank" rel="noopener"
+&gt;What&amp;rsquo;s the Difference Between Artificial Intelligence, Machine Learning and Deep Learning? - Nvidia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.ecloudvalley.com/tw/blog/machine-learning/" target="_blank" rel="noopener"
+&gt;https://www.ecloudvalley.com/tw/blog/machine-learning/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.trendmicro.com/zh_tw/what-is/machine-learning.html" target="_blank" rel="noopener"
+&gt;https://www.trendmicro.com/zh_tw/what-is/machine-learning.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="book"&gt;Book
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;圖解人工智慧 - 神崎洋治 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;機器學習、人工智慧與人類未來 - 吳作樂、吳秉翰 - 五南出版&lt;/li&gt;
+&lt;li&gt;機器學習和深度學習的技術與原理 - 山口達輝、松田洋之 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;從人到人工智慧，破解 AI 革命的 68 個核心概念 - 三宅陽一郎、森川幸人 - 臉譜出版&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[AI 求生日誌] About Artificial Intelligence</title><link>https://blog.crazyfirelee.tw/2022/12/11/about-artificial-intelligence/</link><pubDate>Sun, 11 Dec 2022 18:59:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/11/about-artificial-intelligence/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;1940 年電腦正式誕生之後，1950 年 Alan Turing 就發表論文 計算機與智能（Computing Machinery and Intelligence） 探討機器所能產生的智慧，並提出有名的 圖靈測試（Turing Test），人工智慧的發展可能比你我想像的都更早，且其歷史是更加的值得反思。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在學習任何的領域，都應該先認識一下究竟這個東西是什麼跟其發展的歷史發生了什麼，因為唯有如此我們才能知道這個領域已經發生過什麼問題，而之後的發展跟研究可以避免什麼問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="what-is-artificial-intelligence--什麼是人工智慧"&gt;What is Artificial Intelligence? / 什麼是人工智慧？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;人工智慧（Artificial Intelligence, AI）其實是計算機科學（Computer Science）的一個分支，通常是指由「人」製造出來的機器所表現出來的「智慧」。&lt;/li&gt;
+&lt;li&gt;一般來說就是指電腦模擬人類思維過程以模仿人類能力或行為的能力，強調模擬人類智能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-history-of-artificial-intelligence--人工智慧的歷史"&gt;The History of Artificial Intelligence / 人工智慧的歷史
+&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;詳細時間線可以參考 &lt;a class="link" href="https://builtin.com/artificial-intelligence" target="_blank" rel="noopener"
+&gt;Introduction of Artificial Intelligence — Builtin&lt;/a&gt;，條列的非常的清楚。
+&lt;img src="https://blog.crazyfirelee.tw/images/history-of-ai.png"
+loading="lazy"
+alt="History of AI"
+&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;自 1940 年電腦正式誕生以後，人類對於資訊處理和計算進入了全新的紀元，許多傳統密碼學中一直依賴的人工計算問題被大量的算力所突破，對人類的發展有了新的提升。&lt;/li&gt;
+&lt;li&gt;而到了 1950 年，Alan Turing 就已經設想了機器是否會發展出人類智能的問題，而發表了 Computing Machinery and Intelligence（計算機與智能）一論文，並發表了辨識人和機器的著名測試 Turing Test（圖靈測試），在這時人們其實就已經開始思考各種機器產生人類智慧的可能性和期待了。&lt;/li&gt;
+&lt;li&gt;而 1956 年，達特茅斯會議提出 Artificial Intelligence 一詞，並正式宣告人工智慧在計算機科學這個領域的發展。&lt;/li&gt;
+&lt;li&gt;從上述時間我們可以看到，自 1950 年 ~ 1974 年，是第一次 AI Algorithm 的發展盛期，期間&lt;strong&gt;第一台神經網絡計算機 (1950 年)&lt;/strong&gt;、&lt;strong&gt;機器學習 Machine Learning 一詞的出現 (1956 年)&lt;/strong&gt;、&lt;strong&gt;第一台成功的專家系統 Expert System (1969 年)&lt;/strong&gt; 等等各種嘗試將人類導入機器的實驗跟發展一一出現。&lt;/li&gt;
+&lt;li&gt;但由於人們對人工智慧過度樂觀的預測跟實際電腦發展的軟硬體限制，人工「智慧」一直沒有顯現於機器中，於 1974 年 ~ 1980 年引發了這個研究領域的大量撤資，迎來了&lt;strong&gt;第一次的 AI 寒冬&lt;/strong&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;此階段的 AI 發展仍然嘗試在電腦中放入&lt;strong&gt;人類的知識&lt;/strong&gt;、&lt;strong&gt;思考方式&lt;/strong&gt;，但由於人類其實也不是很確定人類是如何思考的（生物學跟行為學的發展尚未如現在成熟），因此很難正確的把人寫入電腦中，AI 也因此無法擁有&lt;strong&gt;理解 ／決策能力&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;到了 1980 年 ~ 1987 年，軟/硬體有了新的突破，也允許了新的發展，如 &lt;strong&gt;1980 年第一個成功的商業專家系統問世&lt;/strong&gt;，也開啟了專家系統的大量發展；到了 1982 年，&lt;strong&gt;日本則開啟了第五代計算機系統計畫&lt;/strong&gt;，其目標是發展超級計算機 and 人工智能開發平台；到了 1985 年，Lisp 機器（專門的專家系統計算機）的發展巔峰，各公司平均每年投入超過 10 億美金在專家系統的維護上。&lt;/li&gt;
+&lt;li&gt;可惜的是在感覺又有好的發展前景的狀況之下，由於日本的超級計算機計畫失敗，Lisp 機器的市場崩盤等等，AI 發展於 1987 年 ~ 1993 年再次邁入寒冬，進入&lt;strong&gt;第二次 AI 寒冬時期&lt;/strong&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;此階段的 AI 發展主要是利用大量人類定義好的規則做決策，卻忘記了人無法定義出一個問題的所有規則，因此只能一直解決&lt;strong&gt;簡單 / 數據小&lt;/strong&gt;的問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;又到了 2000 年，軟 / 硬體再次有了新的突破，AI 也再次有了新的進展。&lt;/li&gt;
+&lt;li&gt;2012 年，因&lt;strong&gt;硬體的重大進展&lt;/strong&gt;跟 &lt;strong&gt;Deep Learning&lt;/strong&gt; 的發展，Google 成功在沒有 Define 貓咪的狀況下，成功利用影片 Train 一個判斷貓咪的模型，也因此 AI 的發展重回了顛峰。&lt;/li&gt;
+&lt;li&gt;而 2016 年，AlphaGo 打敗了世界圍棋冠軍，正式宣告 AI 突破了新的領域，打敗了人類堅守的領域。
+&lt;blockquote&gt;
+&lt;p&gt;此階段的 AI 發展已經理解到人們無法建構人到電腦中，也無法利用人發展出所有的規則，因此改變了 AI 的演算法，要求 AI 自己找到一個答案，而不是變成人類（或者說把人類寫進電腦）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="名詞解釋"&gt;名詞解釋
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;機器學習 (Machine Learning)&lt;/strong&gt; - 機器利用給予問題跟結果，嘗試找出一個判斷這些問題的解題思路，並在往後的問題中給予答案的方法。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專家系統 (Expert System)&lt;/strong&gt; - 在特定領域內具有專家水平的解決問題能力的程式系統，其運作方式就是建構大量的 if aaa, then bbb, else ccc，可以說是一個&lt;strong&gt;收集了大量專家知識的問答系統&lt;/strong&gt;。
+&lt;ul&gt;
+&lt;li&gt;那究竟有沒有存在的意義？其實是有的，因為可以 &lt;strong&gt;快速&lt;/strong&gt;、&lt;strong&gt;大量&lt;/strong&gt; 的進行問題的 &lt;strong&gt;分析&lt;/strong&gt; / &lt;strong&gt;校正&lt;/strong&gt; / &lt;strong&gt;回答&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;但仍然存在很多問題，就是當然不可能回答沒有答案的問題（沒有統計過 or 紀錄過的）。&lt;/li&gt;
+&lt;li&gt;但現在名詞上已經有些差異了，其實現在的 AI 應用都可以說是一種專家系統，因為會如專家一般在給予我們問題的答案，現在的 AI 會嘗試給予我們沒有面對過的問題一個他可能屬於的答案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="weak-and-strong-artificial-intelligence--弱跟強人工智慧"&gt;Weak and Strong Artificial Intelligence / 弱跟強人工智慧
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;弱人工智慧 == 只執行一項特定工作的系統，也就是能解決一個特定任務，也稱為&lt;strong&gt;狹義人工智慧 (ANI)&lt;/strong&gt;，是現在正在發展中的各種 AI 應用的種類，目前大多數的 AI 系統皆屬於這個類別，例如 &lt;strong&gt;自駕車&lt;/strong&gt;、&lt;strong&gt;自動調貨系統&lt;/strong&gt;、&lt;strong&gt;語音助理&lt;/strong&gt;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;強人工智慧 == 能跟人一樣解決問題的人工智慧，是執行被認為類似於人類的任務的系統，能解決超過一種任務，也稱為&lt;strong&gt;通用人工智慧 (AGI)&lt;/strong&gt;，是一種理想中跟人無差別的人工智慧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="the-type-of-ai--人工智慧的種類"&gt;The Type of AI / 人工智慧的種類
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reactive Machines / 反應式機器&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;這些人工智慧系統沒有記憶並且是特定於任務的。這種 AI 很單純且目標明確，就是解決現在的問題，有名的例子是 IBM 的 DeepBlue 象棋 AI，他可以判斷當前的局面並選擇一個最好的走法來下棋，但是每一次的判斷都跟前一步驟沒有任何關係。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Limited memory / 有限記憶&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;這些人工智慧系統具有記憶力，因此它們可以利用過去的經驗來為未來的決策提供信息。記憶有限的 AI 能夠在收集信息和權衡潛在決策時存儲先前的數據和預測 — 本質上是回顧過去以尋找接下來可能發生的事情的線索。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其必須遵循六個步驟：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必須創建訓練數據&lt;/li&gt;
+&lt;li&gt;必須創建 ML 模型&lt;/li&gt;
+&lt;li&gt;模型必須能夠做出預測&lt;/li&gt;
+&lt;li&gt;模型必須能夠接收人類或環境反饋&lt;/li&gt;
+&lt;li&gt;反饋必須作為數據存儲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;並且這些步驟必須作為一個循環重複。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Theory of mind / 心智理論&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;心理理論是一個心理學術語。當應用於人工智慧時，這意味著該系統將具有理解情緒的社會智能。理論上這類型的 AI 我們還沒達到，因為其必須可以通過自我反思和決心來理解人類、動物和其他機器的感受並做出決定，然後利用這些信息做出自己的決定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Self-awareness / 自我意識&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;在這一類中，人工智慧系統具有自我意識，這賦予了它們意識。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="summary"&gt;Summary
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Artificial Intelligence 的發展涉及到硬體發展、軟體發展和人類對於期望是否明確這件事情，只有人類真的知道硬體的極限、軟體的對硬體調度的成熟度跟究竟「智慧」為何物，我們才能更好的推動發展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="references"&gt;References
+&lt;/h2&gt;&lt;h3 id="web-sites"&gt;Web Sites
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class="link" href="https://builtin.com/artificial-intelligence" target="_blank" rel="noopener"
+&gt;Introduction of Artificial Intelligence - Builtin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://www.britannica.com/technology/artificial-intelligence" target="_blank" rel="noopener"
+&gt;Artificial intelligence - Britannica&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://sitn.hms.harvard.edu/flash/2017/history-artificial-intelligence/" target="_blank" rel="noopener"
+&gt;The History of Artificial Intelligence - Harvard University&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://ai.iias.sinica.edu.tw/glossary/expert-system/" target="_blank" rel="noopener"
+&gt;Expert System - 臺灣人工智慧行動網&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://zh.wikipedia.org/zh-tw/%E4%B8%93%E5%AE%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener"
+&gt;Expert System - Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="link" href="https://wiki.mbalib.com/zh-tw/%E4%B8%93%E5%AE%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener"
+&gt;Expert System - MIT 智庫&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="book"&gt;Book
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;圖解人工智慧 - 神崎洋治 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;機器學習、人工智慧與人類未來 - 吳作樂、吳秉翰 - 五南出版&lt;/li&gt;
+&lt;li&gt;機器學習和深度學習的技術與原理 - 山口達輝、松田洋之 - 碁峰出版&lt;/li&gt;
+&lt;li&gt;從人到人工智慧，破解 AI 革命的 68 個核心概念 - 三宅陽一郎、森川幸人 - 臉譜出版&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>[AI 求生日誌] 關於本系列</title><link>https://blog.crazyfirelee.tw/2022/12/09/series-introduction/</link><pubDate>Fri, 09 Dec 2022 13:46:50 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2022/12/09/series-introduction/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Artificial Intelligence 這個神秘的領域，於 2016 年 Google AlphaGo 突破人類堅守的圍棋領域之後，正式進入了我們的生活，進入了新的紀元，而於 2019 年為了比賽而踏入這個領域的我，在這個領域中的掙扎、挑戰和質疑，讓我慢慢理解到唯有重新深入理解這個領域，才能算是初出茅廬…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="這個系列的誕生"&gt;這個系列的誕生
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;2016 年 Google AlphaGo 突破人類堅守的圍棋領域之後，我也於 2019 年接觸了 AI 這個神秘的領域，但由於剛開始的接觸是為了參加競賽，在慢慢要開始深入研究之後發現底子不穩的問題慢慢顯現了……，也意識到唯有重新有系統的理解這個世界，才能更好的在未來使用跟理解 AI 的世界。&lt;/li&gt;
+&lt;li&gt;藉由繼續求學的機會跟備課的機會，好好重新研究理解究竟 AI 的世界發生了什麼，有哪些東西是需要知道的，從最基礎的數學到最複雜的模型，完善學習這個領域，也嘗試融入自己的工作經驗跟學習經驗，讓也想入門這個領域的人，能有個資料參考，加速入門。&lt;/li&gt;
+&lt;li&gt;如同所有系列的文章，願成領路人，在我所有的努力中，成就你我。&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

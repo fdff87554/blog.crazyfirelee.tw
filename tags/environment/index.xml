@@ -1,5 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Environment on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/environment/</link><description>Recent content in Environment on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 06 Apr 2023 20:50:42 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/environment/index.xml" rel="self" type="application/rss+xml"/><item><title>A short story about Windows python environment conflict</title><link>https://blog.crazyfirelee.tw/posts/sharing/windows-python-env/</link><pubDate>Thu, 06 Apr 2023 20:50:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/windows-python-env/</guid><description>&lt;blockquote>
-&lt;p>許久沒有用 Windows 做開發，這幾天剛好在幫我老弟安裝 Python 跟 C++ 的開發環境，結果遇到了一個關於 python 跟 mingw64 的環境衝突的問題，在嘗試解決的過程中，因為沒有查到太多資料，所以就想說記錄一下，以免之後再次遇到相同的問題。&lt;/p>
-&lt;/blockquote></description></item><item><title>My Python Environment on M1 Mac</title><link>https://blog.crazyfirelee.tw/posts/sharing/environment/</link><pubDate>Sat, 04 Mar 2023 16:11:47 +0800</pubDate><guid>https://blog.crazyfirelee.tw/posts/sharing/environment/</guid><description>&lt;blockquote>
-&lt;p>換了 M1 Mac 之後，一樣遇到一個大魔王就是 Python 環境的問題，這邊不是純粹的指 Python 的安裝，而是管理 Python 環境跟各種 Framework 是不是能正確的再 M1 Mac 上運作，能不能很好的調用硬體的問題，這篇文章記錄一下我在這條路上的愛恨情仇。&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Environment on Crazyfire's Blog</title><link>https://blog.crazyfirelee.tw/tags/environment/</link><description>Recent content in Environment on Crazyfire's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 06 Apr 2023 20:50:42 +0800</lastBuildDate><atom:link href="https://blog.crazyfirelee.tw/tags/environment/index.xml" rel="self" type="application/rss+xml"/><item><title>A short story about Windows python environment conflict</title><link>https://blog.crazyfirelee.tw/2023/04/06/windows-python-env/</link><pubDate>Thu, 06 Apr 2023 20:50:42 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2023/04/06/windows-python-env/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;許久沒有用 Windows 做開發，這幾天剛好在幫我老弟安裝 Python 跟 C++ 的開發環境，結果遇到了一個關於 python 跟 mingw64 的環境衝突的問題，在嘗試解決的過程中，因為沒有查到太多資料，所以就想說記錄一下，以免之後再次遇到相同的問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="python-environment-and-mingw64"&gt;Python Environment and Mingw64
+&lt;/h2&gt;&lt;h3 id="前情提要"&gt;前情提要
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;由於咱小老弟純粹是為了學校的課程使用到 C++ 跟 Python，所以安裝上原本就希望一切從簡，對於環境的設定也沒有太多的要求，只求能夠正常使用就好。&lt;/li&gt;
+&lt;li&gt;也因此，我決定使用 mingw64 來提供 gcc 跟 g++ 的編譯器，因為這個編譯器的安裝過程相對簡單，而且也不需要太多的設定。而 Python 的部分，我也是直接使用官方提供的安裝程式來安裝，並且沒有特別的設定。&lt;/li&gt;
+&lt;li&gt;由於 Python 非常貼心的在 Windows Installer 的過程中，會自動的將 Python 的安裝路徑加入到系統的環境變數中，所以在安裝完 Python 後，我就可以直接在命令提示字元中使用 python 來執行 Python 的程式了。&lt;/li&gt;
+&lt;li&gt;但是，這邊我遇到了一個很神奇的問題，也就是我在使用 &lt;code&gt;pip&lt;/code&gt; 來安裝 python 的 packages 的時候，我的 python 竟然吃不到！也因此展開了後續的故事。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="--version-的小故事"&gt;&lt;code&gt;--version&lt;/code&gt; 的小故事
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一般來說，我們在安裝好 Python 後，都會使用 &lt;code&gt;python --version&lt;/code&gt; 來確認 Python 的版本，順便可以確認 python 的安裝狀況跟 windows 的 path 是否正確。&lt;/li&gt;
+&lt;li&gt;好玩的事情是，我的 &lt;code&gt;python --version&lt;/code&gt; 有正確顯示我安裝的版本 &lt;code&gt;3.10.9&lt;/code&gt;，而 &lt;code&gt;pip --version&lt;/code&gt; 則是顯示了 &lt;code&gt;pip 22.3.1 from the\path\of\AppData\Local\Programs\Python\Python310\lib\site-packages\pip (python 3.10)&lt;/code&gt;，也就是說，我的 pip 是正確的，而且看起來也是確實安裝在 python 3.10 底下的，太好了對吧～&lt;/li&gt;
+&lt;li&gt;開開心心地用 &lt;code&gt;pip install numpy&lt;/code&gt; 等等把環境裝好之後，&lt;code&gt;import numpy as np&lt;/code&gt; 的時候，&lt;code&gt;No module named 'numpy'&lt;/code&gt;&amp;hellip;，奇怪，問題出在哪？我有 pip 也有 python 啊，版本也都是對的啊，為什麼會出現這樣的問題呢？&lt;/li&gt;
+&lt;li&gt;這時候我決定多檢查一個部分，所以我使用了 &lt;code&gt;python -m pip --version&lt;/code&gt;，結果發現，我的 pip 竟然吃不到！顯示了 &lt;code&gt;path\of\msys64\mingw64\bin\python.exe: No module named pip&lt;/code&gt;！我的 python 竟然是 msys64 底下的 python，而不是我安裝的 python！神奇的 msys64 竟然有 python！&lt;/li&gt;
+&lt;li&gt;好的，環境衝突出現了，我們先來看看上面的不同的 &lt;code&gt;--version&lt;/code&gt; 其實分別代表什麼意思。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="different---version"&gt;Different &lt;code&gt;--version&lt;/code&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python --version&lt;/code&gt; 會顯示 python 的版本，也就是說，這個指令會去找到 python 的執行檔，並且執行它，然後顯示出版本，這個部分沒什麼問題。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pip --version&lt;/code&gt; 也會顯示 pip 的版本，也就是說，這個指令會去找到 pip 的執行檔，並且執行它，然後顯示出版本，這個部分沒什麼問題。&lt;/li&gt;
+&lt;li&gt;只是上面兩個指令其實都是做一件事情，就是檢查 path，也就是系統路徑中，有記錄的執行檔的位置，然後去找到對應的執行檔，並且執行它，然後顯示出版本，這時候的 python 跟 pip 並沒有任何相依性的檢查，代表的就是 path 中的 python 跟 path 中的 pip，僅此而已，而也只說明了我們的環境中有 python 跟 pip 這兩個東西，但是並沒有說明 python 跟 pip 之間有什麼關係。&lt;/li&gt;
+&lt;li&gt;而 &lt;code&gt;python -m pip --version&lt;/code&gt; 則是現在這個 python 的 pip 會去找到 python 的執行檔，並且執行它，然後去執行 python 的 pip，也就是說，他的 pip 是 python 的 pip，而不是系統路徑中的 pip，這時候的 python 跟 pip 就會有相依性的檢查。&lt;/li&gt;
+&lt;li&gt;上面的 error message 可以發現，我們現在的 python 是 msys64 底下的 python，而不是我安裝的 python，所以當我們使用 &lt;code&gt;python -m pip --version&lt;/code&gt; 的時候，python 會去找到 msys64 底下的 python，然後去執行它，而 msys64 底下的 python 並沒有 pip，所以就會出現上面的 error message。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="環境衝突的原因跟解決辦法"&gt;環境衝突的原因跟解決辦法
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;簡單來說這個問題就是我的系統中現在有兩個 python 環境，而現在 python 預設執行到了 msys64 底下的 python，而不是我安裝的 python，而這個 python 並沒有 pip，所以就會出現上面的問題。&lt;/li&gt;
+&lt;li&gt;那我們要怎麼解決，其實就是讓系統預設執行的 python 是我安裝的 python，而不是 msys64 底下的 python，這樣就可以解決這個問題了。&lt;/li&gt;
+&lt;li&gt;那由於 python 在安裝時的 path 是自動加入 windows 的 users path 中，而 msys64 則是手動加入在 system 的 path 中，那 Windows 預設 system path 的 priority 會比較高，所以就會出現上面的問題。&lt;/li&gt;
+&lt;li&gt;那我們要怎麼解決，其實就是把 python 的 path 從 users path 中複製一份送到 system path 中，而且要放在 msys64 的前面，這樣就可以解決這個問題了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="小結論"&gt;小結論
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;這次的衝突算是開發過程中第一次遇到，不確定是不是之前安裝 c++ 的時候的安裝方式跟現在新的安裝法不同，所以現在才第一次遇到。&lt;/li&gt;
+&lt;li&gt;那藉由這個衝突，其實讓我對於 python 在系統上的調用跟指令上的差異，以前其實不是很清楚為什麼網路上對於 pip 指令的安裝中，會有 &lt;code&gt;python -m pip install&lt;/code&gt; 這樣的指令，現在就比較清楚了，因為這樣的指令可以確保我們的 pip 是跟 python 有相依性的，而不是系統路徑中的 pip，所以才會有這樣的指令。&lt;/li&gt;
+&lt;li&gt;那以上就是這次簡單的紀錄了～希望對於有踢到一樣問題的人可以有所幫助～&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>My Python Environment on M1 Mac</title><link>https://blog.crazyfirelee.tw/2023/03/04/environment/</link><pubDate>Sat, 04 Mar 2023 16:11:47 +0800</pubDate><guid>https://blog.crazyfirelee.tw/2023/03/04/environment/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;換了 M1 Mac 之後，一樣遇到一個大魔王就是 Python 環境的問題，這邊不是純粹的指 Python 的安裝，而是管理 Python 環境跟各種 Framework 是不是能正確的再 M1 Mac 上運作，能不能很好的調用硬體的問題，這篇文章記錄一下我在這條路上的愛恨情仇。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="python-environment-on-m1-mac"&gt;Python Environment on M1 Mac
+&lt;/h2&gt;&lt;h3 id="前情提要"&gt;前情提要
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;因為我會希望我的原生 Python 環境不要因為各種套件或者實驗性的東西而被污染，而且在開發中往往會需要附上 requirements.txt 來讓其他人知道你的環境是怎麼樣的，所以我會希望能夠有一個虛擬環境來管理我的 Python 環境，這樣我就可以在不同的專案中切換不同的環境，而不會互相影響。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="python-environments"&gt;Python Environments
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;為了符合正確的開發流程跟環境管理，我自己嘗試歸納整理了一下，目前我會使用的 Python 環境管理方式，這邊會分成兩個部分，一個是在開發的時候，一個是在部署的時候。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="python-virtual-environment"&gt;Python Virtual Environment
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Python 原生的 virtual environment 在管理套件上可以說是非常方便了，而且由於可以直接輸出 requirements.txt，因此如果是開發的話，我會直接在目錄下創建 &lt;code&gt;.venv&lt;/code&gt; 來管理我的環境，這樣的好處是 VSCode 在開啟 Python 專案的目錄時，如果有看到 &lt;code&gt;.venv&lt;/code&gt; 資料夾，會預設直接使用這個環境，而不用再去設定。&lt;/li&gt;
+&lt;li&gt;但這個部分會遇到一個小問題，也就是 &lt;code&gt;pip install&lt;/code&gt; 下來的 packages 不一定對於 aarm 環境有支援優化，因此在開發的過程中會發現，如果是利用這樣的方式準備的環境，在測試的過程中可以明顯發現很多時候 python 會跑到 rosetta 上去，經過一層 x86 轉譯，對於一些需要高效率的套件來說，效能會大打折扣，因此如果在做實驗的時候，我會希望能確實選擇跟安裝到 aarm 的相關套件，只有在確定要 deploy 的時候，再開始使用 venv 來整理環境並且輸出。&lt;/li&gt;
+&lt;li&gt;這樣的使用想必對不管是在什麼機器上開發 Python Application 的人都是這樣在整理的，所以也就不過多贅述，只是強調一下這樣的 Python Code 不一定能完全發揮 M1 Mac 的效能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="anaconda--miniconda--miniforge"&gt;Anaconda / Miniconda / Miniforge
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;三者的核心都有 conda 這個工具，其主要用來實現 python 的 &lt;code&gt;環境 Environment&lt;/code&gt; 和 &lt;code&gt;套件 Package&lt;/code&gt; 的管理 (其實有包含多種語言，除了 Python，R, Java, C 等等都有支持)。&lt;/li&gt;
+&lt;li&gt;Anaconda 跟 Miniconda 是公司的產品，如果商用需要付費，但個人使用是免費的，而 Miniforge 則是由社群維護的。&lt;/li&gt;
+&lt;li&gt;Anaconda VS Miniconda
+&lt;ul&gt;
+&lt;li&gt;而 Miniconda 跟 Miniforge 都是相較輕量化的版本，相比 Anaconda 中預設 Python + conda + meta package 的肥胖組合，Miniconda 只有 Python + conda。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Miniconda VS Miniforge
+&lt;ul&gt;
+&lt;li&gt;兩者都是 Python + conda，但其 Miniforge 的預設 conda channel 是 &lt;code&gt;conda-forge&lt;/code&gt;，而 Miniconda 則是預設的 channel 是 &lt;code&gt;anaconda.org&lt;/code&gt;。
+&lt;blockquote&gt;
+&lt;p&gt;conda channels (來源) 是 packages 的儲存位置，目前 &lt;code&gt;conda-forge&lt;/code&gt; 的維護度是最高的，而 &lt;code&gt;anaconda.org&lt;/code&gt; 則是 Anaconda 公司的產品，所以如果是要安裝一些比較新的套件，建議使用 &lt;code&gt;conda-forge&lt;/code&gt;。conda channel 是可以更換的，因此也可以使用 miniconda 但讓 channel 指向 &lt;code&gt;conda-forge&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Miniforge 相比 Miniconda 更早的支援了 Apple M1 Chip，但現在 Miniconda 已經也支援了，但這也側面證明了 Miniforge 的更新維護狀況是非常良好且快速的。
+&lt;blockquote&gt;
+&lt;p&gt;PS. 在早期 Tensorflow 的 M1 Installation 教學是推薦 Miniforge 的，但現在因為 Miniconda 已經支援了，所以改推薦 Miniconda 了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id="小總結"&gt;小總結
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;Miniforge 由於是社群維護的，開源、更新快速、維護狀況其實也非常良好，如果沒啥意外 M1 Mac 我是推薦的直接安裝 Miniforge 來使用。&lt;/li&gt;
+&lt;li&gt;但也請注意，由於 Miniforge 是由社群維護驗證，穩定性一定還是會略輸 Miniconda 跟 Anaconda，因此如果不追求最快速的更新支援，那麼 Miniconda 或是 Anaconda 也是不錯的選擇。&lt;/li&gt;
+&lt;li&gt;Anaconda 太肥胖了，如果只是要用來管理 Python 環境，那麼 Miniconda 或是 Miniforge 就足夠了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="conda-vs-pip"&gt;Conda VS pip
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;conda 的 package source 在前面已經提過了，而 pip 的來源是 PyPI (Python Package Index)。pip 是專門針對 python 打包而成的，屬於 wheels or source distributions，會需要 compiler 來安裝，而 conda 則是 packages are binaries，因此包含例如 C Language 所撰寫的套件，都可以直接安裝，不需要 compiler。&lt;/li&gt;
+&lt;li&gt;conda 則會有嚴格的依賴衝突檢查，pip 則沒有。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="我的使用方式"&gt;我的使用方式
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;由於是 M1 Mac，為了集結社群之力，盡快取得合適的 Python 環境，我是直接安裝了 Miniforge 來使用。穩定性上我目前沒有特別擔心。&lt;/li&gt;
+&lt;li&gt;雖然一般來說，關於 Python 的 Package 會盡可能建議直接用 pip 來安裝，但由於我希望能夠盡可能的利用 M1 Mac 的效能，因此我會盡可能的使用 conda 來安裝套件，但如果是沒有 conda 的套件，那麼我會直接使用 pip 來安裝。
+&lt;blockquote&gt;
+&lt;p&gt;好處在於 conda 的 binary package 會類似於 source code 的編譯，可以發現其效能是比 pip 來的好的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
