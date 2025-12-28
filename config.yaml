@@ -128,7 +128,7 @@ menu:
         icon: archives
     - identifier: about
       name: About
-      url: /page/about/
+      url: /about/
       weight: -60
       params:
         icon: user
