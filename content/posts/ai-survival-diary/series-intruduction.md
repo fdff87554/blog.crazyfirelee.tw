@@ -3,12 +3,12 @@ title: "[AI 求生日誌] 關於本系列"
 slug: "series-introduction"
 date: 2022-12-09T13:46:50+08:00
 draft: false
-autoThumbnailImage: true
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['Artificial Intelligence',
-       'Machine Learning',
-       'Deep Learning']
+categories:
+  - AI 求生日誌
+tags:
+  - Artificial Intelligence
+  - Machine Learning
+  - Deep Learning
 ---
 > Artificial Intelligence 這個神秘的領域，於 2016 年 Google AlphaGo 突破人類堅守的圍棋領域之後，正式進入了我們的生活，進入了新的紀元，而於 2019 年為了比賽而踏入這個領域的我，在這個領域中的掙扎、挑戰和質疑，讓我慢慢理解到唯有重新深入理解這個領域，才能算是初出茅廬…
 <!--more-->

@@ -3,12 +3,12 @@ title: "[AI 求生日誌] About Deep Learning"
 slug: "about-deep-learning"
 date: 2022-12-12T12:51:21+08:00
 draft: false
-autoThumbnailImage: true
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['Artificial Intelligence',
-       'Machine Learning',
-       'Deep Learning']
+categories:
+  - AI 求生日誌
+tags:
+  - Artificial Intelligence
+  - Machine Learning
+  - Deep Learning
 ---
 > Machine Learning 的概念已經存在數十年，為何於近期才又有一場新的反擊的號角？Deep Learning 的概念為什麼可以跟 Artificial Intelligence 一起被提起變成必駕齊驅的 Keywords？這篇文章將會介紹 Deep Learning 的基本概念，以及為什麼 Deep Learning 會讓 Machine Learning 有了新的生命力。
 <!--more-->

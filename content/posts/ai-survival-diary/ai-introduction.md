@@ -3,12 +3,12 @@ title: "[AI 求生日誌] About Artificial Intelligence"
 slug: "about-artificial-intelligence"
 date: 2022-12-11T18:59:42+08:00
 draft: false
-autoThumbnailImage: true
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['Artificial Intelligence',
-       'Machine Learning',
-       'Deep Learning']
+categories:
+  - AI 求生日誌
+tags:
+  - Artificial Intelligence
+  - Machine Learning
+  - Deep Learning
 ---
 > 1940 年電腦正式誕生之後，1950 年 Alan Turing 就發表論文 計算機與智能（Computing Machinery and Intelligence） 探討機器所能產生的智慧，並提出有名的 圖靈測試（Turing Test），人工智慧的發展可能比你我想像的都更早，且其歷史是更加的值得反思。
 <!--more-->

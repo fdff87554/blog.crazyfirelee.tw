@@ -3,12 +3,13 @@ title: "My Python Environment on M1 Mac"
 slug: "environment"
 date: 2023-03-04T16:11:47+08:00
 draft: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['M1',
-       'Mac',
-       'Python',
-       'Environment']
+categories:
+  - 技術分享
+tags:
+  - M1
+  - Mac
+  - Python
+  - Environment
 ---
 > 換了 M1 Mac 之後，一樣遇到一個大魔王就是 Python 環境的問題，這邊不是純粹的指 Python 的安裝，而是管理 Python 環境跟各種 Framework 是不是能正確的再 M1 Mac 上運作，能不能很好的調用硬體的問題，這篇文章記錄一下我在這條路上的愛恨情仇。
 <!--more-->

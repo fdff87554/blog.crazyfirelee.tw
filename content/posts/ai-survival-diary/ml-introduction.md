@@ -3,12 +3,12 @@ title: "[AI 求生日誌] About Machine Learning"
 slug: "about-machine-learning"
 date: 2022-12-12T00:04:42+08:00
 draft: false
-autoThumbnailImage: true
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['Artificial Intelligence',
-       'Machine Learning',
-       'Deep Learning']
+categories:
+  - AI 求生日誌
+tags:
+  - Artificial Intelligence
+  - Machine Learning
+  - Deep Learning
 ---
 > AI 在長久的發展中載浮載沈，是什麼決定了現在的崛起？在 2022 年的今天，生活中似乎已經慢慢被 AI 給滲透，手機、銀行和政府機構等等，似乎沒有什麼服務已經看不到 AI 的身影，究竟是什麼成就了現在的 AI？
 <!--more-->
