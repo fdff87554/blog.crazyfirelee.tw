@@ -50,7 +50,7 @@ params:
     avatar:
       enabled: true
       local: false
-      src: https://www.gravatar.com/avatar/
+      src: https://www.gravatar.com/avatar/6f0afd73f9e68da18c23f56385a9759e?s=150
 
   # 文章設定
   article:
@@ -170,7 +170,7 @@ related:
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: false
   tableOfContents:
     startLevel: 2
     endLevel: 4

@@ -1,0 +1,63 @@
+// Custom styles for Crazyfire's Blog
+// Overrides Stack theme default values
+
+// Light mode
+:root {
+    // Modern blue accent color
+    --accent-color: #2563eb;
+    --accent-color-darker: #1d4ed8;
+
+    // Larger card border radius
+    --card-border-radius: 16px;
+
+    // Slightly adjusted background
+    --body-background: #f8fafc;
+}
+
+// Dark mode
+[data-scheme="dark"] {
+    // Softer dark background
+    --body-background: #1e293b;
+    --card-background: #334155;
+
+    // Accent color for dark mode
+    --accent-color: #60a5fa;
+    --accent-color-darker: #3b82f6;
+}
+
+// Sidebar avatar styling
+.left-sidebar .sidebar-avatar .site-avatar {
+    border-radius: 50%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// Article card hover effect
+.article-list article {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Menu item spacing
+.menu {
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    a {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: var(--card-background);
+        }
+    }
+}
