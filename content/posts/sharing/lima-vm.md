@@ -3,12 +3,13 @@ title: "Lima - M1 Mac 跑 x84 的好朋友"
 slug: "lima"
 date: 2022-12-21T11:08:23+08:00
 draft: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['M1',
-       'Mac',
-       'Lima',
-       'Tools']
+categories:
+  - 技術分享
+tags:
+  - M1
+  - Mac
+  - Lima
+  - Tools
 ---
 > 換了 M1 Mac 之後，發現其實還有大量工具只能跑在 x86_64 的環境，這就超級無敵痛苦了，因為不是所有東西都可以利用 Rosetta 2 來轉換，每天崩潰的使用 RDP 來連回家裡的 Windows 再開 VM 來解決問題也實在煩躁，直到喵喵推薦了 Lima 這個屌炸天的 Linux VM 工具，讓我可以在 M1 Mac 上跑 x86_64 的 Linux VM，真的是太感謝了，這篇文章就來介紹一下 Lima 這個工具吧！
 <!--more-->

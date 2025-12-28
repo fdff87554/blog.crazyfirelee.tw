@@ -1,12 +1,14 @@
 ---
 title: "A short story about Windows python environment conflict"
+slug: "windows-python-env"
 date: 2023-04-06T20:50:42+08:00
 draft: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['Windows',
-       'Python',
-       'Environment']
+categories:
+  - 技術分享
+tags:
+  - Windows
+  - Python
+  - Environment
 ---
 > 許久沒有用 Windows 做開發，這幾天剛好在幫我老弟安裝 Python 跟 C++ 的開發環境，結果遇到了一個關於 python 跟 mingw64 的環境衝突的問題，在嘗試解決的過程中，因為沒有查到太多資料，所以就想說記錄一下，以免之後再次遇到相同的問題。
 <!--more-->

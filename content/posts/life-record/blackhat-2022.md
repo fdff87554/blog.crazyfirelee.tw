@@ -3,13 +3,13 @@ title: "Blackhat 2022 線上遊記"
 slug: "blackhat-2022"
 date: 2022-12-12T11:31:28+08:00
 draft: false
-autoThumbnailImage: true
-thumbnailImagePosition: "top"
-metaAlignment: center
-tags: ['Blackhat',
-       'Security',
-       'Conference',
-       '2022']
+categories:
+  - 生活記錄
+tags:
+  - Blackhat
+  - Security
+  - Conference
+  - "2022"
 ---
 > BlackHat，這個資安圈盛會，也一直是自己學習資安的路上一個嚮往和期待能參與的活動，但對於學生來說，費用相較昂貴而且參與成本較高，尤其是在疫情當頭的 2022 年，能參加更是一種奢侈...，但是！今年感謝 Orange Tsai 願意給我講者的學生推薦票，讓我有機會線上參與這場活動 (因為是役男不能隨便出國 QQ)，所以我就來紀錄一下這次的線上遊記吧！也希望藉由這個簡單的紀錄，讓更多人知道究竟 BlackHat 上會有什麼，跟我藉由這次參與兩天的議程，有什麼收穫跟感想。
 <!--more-->

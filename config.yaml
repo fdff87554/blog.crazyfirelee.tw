@@ -1,152 +1,184 @@
 baseURL: https://blog.crazyfirelee.tw/
 languageCode: zh-tw
 defaultContentLanguage: zh-tw
-title: Crazyfire's Blog
-theme: tranquilpeak
-disqusShortname: crazyfirelee
-themesDir: themes
-paginate: 10
-canonifyurls: true
+title: "Crazyfire's Blog"
+theme: hugo-theme-stack
 
-author:
-  name: Darren Lee (Crazyfire Lee)
-  description: Crazyfire's Blog
-  bio: A student interested in how machine learning & cyber security can change the world.
-  job: Student in NTHU IIS
-  location: Taipei, Taiwan
-  social:
-    github: fdff87554
-    twitter: fdff87554
-  gravatarEmail: "wordpress.c@crazyfirelee.tw"
+# CJK 語言支援
+hasCJKLanguage: true
 
+# Disqus 評論
+services:
+  disqus:
+    shortname: crazyfirelee
+
+# 分頁設定（使用新版 Hugo 語法）
+pagination:
+  pagerSize: 10
+
+# 永久連結（對應 content/posts/ 目錄）
 permalinks:
-  post: /:year/:month/:day/:slug/
-  page: /:title/
+  posts: /:year/:month/:day/:slug/
+  page: /:slug/
 
+# 分類法
 taxonomies:
   tag: tags
   category: categories
-  archive: archives
   series: series
 
-markup:
-  tableOfContents:
-    startLevel: 1
-    ordered: false
-    endLevel: 6
+params:
+  # 主要內容區塊
+  mainSections:
+    - posts
 
+  # RSS 完整內容
+  rssFullContent: true
+
+  # 頁尾設定
+  footer:
+    since: 2022
+
+  # 日期格式
+  dateFormat:
+    published: 2006-01-02
+    lastUpdated: 2006-01-02 15:04 MST
+
+  # 側邊欄設定
+  sidebar:
+    subtitle: "A student interested in how machine learning & cyber security can change the world."
+    avatar:
+      enabled: true
+      local: false
+      src: https://www.gravatar.com/avatar/6f0afd73f9e68da18c23f56385a9759e?s=150
+
+  # 文章設定
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: false
+
+  # 評論系統
+  comments:
+    enabled: true
+    provider: disqus
+
+  # 小工具設定
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
+      - type: categories
+        params:
+          limit: 10
+      - type: tag-cloud
+        params:
+          limit: 10
+    page:
+      - type: toc
+
+  # Open Graph / Twitter
+  opengraph:
+    twitter:
+      site: fdff87554
+      card: summary_large_image
+
+  # 深色模式切換
+  colorScheme:
+    toggle: true
+    default: auto
+
+  # 圖片處理
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+
+# 導航菜單
 menu:
   main:
     - identifier: home
       name: Home
       url: /
-      weight: 1
-      pre: <i class=\"sidebar-button-icon fas fa-lg fa-home\" aria-hidden=\"true\"></i>
+      weight: -100
+      params:
+        icon: home
     - identifier: categories
       name: Categories
       url: /categories/
-      weight: 2
-      pre: <i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>
+      weight: -90
+      params:
+        icon: categories
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 3
-      pre: <i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>
+      weight: -80
+      params:
+        icon: tag
     - identifier: archives
       name: Archives
       url: /archives/
-      weight: 4
-      pre: <i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>
+      weight: -70
+      params:
+        icon: archives
     - identifier: about
       name: About
-      url: /#about/
-      weight: 5
-      pre: <i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>
+      url: /about/
+      weight: -60
+      params:
+        icon: user
 
-  links:
+  social:
     - identifier: github
-      name: Github
+      name: GitHub
       url: https://github.com/fdff87554
-      pre: <i class=\"sidebar-button-icon fab fa-lg fa-github\" aria-hidden=\"true\"></i>
+      params:
+        icon: brand-github
     - identifier: twitter
       name: Twitter
       url: https://twitter.com/fdff87554
-      pre: <i class=\"sidebar-button-icon fab fa-lg fa-twitter\" aria-hidden=\"true\"></i>
+      params:
+        icon: brand-twitter
     - identifier: linkedin
       name: LinkedIn
       url: https://www.linkedin.com/in/darren-lee-69790b187/
-      pre: <i class=\"sidebar-button-icon fab fa-lg fa-linkedin\" aria-hidden=\"true\"></i>
-
-  misc:
+      params:
+        icon: brand-linkedin
     - identifier: rss
       name: RSS
       url: /index.xml
-      pre: <i class=\"sidebar-button-icon fas fa-lg fa-rss\" aria-hidden=\"true\"></i>
+      params:
+        icon: rss
 
-params:
-  syntaxHighlighter: highlight.js
-  dateFormat: January 2, 2006
-  clearReading: true
-  hierarchicalCategories: true
-  swapPaginator: true
-  sidebarBehavior: 2
-  coverImage: /images/cover.jpg
-  imageGallery: true
-  thumbnailImage: true
-  thumbnailImagePosition: right
-  autoThumbnailImage: true
-  customJS:
-    - integrity: sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js
-      async: true
-      defer: true
-    - integrity: sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js
-      async: true
-      defer: true
-    - integrity: sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js
-      async: true
-      defer: true
-    - integrity: sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js
-      async: true
-      defer: true
-    - integrity: sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js
-      async: true
-      defer: true
-    - integrity: sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js
-      async: true
-      defer: true
-    - integrity: sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js
-      async: true
-      defer: true
-    - integrity: sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js
-      async: true
-      defer: true
-    - integrity: sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js
-      async: true
-      defer: true
-    - integrity: sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==
-      crossorigin: anonymous
-      src: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js
-      async: true
-      defer: true
-  comment:
-    disqus:
-      shortname: crazyfirelee
-      enable: true
+# 相關文章
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 200
+
+# Markdown 渲染設定
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
